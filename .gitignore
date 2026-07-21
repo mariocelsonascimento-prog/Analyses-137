@@ -1,0 +1,15 @@
+# Fichiers système et éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Variables et fichiers locaux sensibles
+.env
+.env.*
+!.env.example
+
+# Dépendances et sorties de build
+node_modules/
+dist/
+build/
+
