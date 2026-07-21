@@ -1,0 +1,39 @@
+[
+  {
+    "id": "premier-sujet",
+    "number": "001",
+    "category": "societe",
+    "categoryLabel": "Société",
+    "title": "Premier sujet à définir",
+    "summary": "La première conviction sera transformée en question vérifiable, avec ses données, son code et ses limites.",
+    "status": "En préparation",
+    "tool": "À définir",
+    "updatedAt": "2026-07-21",
+    "href": null
+  },
+  {
+    "id": "economie",
+    "number": "002",
+    "category": "economie",
+    "categoryLabel": "Économie",
+    "title": "Une affirmation économique à vérifier",
+    "summary": "Un futur dossier pour distinguer intuition, corrélation et causalité à partir de sources publiques.",
+    "status": "À venir",
+    "tool": "Power BI / Excel",
+    "updatedAt": null,
+    "href": null
+  },
+  {
+    "id": "environnement",
+    "number": "003",
+    "category": "environnement",
+    "categoryLabel": "Environnement",
+    "title": "Une idée reçue environnementale",
+    "summary": "Une analyse future où périmètre, unité de mesure et ordre de grandeur seront rendus explicites.",
+    "status": "À venir",
+    "tool": "Tableau",
+    "updatedAt": null,
+    "href": null
+  }
+]
+

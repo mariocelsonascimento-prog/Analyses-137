@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Analyses 137 confronte les idées reçues aux données publiques, avec des méthodes transparentes et reproductibles.">
+  <meta name="theme-color" content="#f4f1e8">
+  <title>Analyses 137 — Des convictions aux données</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Analyses 137, accueil">
+      <span class="brand-mark" aria-hidden="true">137</span>
+      <span>Analyses</span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+    <nav id="navigation" class="navigation" aria-label="Navigation principale">
+      <a href="#analyses">Analyses</a>
+      <a href="#methode">Méthode</a>
+      <a href="#outils">Outils</a>
+      <a class="nav-cta" href="https://github.com/mariocelsonascimento-prog/Analyses-137">Voir le code</a>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section id="accueil" class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio de Data Analysis</p>
+        <h1>Moins de certitudes.<br><em>Plus de données.</em></h1>
+        <p class="hero-intro">Je prends les sujets dont on parle avec conviction et je les confronte à des données publiques, traçables et reproductibles.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#analyses">Explorer les analyses</a>
+          <a class="button button-secondary" href="#methode">Comprendre la méthode</a>
+        </div>
+      </div>
+      <aside class="hero-proof" aria-label="Engagements du projet">
+        <div class="proof-label">Le contrat de lecture</div>
+        <p class="proof-number">01</p>
+        <h2>Chaque chiffre doit pouvoir être retrouvé.</h2>
+        <ul>
+          <li><span>Source</span><strong>publique</strong></li>
+          <li><span>Données</span><strong>versionnées</strong></li>
+          <li><span>Traitement</span><strong>reproductible</strong></li>
+          <li><span>Limites</span><strong>explicites</strong></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="manifesto" aria-label="Positionnement">
+      <div class="section-shell manifesto-grid">
+        <p>Une opinion forte mérite mieux qu'un graphique isolé.</p>
+        <p>Analyses 137 documente le chemin complet : de la source brute à la conclusion.</p>
+      </div>
+    </section>
+
+    <section id="analyses" class="section section-shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Sujets</p>
+          <h2>Les analyses</h2>
+        </div>
+        <p>Les premiers dossiers sont en préparation. Leur statut est affiché sans maquiller l'avancement.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrer les analyses">
+        <button class="filter is-active" type="button" data-filter="all">Toutes</button>
+        <button class="filter" type="button" data-filter="societe">Société</button>
+        <button class="filter" type="button" data-filter="economie">Économie</button>
+        <button class="filter" type="button" data-filter="environnement">Environnement</button>
+      </div>
+      <div id="analysis-grid" class="analysis-grid" aria-live="polite"></div>
+      <noscript><p>Activez JavaScript pour afficher le catalogue des analyses.</p></noscript>
+    </section>
+
+    <section id="methode" class="method-section">
+      <div class="section-shell">
+        <div class="section-heading light-heading">
+          <div><p class="eyebrow">Transparence</p><h2>De la question à la preuve</h2></div>
+          <p>Une méthode identique pour chaque sujet permet de juger le raisonnement, pas seulement le résultat.</p>
+        </div>
+        <ol class="method-grid">
+          <li><span>01</span><h3>Questionner</h3><p>Transformer une conviction courante en question mesurable.</p></li>
+          <li><span>02</span><h3>Sourcer</h3><p>Retrouver les données originales, leur licence, leur date et leur version.</p></li>
+          <li><span>03</span><h3>Traiter</h3><p>Publier le code de nettoyage, les hypothèses et les contrôles qualité.</p></li>
+          <li><span>04</span><h3>Nuancer</h3><p>Présenter les résultats avec leurs limites et leur niveau d'incertitude.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="outils" class="section section-shell">
+      <div class="section-heading">
+        <div><p class="eyebrow">Visualisation</p><h2>Un site, plusieurs outils</h2></div>
+        <p>Chaque dashboard conserve son outil d'origine, tout en partageant la même présentation et le même niveau de documentation.</p>
+      </div>
+      <div class="tool-grid">
+        <article><span class="tool-index">01</span><h3>Tableau</h3><p>Visualisations interactives et exploration guidée.</p></article>
+        <article><span class="tool-index">02</span><h3>Power BI</h3><p>Rapports métiers et modèles analytiques.</p></article>
+        <article><span class="tool-index">03</span><h3>Excel</h3><p>Modèles accessibles, auditables et téléchargeables.</p></article>
+        <article><span class="tool-index">04</span><h3>Web</h3><p>Expériences sur mesure, rapides et responsives.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-grid">
+      <div><a class="brand footer-brand" href="#accueil"><span class="brand-mark">137</span><span>Analyses</span></a><p>Des analyses publiques, vérifiables et sans fausse certitude.</p></div>
+      <div><p class="footer-label">Projet</p><a href="#analyses">Analyses</a><a href="#methode">Méthode</a><a href="https://github.com/mariocelsonascimento-prog/Analyses-137">GitHub</a></div>
+      <p class="copyright">© <span id="year"></span> Analyses 137</p>
+    </div>
+  </footer>
+</body>
+</html>
+
