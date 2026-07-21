@@ -1,8 +1,39 @@
 # Analyses 137
 
-Portfolio de projets et d'analyses de données présentant mes compétences de Data Analyst.
+Portfolio public de Data Analysis consacré aux sujets souvent discutés avec beaucoup de conviction, mais pas toujours avec suffisamment de données.
 
-## Objectif
+Le projet présentera des analyses claires, sourcées et reproductibles, avec des dashboards créés dans Tableau Desktop, Power BI, Excel ou avec des technologies web.
 
-Ce site réunira mes projets, mes visualisations, mes études de cas et les outils que je maîtrise.
+## Principes
+
+- distinguer faits, hypothèses et interprétations ;
+- publier la source, la version et la date de chaque jeu de données ;
+- expliquer les transformations et les limites ;
+- conserver des analyses reproductibles ;
+- offrir une navigation simple et cohérente quel que soit l'outil utilisé.
+
+## Structure
+
+```text
+analyses/        Etudes de cas, methodes et resultats
+dashboards/      Sources et exports Tableau, Power BI, Excel et web
+data/catalog/    Fiches de tracabilite des jeux de donnees
+data/raw/        Donnees publiques originales
+data/processed/  Donnees nettoyees ou agregees
+docs/            Architecture, gouvernance et conventions
+site/            Code du portfolio web
+templates/       Modeles d'analyse et de source
+```
+
+## Ajouter une analyse
+
+1. Copier `templates/analysis/` dans `analyses/<sujet>/`.
+2. Référencer chaque source dans `data/catalog/` avec `templates/dataset.yml`.
+3. Conserver les scripts de préparation avec l'analyse.
+4. Placer le dashboard ou ses instructions dans `dashboards/`.
+5. Publier le contexte, la méthode, les résultats, les sources et les limites.
+
+## Statut
+
+Le dépôt est en phase de structuration initiale.
 

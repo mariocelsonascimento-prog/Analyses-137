@@ -1,0 +1,23 @@
+id: exemple-source-2026
+title: Titre officiel du jeu de donnees
+publisher: Organisme producteur
+source_url: https://example.org/dataset
+license:
+  name: Licence a confirmer
+  url: https://example.org/license
+version: "2026-01"
+published_at: "2026-01-01"
+retrieved_at: "2026-07-21"
+coverage: Periode et perimetre
+format: csv
+encoding: utf-8
+sha256: A_COMPLETER
+files:
+  raw: data/raw/exemple-source-2026.csv
+  processed: data/processed/exemple-source-2026.csv
+transformations:
+  - Decrire chaque transformation
+limitations:
+  - Decrire les biais et limites connus
+personal_data: false
+

@@ -1,0 +1,12 @@
+id: exemple-dashboard
+title: Titre du dashboard
+tool: tableau
+tool_version: A_COMPLETER
+embed_url: null
+fallback_url: null
+preview_image: null
+updated_at: "2026-07-21"
+dataset_ids: []
+recommended_width: 1280
+recommended_height: 800
+

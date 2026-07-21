@@ -13,3 +13,13 @@ node_modules/
 dist/
 build/
 
+# Caches d'analyse
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+
+# Données temporaires et exports lourds
+data/tmp/
+*.hyper
+*.twb.bak
+~$*.xlsx
