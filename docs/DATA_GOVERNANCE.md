@@ -13,3 +13,11 @@ Chaque jeu de données doit indiquer : producteur, URL officielle, licence, vers
 - Une mise à jour conserve un historique de version utile.
 - Chaque affirmation et graphique cite sa source au plus près.
 
+## Reproductibilité
+
+- Tout fichier de `data/processed/` doit pouvoir être recréé par un pipeline public.
+- Le pipeline conserve les données brutes en lecture seule.
+- Les dépendances et leurs versions sont déclarées.
+- Les étapes de nettoyage sont déterministes ou documentent leur part d'aléatoire.
+- Les contrôles qualité vérifient au minimum le schéma, les doublons, les valeurs manquantes et les plages attendues.
+- Le README du pipeline indique les entrées, sorties et commandes exactes.

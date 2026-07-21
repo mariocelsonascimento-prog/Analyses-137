@@ -1,0 +1,3 @@
+# Déclarer des versions exactes, par exemple :
+# pandas==X.Y.Z
+

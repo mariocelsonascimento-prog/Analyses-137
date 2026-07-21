@@ -20,10 +20,10 @@ Les contenus externes seront intégrés par un composant commun pour gérer char
 analyses/<sujet>/
 |-- README.md
 |-- notebooks/
-|-- scripts/
 |-- outputs/
 `-- dashboard.yml
 ```
 
-Les fichiers trop lourds sont référencés par un lien public, une empreinte et des instructions de récupération.
+Le code de traitement correspondant se trouve dans `pipelines/<sujet>/`. Cette séparation permet de réutiliser une même préparation de données dans plusieurs analyses ou dashboards.
 
+Les fichiers trop lourds sont référencés par un lien public, une empreinte et des instructions de récupération.
