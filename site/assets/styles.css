@@ -102,6 +102,66 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .error-page { width:var(--shell); min-height:100vh; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; }
 .error-page h1 { margin:0; font-size:clamp(48px,8vw,100px); line-height:1; letter-spacing:-.06em; }
 .error-page .button { margin-top:25px; }
+.tracker-main { overflow:hidden; }
+.tracker-hero { display:grid; grid-template-columns:1.4fr .6fr; gap:8%; align-items:end; padding-block:85px 70px; }
+.tracker-hero h1 { margin:0; font-size:clamp(55px,8vw,105px); line-height:.91; letter-spacing:-.07em; }
+.tracker-hero h1 em { font-family:"Playfair Display",serif; color:#407065; }
+.tracker-intro { padding-bottom:8px; color:var(--muted); font-size:17px; }
+.updated-label { margin-top:28px; font:500 11px "DM Mono",monospace; text-transform:uppercase; letter-spacing:.08em; }
+.tracker-summary { display:grid; grid-template-columns:2fr repeat(3,1fr); border:1px solid var(--ink); background:var(--white); }
+.tracker-summary > div { min-height:145px; padding:24px; display:flex; flex-direction:column; border-right:1px solid var(--line); }
+.tracker-summary > div:last-child { border-right:0; }
+.tracker-summary span { font:500 11px "DM Mono",monospace; text-transform:uppercase; color:var(--muted); }
+.tracker-summary strong { margin-top:auto; font-size:40px; line-height:1; letter-spacing:-.05em; }
+.progress-track { height:5px; margin-top:14px; overflow:hidden; background:#d7d5cc; }
+.progress-track i { display:block; width:0; height:100%; background:var(--ink); transition:width .5s ease; }
+.tracker-section,.board-section { padding-block:105px; }
+.board-section { background:var(--deep); color:var(--paper); }
+.tracker-heading { display:grid; grid-template-columns:1fr minmax(240px,400px); gap:7%; align-items:end; margin-bottom:38px; }
+.tracker-heading h2 { margin:0; font-size:clamp(42px,5vw,66px); line-height:1; letter-spacing:-.055em; }
+.tracker-heading > p { margin:0; color:var(--muted); }
+.project-list { border-top:1px solid var(--ink); }
+.project-row { display:grid; grid-template-columns:100px 1fr 180px; gap:28px; align-items:center; padding:27px 0; border-bottom:1px solid var(--line); }
+.project-code { font:500 12px "DM Mono",monospace; color:#477168; }
+.project-title-line { display:flex; align-items:center; gap:13px; }
+.project-title-line h3 { margin:0; font-size:20px; letter-spacing:-.025em; }
+.project-title-line span { padding:3px 8px; border:1px solid var(--line); border-radius:99px; font:500 9px "DM Mono",monospace; text-transform:uppercase; }
+.project-row p { margin:5px 0 0; color:var(--muted); font-size:13px; }
+.project-progress { text-align:right; }
+.project-progress strong { font-size:24px; }
+.project-progress > span { display:block; color:var(--muted); font:400 10px "DM Mono",monospace; }
+.board-filters { display:flex; flex-direction:column; gap:7px; }
+.board-filters label { color:#9cb0ab; font:500 10px "DM Mono",monospace; text-transform:uppercase; }
+.board-filters select { width:100%; padding:11px 13px; border:1px solid rgba(255,255,255,.3); background:#183a34; color:var(--paper); font:500 12px "DM Mono",monospace; }
+.kanban-board { display:grid; grid-template-columns:repeat(5,minmax(230px,1fr)); gap:12px; overflow-x:auto; padding-bottom:16px; }
+.kanban-column { min-height:410px; background:#173731; border:1px solid rgba(255,255,255,.15); }
+.kanban-column > header { display:flex; justify-content:space-between; align-items:center; padding:14px; border-bottom:1px solid rgba(255,255,255,.15); }
+.kanban-column h3 { margin:0; font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+.kanban-column header span { display:grid; place-items:center; width:22px; height:22px; border-radius:50%; background:rgba(255,255,255,.1); font:400 10px "DM Mono",monospace; }
+.ticket-list { padding:9px; }
+.ticket { margin-bottom:9px; padding:14px; background:var(--paper); color:var(--ink); border-left:3px solid var(--acid); }
+.ticket-tags,.ticket footer { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.ticket-tags span,.priority { font:500 9px "DM Mono",monospace; text-transform:uppercase; }
+.priority { font-style:normal; color:var(--muted); }
+.priority-haute { color:#a73b31; }
+.priority-moyenne { color:#8b6119; }
+.ticket h4 { margin:21px 0 25px; font-size:14px; line-height:1.35; }
+.ticket footer { padding-top:10px; border-top:1px solid var(--line); font:400 9px "DM Mono",monospace; }
+.ticket footer time { color:var(--muted); }
+.empty-column { padding:15px 5px; color:#829c96; font-size:12px; }
+.incident-table-wrap { overflow-x:auto; }
+.incident-table { width:100%; border-collapse:collapse; border-top:1px solid var(--ink); font-size:13px; }
+.incident-table th { color:var(--muted); font:500 10px "DM Mono",monospace; text-transform:uppercase; text-align:left; }
+.incident-table th,.incident-table td { padding:18px 14px; border-bottom:1px solid var(--line); vertical-align:top; }
+.incident-table td:nth-child(2) span,.incident-table td:nth-child(2) small { display:block; }
+.incident-table td:nth-child(2) small { max-width:550px; margin-top:5px; color:var(--muted); }
+.incident-status { padding:4px 8px; background:#dce7dc; color:#285944; font:500 9px "DM Mono",monospace; text-transform:uppercase; }
+@media (max-width:900px) {
+  .tracker-hero { grid-template-columns:1fr; }
+  .tracker-summary { grid-template-columns:1fr 1fr; }
+  .tracker-summary > div:nth-child(2) { border-right:0; }
+  .tracker-summary > div { border-bottom:1px solid var(--line); }
+}
 @media (max-width:900px) {
   .hero { grid-template-columns:1fr; min-height:auto; gap:70px; }
   .hero-proof { max-width:520px; align-self:auto; }
@@ -124,6 +184,12 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
   .analysis-grid,.method-grid,.tool-grid { grid-template-columns:1fr; }
   .book-card { grid-template-columns:1fr; }
   .book-cover { width:min(80%,280px); }
+  .tracker-hero { padding-block:60px; }
+  .tracker-summary,.tracker-heading { grid-template-columns:1fr; }
+  .tracker-summary > div { border-right:0; }
+  .project-row { grid-template-columns:1fr; gap:10px; }
+  .project-progress { text-align:left; }
+  .kanban-board { margin-right:-14px; }
   .analysis-card { min-height:340px; border-left:1px solid var(--line); }
   .method-grid li,.method-grid li + li { padding:28px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.18); }
   .method-grid h3 { margin-top:38px; }

@@ -22,6 +22,7 @@ data/catalog/    Fiches de tracabilite des jeux de donnees
 data/raw/        Donnees publiques originales
 data/processed/  Donnees nettoyees ou agregees
 pipelines/       Code public de collecte, nettoyage et validation
+project-management/ Workflow, tickets et modèles d'incidents
 docs/            Architecture, gouvernance et conventions
 site/            Code du portfolio web
 templates/       Modeles d'analyse et de source

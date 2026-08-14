@@ -1,0 +1,32 @@
+{
+  "updatedAt": "2026-08-14",
+  "workflow": [
+    { "id": "backlog", "label": "À étudier" },
+    { "id": "planned", "label": "Planifié" },
+    { "id": "in-progress", "label": "En cours" },
+    { "id": "review", "label": "À valider" },
+    { "id": "done", "label": "Terminé" }
+  ],
+  "projects": [
+    { "id": "SITE", "name": "Portfolio Analyses 137", "type": "Site web", "status": "Actif", "description": "Construire le site public et ses parcours de présentation." },
+    { "id": "BOOK-BIPY", "name": "Business Intelligence avec Python", "type": "Livre", "status": "Actif", "description": "Transformer les apprentissages du livre en projets BI reproductibles." },
+    { "id": "ANALYSES", "name": "Sujets de conversation", "type": "Analyses", "status": "Préparation", "description": "Confronter des convictions courantes à des données publiques." }
+  ],
+  "issues": [
+    { "id": "SITE-1", "project": "SITE", "title": "Structurer les données, analyses et dashboards", "status": "done", "priority": "Haute", "type": "Tâche", "updatedAt": "2026-07-21" },
+    { "id": "SITE-2", "project": "SITE", "title": "Créer et déployer la page d'accueil", "status": "done", "priority": "Haute", "type": "Fonctionnalité", "updatedAt": "2026-07-21" },
+    { "id": "SITE-3", "project": "SITE", "title": "Ajouter le catalogue de projets basés sur des livres", "status": "done", "priority": "Moyenne", "type": "Fonctionnalité", "updatedAt": "2026-08-14" },
+    { "id": "SITE-4", "project": "SITE", "title": "Créer le suivi public des projets et incidents", "status": "review", "priority": "Haute", "type": "Fonctionnalité", "updatedAt": "2026-08-14" },
+    { "id": "SITE-5", "project": "SITE", "title": "Définir une charte d'accessibilité complète", "status": "planned", "priority": "Moyenne", "type": "Amélioration", "updatedAt": "2026-08-14" },
+    { "id": "BOOK-BIPY-1", "project": "BOOK-BIPY", "title": "Définir le jeu de données du premier projet", "status": "planned", "priority": "Haute", "type": "Tâche", "updatedAt": "2026-08-14" },
+    { "id": "BOOK-BIPY-2", "project": "BOOK-BIPY", "title": "Construire la collecte et le nettoyage multi-sources", "status": "backlog", "priority": "Moyenne", "type": "Projet", "updatedAt": "2026-08-14" },
+    { "id": "BOOK-BIPY-3", "project": "BOOK-BIPY", "title": "Modéliser un entrepôt de données décisionnel", "status": "backlog", "priority": "Moyenne", "type": "Projet", "updatedAt": "2026-08-14" },
+    { "id": "BOOK-BIPY-4", "project": "BOOK-BIPY", "title": "Automatiser le pipeline BI", "status": "backlog", "priority": "Basse", "type": "Projet", "updatedAt": "2026-08-14" },
+    { "id": "BOOK-BIPY-5", "project": "BOOK-BIPY", "title": "Créer un dashboard Python interactif", "status": "backlog", "priority": "Basse", "type": "Projet", "updatedAt": "2026-08-14" },
+    { "id": "ANALYSES-1", "project": "ANALYSES", "title": "Choisir le premier sujet à vérifier", "status": "planned", "priority": "Haute", "type": "Tâche", "updatedAt": "2026-08-14" }
+  ],
+  "incidents": [
+    { "id": "INC-1", "title": "Échec du premier déploiement GitHub Pages", "impact": "Site temporairement indisponible avant la première mise en ligne", "status": "Résolu", "severity": "Moyenne", "openedAt": "2026-07-21", "resolvedAt": "2026-07-21", "resolution": "Activation explicite de GitHub Pages dans le workflow de déploiement." }
+  ]
+}
+

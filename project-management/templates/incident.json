@@ -1,0 +1,11 @@
+{
+  "id": "INC-1",
+  "title": "Description courte de l'incident",
+  "impact": "Conséquence observable",
+  "status": "Ouvert",
+  "severity": "Moyenne",
+  "openedAt": "AAAA-MM-JJ",
+  "resolvedAt": null,
+  "resolution": ""
+}
+
