@@ -37,14 +37,6 @@ body:
       placeholder: Votre commentaire...
     validations:
       required: true
-  - type: input
-    id: contact
-    attributes:
-      label: Contact facultatif et public
-      description: Si vous souhaitez être recontacté, vous pouvez laisser une adresse. Elle sera visible publiquement dans cette issue GitHub, mais ne sera jamais reproduite sur le site.
-      placeholder: Laisser vide pour ne partager aucune coordonnée
-    validations:
-      required: false
   - type: checkboxes
     id: rules
     attributes:
@@ -52,4 +44,3 @@ body:
       options:
         - label: Je comprends que cette issue GitHub est publique et je n'y publie aucune donnée confidentielle.
           required: true
-

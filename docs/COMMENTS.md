@@ -22,5 +22,4 @@ Pour refuser un commentaire, utiliser `comment-rejected`. Une issue fermée n'es
 
 ## Vie privée
 
-Une issue d'un dépôt public est visible dès sa création. Le formulaire avertit donc explicitement les visiteurs de ne publier aucune donnée confidentielle. Le champ de contact est facultatif et public sur GitHub. Le site ne lit et n'affiche que le projet, le pseudonyme et le commentaire ; il ignore systématiquement le contact.
-
+Une issue d'un dépôt public est visible dès sa création. Le formulaire avertit donc explicitement les visiteurs de ne publier aucune donnée confidentielle. Il ne demande aucune adresse e-mail ni coordonnée de contact. Le site lit uniquement le projet, le pseudonyme et le commentaire.
