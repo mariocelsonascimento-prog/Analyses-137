@@ -122,7 +122,8 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .tracker-heading > p { margin:0; color:var(--muted); }
 .project-list { border-top:1px solid var(--ink); }
 .project-row { display:grid; grid-template-columns:100px 1fr 180px; gap:28px; align-items:center; padding:27px 0; border-bottom:1px solid var(--line); }
-.project-code { font:500 12px "DM Mono",monospace; color:#477168; }
+.project-code { display:flex; align-items:center; gap:10px; font:500 12px "DM Mono",monospace; color:var(--ink); }
+.project-code i,.ticket-project i { display:inline-block; flex:0 0 auto; width:10px; height:10px; border-radius:50%; background:var(--project-color); border:1px solid rgba(16,42,38,.45); }
 .project-title-line { display:flex; align-items:center; gap:13px; }
 .project-title-line h3 { margin:0; font-size:20px; letter-spacing:-.025em; }
 .project-title-line span { padding:3px 8px; border:1px solid var(--line); border-radius:99px; font:500 9px "DM Mono",monospace; text-transform:uppercase; }
@@ -130,6 +131,7 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .project-progress { text-align:right; }
 .project-progress strong { font-size:24px; }
 .project-progress > span { display:block; color:var(--muted); font:400 10px "DM Mono",monospace; }
+.project-row .progress-track i { background:var(--project-color); }
 .board-filters { display:flex; flex-direction:column; gap:7px; }
 .board-filters label { color:#9cb0ab; font:500 10px "DM Mono",monospace; text-transform:uppercase; }
 .board-filters select { width:100%; padding:11px 13px; border:1px solid rgba(255,255,255,.3); background:#183a34; color:var(--paper); font:500 12px "DM Mono",monospace; }
@@ -139,9 +141,11 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .kanban-column h3 { margin:0; font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
 .kanban-column header span { display:grid; place-items:center; width:22px; height:22px; border-radius:50%; background:rgba(255,255,255,.1); font:400 10px "DM Mono",monospace; }
 .ticket-list { padding:9px; }
-.ticket { margin-bottom:9px; padding:14px; background:var(--paper); color:var(--ink); border-left:3px solid var(--acid); }
+.ticket { margin-bottom:9px; padding:14px; background:var(--paper); color:var(--ink); border-left:4px solid var(--project-color); }
 .ticket-tags,.ticket footer { display:flex; justify-content:space-between; align-items:center; gap:10px; }
 .ticket-tags span,.priority { font:500 9px "DM Mono",monospace; text-transform:uppercase; }
+.ticket-project { display:flex; align-items:center; gap:6px; }
+.ticket-project i { width:8px; height:8px; }
 .priority { font-style:normal; color:var(--muted); }
 .priority-haute { color:#a73b31; }
 .priority-moyenne { color:#8b6119; }

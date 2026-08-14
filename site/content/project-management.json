@@ -8,9 +8,9 @@
     { "id": "done", "label": "Terminé" }
   ],
   "projects": [
-    { "id": "SITE", "name": "Portfolio Analyses 137", "type": "Site web", "status": "Actif", "description": "Construire le site public et ses parcours de présentation." },
-    { "id": "BOOK-BIPY", "name": "Business Intelligence avec Python", "type": "Livre", "status": "Actif", "description": "Transformer les apprentissages du livre en projets BI reproductibles." },
-    { "id": "ANALYSES", "name": "Sujets de conversation", "type": "Analyses", "status": "Préparation", "description": "Confronter des convictions courantes à des données publiques." }
+    { "id": "SITE", "name": "Portfolio Analyses 137", "type": "Site web", "status": "Actif", "color": "#d5ff45", "description": "Construire le site public et ses parcours de présentation." },
+    { "id": "BOOK-BIPY", "name": "Business Intelligence avec Python", "type": "Livre", "status": "Actif", "color": "#73b7ff", "description": "Transformer les apprentissages du livre en projets BI reproductibles." },
+    { "id": "ANALYSES", "name": "Sujets de conversation", "type": "Analyses", "status": "Préparation", "color": "#ff9478", "description": "Confronter des convictions courantes à des données publiques." }
   ],
   "issues": [
     { "id": "SITE-1", "project": "SITE", "title": "Structurer les données, analyses et dashboards", "status": "done", "priority": "Haute", "type": "Tâche", "updatedAt": "2026-07-21" },
@@ -29,4 +29,3 @@
     { "id": "INC-1", "title": "Échec du premier déploiement GitHub Pages", "impact": "Site temporairement indisponible avant la première mise en ligne", "status": "Résolu", "severity": "Moyenne", "openedAt": "2026-07-21", "resolvedAt": "2026-07-21", "resolution": "Activation explicite de GitHub Pages dans le workflow de déploiement." }
   ]
 }
-
