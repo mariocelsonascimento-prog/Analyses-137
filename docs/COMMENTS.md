@@ -8,7 +8,7 @@ Les commentaires utilisent exclusivement les GitHub Issues du dépôt public.
 2. Il choisit un projet, indique un pseudonyme et rédige son commentaire.
 3. L'issue reçoit automatiquement le label `comment-pending`.
 4. Après vérification, le propriétaire remplace ce label par `comment-approved` ou `comment-rejected`.
-5. Le site interroge l'API publique GitHub et affiche uniquement les issues ouvertes portant `comment-approved`.
+5. Le site interroge l'API publique GitHub et affiche uniquement les issues ouvertes portant `comment-approved`, directement sous le projet concerné.
 
 ## Approuver un commentaire
 

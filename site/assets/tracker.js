@@ -21,7 +21,8 @@ function renderTracker(data, projectFilter = "all") {
     const issues = data.issues.filter((issue) => issue.project === project.id);
     const complete = issues.filter((issue) => issue.status === "done").length;
     const rate = issues.length ? Math.round((complete / issues.length) * 100) : 0;
-    return `<article class="project-row" style="--project-color:${safeColor(project.color)}"><div class="project-code"><i aria-hidden="true"></i>${escapeHtml(project.id)}</div><div><div class="project-title-line"><h3>${escapeHtml(project.name)}</h3><span>${escapeHtml(project.status)}</span></div><p>${escapeHtml(project.description)}</p></div><div class="project-progress"><strong>${rate}%</strong><span>${complete}/${issues.length} tickets</span><div class="progress-track"><i style="width:${rate}%"></i></div></div></article>`;
+    const commentUrl = `https://github.com/mariocelsonascimento-prog/Analyses-137/issues/new?template=comment.yml&title=${encodeURIComponent(`[Commentaire ${project.id}] `)}`;
+    return `<article class="project-row" style="--project-color:${safeColor(project.color)}"><div class="project-code"><i aria-hidden="true"></i>${escapeHtml(project.id)}</div><div><div class="project-title-line"><h3>${escapeHtml(project.name)}</h3><span>${escapeHtml(project.status)}</span></div><p>${escapeHtml(project.description)}</p></div><div class="project-progress"><strong>${rate}%</strong><span>${complete}/${issues.length} tickets</span><div class="progress-track"><i style="width:${rate}%"></i></div></div><details class="project-comments"><summary><span><strong data-comment-count="${escapeHtml(project.id)}">Commentaires</strong><small>approuvés uniquement</small></span><span class="comments-toggle">Afficher</span></summary><div class="project-comments-body"><div data-project-comments="${escapeHtml(project.id)}" aria-live="polite"><p class="comments-loading">Chargement…</p></div><a class="project-comment-button" href="${commentUrl}">Commenter ce projet</a><p class="project-comments-notice">Compte GitHub requis. Aucune adresse e-mail ou coordonnée n'est demandée.</p></div></details></article>`;
   }).join("");
 
   const visible = projectFilter === "all" ? data.issues : data.issues.filter((issue) => issue.project === projectFilter);
@@ -31,9 +32,10 @@ function renderTracker(data, projectFilter = "all") {
   }).join("");
 
   document.querySelector("#incident-list").innerHTML = data.incidents.map((incident) => `<tr><td><strong>${escapeHtml(incident.id)}</strong></td><td><span>${escapeHtml(incident.title)}</span><small>${escapeHtml(incident.resolution)}</small></td><td>${escapeHtml(incident.severity)}</td><td><span class="incident-status">${escapeHtml(incident.status)}</span></td><td>${formatDate(incident.openedAt)}</td></tr>`).join("");
+  document.dispatchEvent(new CustomEvent("tracker:rendered"));
 }
 
-fetch("content/project-management.json?v=20260814-no-contact", { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Suivi indisponible"); return response.json(); }).then((data) => {
+fetch("content/project-management.json?v=20260814-inline-comments", { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Suivi indisponible"); return response.json(); }).then((data) => {
   trackerData = data;
   const select = document.querySelector("#project-filter");
   select.insertAdjacentHTML("beforeend", data.projects.map((project) => `<option value="${escapeHtml(project.id)}">${escapeHtml(project.id)} · ${escapeHtml(project.name)}</option>`).join(""));
