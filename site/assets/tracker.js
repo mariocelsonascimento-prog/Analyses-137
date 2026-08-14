@@ -30,7 +30,7 @@ function renderTracker(data, projectFilter = "all") {
   document.querySelector("#incident-list").innerHTML = data.incidents.map((incident) => `<tr><td><strong>${escapeHtml(incident.id)}</strong></td><td><span>${escapeHtml(incident.title)}</span><small>${escapeHtml(incident.resolution)}</small></td><td>${escapeHtml(incident.severity)}</td><td><span class="incident-status">${escapeHtml(incident.status)}</span></td><td>${formatDate(incident.openedAt)}</td></tr>`).join("");
 }
 
-fetch("content/project-management.json").then((response) => { if (!response.ok) throw new Error("Suivi indisponible"); return response.json(); }).then((data) => {
+fetch("content/project-management.json?v=20260814-colors", { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Suivi indisponible"); return response.json(); }).then((data) => {
   const select = document.querySelector("#project-filter");
   select.insertAdjacentHTML("beforeend", data.projects.map((project) => `<option value="${escapeHtml(project.id)}">${escapeHtml(project.id)} · ${escapeHtml(project.name)}</option>`).join(""));
   select.addEventListener("change", () => renderTracker(data, select.value));
