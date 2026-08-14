@@ -186,6 +186,22 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .ticket-dialog ul { margin:0; padding:0; list-style:none; border-top:1px solid var(--line); }
 .ticket-dialog li { padding:10px 0 10px 25px; border-bottom:1px solid var(--line); position:relative; }
 .ticket-dialog li::before { content:"✓"; position:absolute; left:0; font-weight:700; }
+.comments-section { padding-block:105px; background:#dedace; border-top:1px solid var(--line); }
+.comments-toolbar { display:flex; align-items:end; justify-content:space-between; gap:25px; padding:22px; background:var(--white); border:1px solid var(--ink); }
+.comments-toolbar > div { display:flex; flex-direction:column; gap:7px; min-width:min(100%,360px); }
+.comments-toolbar label { font:500 10px "DM Mono",monospace; text-transform:uppercase; color:var(--muted); }
+.comments-toolbar select { min-height:44px; padding:10px 12px; background:var(--paper); border:1px solid var(--ink); color:var(--ink); }
+.comments-notice { max-width:850px; margin:20px 0 36px; color:var(--muted); font-size:13px; }
+.comments-list { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+.public-comment { min-height:220px; padding:23px; display:flex; flex-direction:column; background:var(--white); border:1px solid var(--line); }
+.public-comment header { display:flex; justify-content:space-between; gap:20px; padding-bottom:14px; border-bottom:1px solid var(--line); }
+.public-comment header > div { display:flex; align-items:center; gap:10px; }
+.public-comment header strong { font-size:13px; }
+.public-comment time,.comment-project { font:500 9px "DM Mono",monospace; text-transform:uppercase; color:var(--muted); }
+.comment-project { padding:3px 6px; border:1px solid var(--line); color:var(--ink); }
+.public-comment > p { white-space:pre-wrap; }
+.public-comment > a { margin-top:auto; font-size:12px; font-weight:700; text-underline-offset:4px; }
+.comments-loading,.comments-empty { grid-column:1/-1; padding:30px; border:1px solid var(--line); background:var(--white); }
 .policy-main { padding-block:75px 110px; }
 .policy-hero { display:grid; grid-template-columns:1.25fr .75fr; gap:8%; align-items:end; padding-bottom:80px; border-bottom:1px solid var(--ink); }
 .policy-hero .eyebrow { grid-column:1/-1; }
@@ -246,6 +262,8 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
   .dialog-meta { grid-template-columns:1fr 1fr; }
   .dialog-meta > span:nth-child(2) { border-right:0; }
   .dialog-meta > span:nth-child(-n+2) { border-bottom:1px solid var(--line); }
+  .comments-toolbar { align-items:stretch; flex-direction:column; }
+  .comments-list { grid-template-columns:1fr; }
   .policy-hero { align-items:start; }
   .analysis-card { min-height:340px; border-left:1px solid var(--line); }
   .method-grid li,.method-grid li + li { padding:28px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.18); }

@@ -1,0 +1,55 @@
+name: Proposer un commentaire
+description: Commenter publiquement un projet Analyses 137
+title: "[Commentaire] "
+labels:
+  - comment-pending
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci pour votre commentaire. Il sera visible sur le site uniquement après validation.
+
+        **Important : l'issue GitHub est publique dès son envoi.** N'indiquez aucune information que vous ne souhaitez pas rendre publique.
+  - type: dropdown
+    id: project
+    attributes:
+      label: Projet
+      description: Sélectionnez le projet concerné.
+      options:
+        - SITE — Portfolio Analyses 137
+        - BOOK-BIPY — Business Intelligence avec Python
+        - ANALYSES — Sujets de conversation
+    validations:
+      required: true
+  - type: input
+    id: pseudonym
+    attributes:
+      label: Pseudonyme
+      description: Le nom qui sera affiché avec votre commentaire sur le site.
+      placeholder: Votre pseudonyme public
+    validations:
+      required: true
+  - type: textarea
+    id: comment
+    attributes:
+      label: Commentaire
+      description: Partagez une remarque constructive sur le projet.
+      placeholder: Votre commentaire...
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact facultatif et public
+      description: Si vous souhaitez être recontacté, vous pouvez laisser une adresse. Elle sera visible publiquement dans cette issue GitHub, mais ne sera jamais reproduite sur le site.
+      placeholder: Laisser vide pour ne partager aucune coordonnée
+    validations:
+      required: false
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Confirmation
+      options:
+        - label: Je comprends que cette issue GitHub est publique et je n'y publie aucune donnée confidentielle.
+          required: true
+
