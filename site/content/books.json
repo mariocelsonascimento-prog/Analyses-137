@@ -1,0 +1,22 @@
+[
+  {
+    "id": "business-intelligence-avec-python",
+    "number": "L01",
+    "title": "Business Intelligence avec Python",
+    "subtitle": "Créez vos outils BI de A à Z",
+    "author": "Gaël Penessot",
+    "publisher": "Éditions ENI",
+    "year": 2025,
+    "isbn": "978-2-409-04804-3",
+    "status": "Livre ajouté",
+    "sourceUrl": "https://www.editions-eni.fr/livre/business-intelligence-avec-python-creez-vos-outils-bi-de-a-a-z-9782409048043",
+    "repoPath": "https://github.com/mariocelsonascimento-prog/Analyses-137/tree/main/books/business-intelligence-avec-python",
+    "projects": [
+      { "title": "Collecte et nettoyage multi-sources", "status": "Planifié" },
+      { "title": "Entrepôt de données décisionnel", "status": "Planifié" },
+      { "title": "Pipeline BI automatisé", "status": "Planifié" },
+      { "title": "Dashboard Python interactif", "status": "Planifié" }
+    ]
+  }
+]
+

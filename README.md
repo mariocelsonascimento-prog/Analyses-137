@@ -16,6 +16,7 @@ Le projet présentera des analyses claires, sourcées et reproductibles, avec de
 
 ```text
 analyses/        Etudes de cas, methodes et resultats
+books/           Projets pratiques inspires de livres
 dashboards/      Sources et exports Tableau, Power BI, Excel et web
 data/catalog/    Fiches de tracabilite des jeux de donnees
 data/raw/        Donnees publiques originales
@@ -33,6 +34,13 @@ templates/       Modeles d'analyse et de source
 3. Copier `templates/pipeline/` dans `pipelines/<sujet>/` et documenter son exécution.
 4. Placer le dashboard ou ses instructions dans `dashboards/`.
 5. Publier le contexte, la méthode, les résultats, les sources et les limites.
+
+## Ajouter un projet basé sur un livre
+
+1. Créer `books/<identifiant-du-livre>/` avec la référence bibliographique.
+2. Définir les projets envisagés et afficher leur statut réel.
+3. Publier uniquement le code personnel, les données autorisées et les résultats produits.
+4. Ajouter le livre au catalogue `site/content/books.json`.
 
 ## Reproduire un traitement
 

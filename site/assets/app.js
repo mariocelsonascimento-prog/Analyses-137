@@ -2,6 +2,7 @@ const grid = document.querySelector("#analysis-grid");
 const filters = [...document.querySelectorAll(".filter")];
 const menuButton = document.querySelector(".menu-button");
 const navigation = document.querySelector("#navigation");
+const booksGrid = document.querySelector("#books-grid");
 
 const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, (character) => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
@@ -43,6 +44,39 @@ fetch("content/analyses.json")
   })
   .catch(() => { grid.innerHTML = '<p class="empty-state">Le catalogue ne peut pas être chargé.</p>'; });
 
+function renderBooks(books) {
+  booksGrid.innerHTML = books.map((book) => `
+    <article class="book-card">
+      <div class="book-cover" aria-hidden="true">
+        <span>${escapeHtml(book.number)}</span>
+        <strong>BI<br>PY</strong>
+        <small>${escapeHtml(book.year)}</small>
+      </div>
+      <div class="book-content">
+        <div class="book-kicker"><span>${escapeHtml(book.status)}</span><span>${escapeHtml(book.publisher)}</span></div>
+        <h3>${escapeHtml(book.title)}</h3>
+        <p class="book-subtitle">${escapeHtml(book.subtitle)}</p>
+        <p class="book-author">de <strong>${escapeHtml(book.author)}</strong></p>
+        <div class="book-projects">
+          <p class="project-label">Projets associés</p>
+          <ol>${book.projects.map((project) => `<li><span>${escapeHtml(project.title)}</span><small>${escapeHtml(project.status)}</small></li>`).join("")}</ol>
+        </div>
+        <div class="book-links">
+          <a href="${escapeHtml(book.repoPath)}">Voir le dossier projet</a>
+          <a href="${escapeHtml(book.sourceUrl)}">Référence du livre</a>
+        </div>
+      </div>
+    </article>`).join("");
+}
+
+fetch("content/books.json")
+  .then((response) => {
+    if (!response.ok) throw new Error("Catalogue indisponible");
+    return response.json();
+  })
+  .then(renderBooks)
+  .catch(() => { booksGrid.innerHTML = '<p class="empty-state">Le catalogue des livres ne peut pas être chargé.</p>'; });
+
 menuButton.addEventListener("click", () => {
   const open = menuButton.getAttribute("aria-expanded") === "true";
   menuButton.setAttribute("aria-expanded", String(!open));
@@ -57,4 +91,3 @@ navigation.addEventListener("click", (event) => {
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
-

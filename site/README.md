@@ -16,3 +16,7 @@ Puis ouvrir `http://127.0.0.1:4173`.
 
 Modifier `content/analyses.json`. Une fiche complète pourra ensuite utiliser le même identifiant comme nom de dossier dans `analyses/`.
 
+## Ajouter un livre
+
+Modifier `content/books.json`, puis créer un dossier portant le même identifiant dans `books/`. Les projets restent marqués comme planifiés tant que leur code et leurs résultats ne sont pas publiés.
+
