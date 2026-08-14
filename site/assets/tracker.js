@@ -9,6 +9,7 @@ function renderTracker(data, projectFilter = "all") {
   const progress = data.issues.length ? Math.round((done / data.issues.length) * 100) : 0;
   document.querySelector("#metric-progress").textContent = `${progress}%`;
   document.querySelector("#progress-bar").style.width = `${progress}%`;
+  document.querySelector("#global-progress").setAttribute("aria-valuenow", String(progress));
   document.querySelector("#metric-open").textContent = data.issues.length - done;
   document.querySelector("#metric-projects").textContent = data.projects.filter((project) => project.status === "Actif").length;
   document.querySelector("#metric-incidents").textContent = data.incidents.filter((incident) => incident.status !== "Résolu").length;
@@ -30,7 +31,7 @@ function renderTracker(data, projectFilter = "all") {
   document.querySelector("#incident-list").innerHTML = data.incidents.map((incident) => `<tr><td><strong>${escapeHtml(incident.id)}</strong></td><td><span>${escapeHtml(incident.title)}</span><small>${escapeHtml(incident.resolution)}</small></td><td>${escapeHtml(incident.severity)}</td><td><span class="incident-status">${escapeHtml(incident.status)}</span></td><td>${formatDate(incident.openedAt)}</td></tr>`).join("");
 }
 
-fetch("content/project-management.json?v=20260814-colors", { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Suivi indisponible"); return response.json(); }).then((data) => {
+fetch("content/project-management.json?v=20260814-accessibility", { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Suivi indisponible"); return response.json(); }).then((data) => {
   const select = document.querySelector("#project-filter");
   select.insertAdjacentHTML("beforeend", data.projects.map((project) => `<option value="${escapeHtml(project.id)}">${escapeHtml(project.id)} · ${escapeHtml(project.name)}</option>`).join(""));
   select.addEventListener("change", () => renderTracker(data, select.value));
@@ -38,4 +39,5 @@ fetch("content/project-management.json?v=20260814-colors", { cache: "no-store" }
 }).catch(() => { document.querySelector("#kanban-board").innerHTML = '<p class="empty-state">Les données de suivi ne peuvent pas être chargées.</p>'; });
 
 menuButton.addEventListener("click", () => { const open = menuButton.getAttribute("aria-expanded") === "true"; menuButton.setAttribute("aria-expanded", String(!open)); navigation.classList.toggle("is-open", !open); });
+document.addEventListener("keydown", (event) => { if (event.key === "Escape" && navigation.classList.contains("is-open")) { menuButton.setAttribute("aria-expanded", "false"); navigation.classList.remove("is-open"); menuButton.focus(); } });
 document.querySelector("#year").textContent = new Date().getFullYear();

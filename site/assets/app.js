@@ -28,7 +28,7 @@ function renderAnalyses(items) {
   }).join("");
 }
 
-fetch("content/analyses.json")
+if (grid) fetch("content/analyses.json")
   .then((response) => {
     if (!response.ok) throw new Error("Catalogue indisponible");
     return response.json();
@@ -37,7 +37,9 @@ fetch("content/analyses.json")
     renderAnalyses(analyses);
     filters.forEach((button) => button.addEventListener("click", () => {
       filters.forEach((filter) => filter.classList.remove("is-active"));
+      filters.forEach((filter) => filter.setAttribute("aria-pressed", "false"));
       button.classList.add("is-active");
+      button.setAttribute("aria-pressed", "true");
       const selected = button.dataset.filter;
       renderAnalyses(selected === "all" ? analyses : analyses.filter((item) => item.category === selected));
     }));
@@ -69,7 +71,7 @@ function renderBooks(books) {
     </article>`).join("");
 }
 
-fetch("content/books.json")
+if (booksGrid) fetch("content/books.json")
   .then((response) => {
     if (!response.ok) throw new Error("Catalogue indisponible");
     return response.json();
@@ -87,6 +89,14 @@ navigation.addEventListener("click", (event) => {
   if (event.target.matches("a")) {
     menuButton.setAttribute("aria-expanded", "false");
     navigation.classList.remove("is-open");
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navigation.classList.contains("is-open")) {
+    menuButton.setAttribute("aria-expanded", "false");
+    navigation.classList.remove("is-open");
+    menuButton.focus();
   }
 });
 

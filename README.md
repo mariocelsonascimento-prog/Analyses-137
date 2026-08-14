@@ -50,3 +50,5 @@ Chaque pipeline public précise son environnement, ses données d'entrée, les c
 ## Statut
 
 Le dépôt est en phase de structuration initiale.
+
+La démarche d'accessibilité du site est documentée dans `docs/ACCESSIBILITY.md` et publiée sur la page `site/accessibilite.html`.

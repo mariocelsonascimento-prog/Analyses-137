@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#f4f1e8">
   <title>Analyses 137 — Des convictions aux données</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/app.js" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20260814-accessibility">
+  <script src="assets/app.js?v=20260814-accessibility" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -68,10 +68,10 @@
         <p>Les premiers dossiers sont en préparation. Leur statut est affiché sans maquiller l'avancement.</p>
       </div>
       <div class="filters" role="group" aria-label="Filtrer les analyses">
-        <button class="filter is-active" type="button" data-filter="all">Toutes</button>
-        <button class="filter" type="button" data-filter="societe">Société</button>
-        <button class="filter" type="button" data-filter="economie">Économie</button>
-        <button class="filter" type="button" data-filter="environnement">Environnement</button>
+        <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Toutes</button>
+        <button class="filter" type="button" data-filter="societe" aria-pressed="false">Société</button>
+        <button class="filter" type="button" data-filter="economie" aria-pressed="false">Économie</button>
+        <button class="filter" type="button" data-filter="environnement" aria-pressed="false">Environnement</button>
       </div>
       <div id="analysis-grid" class="analysis-grid" aria-live="polite"></div>
       <noscript><p>Activez JavaScript pour afficher le catalogue des analyses.</p></noscript>
@@ -123,7 +123,7 @@
   <footer class="site-footer">
     <div class="section-shell footer-grid">
       <div><a class="brand footer-brand" href="#accueil"><span class="brand-mark">137</span><span>Analyses</span></a><p>Des analyses publiques, vérifiables et sans fausse certitude.</p></div>
-      <div><p class="footer-label">Projet</p><a href="#analyses">Analyses</a><a href="#livres">Livres</a><a href="suivi.html">Suivi</a><a href="#methode">Méthode</a><a href="https://github.com/mariocelsonascimento-prog/Analyses-137">GitHub</a></div>
+      <div><p class="footer-label">Projet</p><a href="#analyses">Analyses</a><a href="#livres">Livres</a><a href="suivi.html">Suivi</a><a href="#methode">Méthode</a><a href="accessibilite.html">Accessibilité</a><a href="https://github.com/mariocelsonascimento-prog/Analyses-137">GitHub</a></div>
       <p class="copyright">© <span id="year"></span> Analyses 137</p>
     </div>
   </footer>

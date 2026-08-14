@@ -17,7 +17,7 @@
     { "id": "SITE-2", "project": "SITE", "title": "Créer et déployer la page d'accueil", "status": "done", "priority": "Haute", "type": "Fonctionnalité", "updatedAt": "2026-07-21" },
     { "id": "SITE-3", "project": "SITE", "title": "Ajouter le catalogue de projets basés sur des livres", "status": "done", "priority": "Moyenne", "type": "Fonctionnalité", "updatedAt": "2026-08-14" },
     { "id": "SITE-4", "project": "SITE", "title": "Créer le suivi public des projets et incidents", "status": "review", "priority": "Haute", "type": "Fonctionnalité", "updatedAt": "2026-08-14" },
-    { "id": "SITE-5", "project": "SITE", "title": "Définir une charte d'accessibilité complète", "status": "planned", "priority": "Moyenne", "type": "Amélioration", "updatedAt": "2026-08-14" },
+    { "id": "SITE-5", "project": "SITE", "title": "Définir une charte d'accessibilité complète", "status": "done", "priority": "Moyenne", "type": "Amélioration", "updatedAt": "2026-08-14" },
     { "id": "BOOK-BIPY-1", "project": "BOOK-BIPY", "title": "Définir le jeu de données du premier projet", "status": "planned", "priority": "Haute", "type": "Tâche", "updatedAt": "2026-08-14" },
     { "id": "BOOK-BIPY-2", "project": "BOOK-BIPY", "title": "Construire la collecte et le nettoyage multi-sources", "status": "backlog", "priority": "Moyenne", "type": "Projet", "updatedAt": "2026-08-14" },
     { "id": "BOOK-BIPY-3", "project": "BOOK-BIPY", "title": "Modéliser un entrepôt de données décisionnel", "status": "backlog", "priority": "Moyenne", "type": "Projet", "updatedAt": "2026-08-14" },

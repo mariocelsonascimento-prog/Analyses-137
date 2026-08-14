@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#f4f1e8">
   <title>Suivi des projets — Analyses 137</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=20260814-colors">
-  <script src="assets/tracker.js?v=20260814-colors" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20260814-accessibility">
+  <script src="assets/tracker.js?v=20260814-accessibility" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -30,7 +30,7 @@
     </section>
 
     <section class="section-shell tracker-summary" aria-label="Indicateurs de suivi">
-      <div><span>Progression globale</span><strong id="metric-progress">—</strong><div class="progress-track"><i id="progress-bar"></i></div></div>
+      <div><span>Progression globale</span><strong id="metric-progress">—</strong><div id="global-progress" class="progress-track" role="progressbar" aria-label="Progression globale des tickets" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="progress-bar"></i></div></div>
       <div><span>Tickets ouverts</span><strong id="metric-open">—</strong></div>
       <div><span>Projets actifs</span><strong id="metric-projects">—</strong></div>
       <div><span>Incidents ouverts</span><strong id="metric-incidents">—</strong></div>
@@ -50,10 +50,10 @@
 
     <section class="tracker-section section-shell">
       <div class="tracker-heading"><div><p class="eyebrow">Fiabilité</p><h2>Registre des incidents</h2></div><p>Les problèmes significatifs restent visibles après leur résolution.</p></div>
-      <div class="incident-table-wrap"><table class="incident-table"><thead><tr><th>Identifiant</th><th>Incident</th><th>Impact</th><th>Statut</th><th>Date</th></tr></thead><tbody id="incident-list"></tbody></table></div>
+      <div class="incident-table-wrap"><table class="incident-table"><caption class="sr-only">Incidents ayant affecté Analyses 137, avec leur impact, leur statut et leur date</caption><thead><tr><th scope="col">Identifiant</th><th scope="col">Incident</th><th scope="col">Impact</th><th scope="col">Statut</th><th scope="col">Date</th></tr></thead><tbody id="incident-list"></tbody></table></div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="section-shell footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark">137</span><span>Analyses</span></a><p>Un avancement public, vérifiable et versionné.</p></div><div><p class="footer-label">Navigation</p><a href="index.html">Accueil</a><a href="suivi.html">Suivi</a><a href="https://github.com/mariocelsonascimento-prog/Analyses-137">GitHub</a></div><p class="copyright">© <span id="year"></span> Analyses 137</p></div></footer>
+  <footer class="site-footer"><div class="section-shell footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark">137</span><span>Analyses</span></a><p>Un avancement public, vérifiable et versionné.</p></div><div><p class="footer-label">Navigation</p><a href="index.html">Accueil</a><a href="suivi.html">Suivi</a><a href="accessibilite.html">Accessibilité</a><a href="https://github.com/mariocelsonascimento-prog/Analyses-137">GitHub</a></div><p class="copyright">© <span id="year"></span> Analyses 137</p></div></footer>
 </body>
 </html>
