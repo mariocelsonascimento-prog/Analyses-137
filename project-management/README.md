@@ -14,6 +14,8 @@ Chaque projet possède une couleur hexadécimale dans le champ `color`. Elle ser
 
 Un ticket ne passe pas directement de « Planifié » à « Terminé » sans que la réalisation et sa validation puissent être constatées.
 
+Chaque ticket doit aussi fournir une `description` compréhensible et une liste de `deliverables` vérifiables. Ces informations sont affichées dans la fenêtre de détail du Kanban.
+
 ## Identifiants
 
 - `SITE-n` : évolution du portfolio ;

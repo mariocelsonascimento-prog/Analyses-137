@@ -5,6 +5,9 @@
   "status": "backlog",
   "priority": "Moyenne",
   "type": "Tâche",
-  "updatedAt": "AAAA-MM-JJ"
+  "updatedAt": "AAAA-MM-JJ",
+  "description": "Contexte, objectif et résultat attendu du ticket.",
+  "deliverables": [
+    "Premier livrable vérifiable"
+  ]
 }
-

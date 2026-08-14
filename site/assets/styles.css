@@ -143,17 +143,18 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .kanban-column h3 { margin:0; font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
 .kanban-column header span { display:grid; place-items:center; width:22px; height:22px; border-radius:50%; background:rgba(255,255,255,.1); font:400 10px "DM Mono",monospace; }
 .ticket-list { padding:9px; }
-.ticket { margin-bottom:9px; padding:14px; background:var(--paper); color:var(--ink); border-left:4px solid var(--project-color); }
-.ticket-tags,.ticket footer { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.ticket { width:100%; margin-bottom:9px; padding:14px; text-align:left; font-family:inherit; background:var(--paper); color:var(--ink); border:0; border-left:4px solid var(--project-color); cursor:pointer; transition:transform .15s ease,box-shadow .15s ease; }
+.ticket:hover { transform:translateY(-2px); box-shadow:0 5px 0 rgba(0,0,0,.16); }
+.ticket-tags,.ticket-footer { display:flex; justify-content:space-between; align-items:center; gap:10px; }
 .ticket-tags span,.priority { font:500 9px "DM Mono",monospace; text-transform:uppercase; }
 .ticket-project { display:flex; align-items:center; gap:6px; }
 .ticket-project i { width:8px; height:8px; }
 .priority { font-style:normal; color:var(--muted); }
 .priority-haute { color:#a73b31; }
 .priority-moyenne { color:#8b6119; }
-.ticket h4 { margin:21px 0 25px; font-size:14px; line-height:1.35; }
-.ticket footer { padding-top:10px; border-top:1px solid var(--line); font:400 9px "DM Mono",monospace; }
-.ticket footer time { color:var(--muted); }
+.ticket-title { display:block; margin:21px 0 25px; font-size:14px; line-height:1.35; font-weight:700; }
+.ticket-footer { padding-top:10px; border-top:1px solid var(--line); font:400 9px "DM Mono",monospace; }
+.ticket-footer time { color:var(--muted); }
 .empty-column { padding:15px 5px; color:#829c96; font-size:12px; }
 .incident-table-wrap { overflow-x:auto; }
 .incident-table { width:100%; border-collapse:collapse; border-top:1px solid var(--ink); font-size:13px; }
@@ -162,6 +163,26 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .incident-table td:nth-child(2) span,.incident-table td:nth-child(2) small { display:block; }
 .incident-table td:nth-child(2) small { max-width:550px; margin-top:5px; color:var(--muted); }
 .incident-status { padding:4px 8px; background:#dce7dc; color:#285944; font:500 9px "DM Mono",monospace; text-transform:uppercase; }
+.ticket-dialog { width:min(720px,calc(100% - 28px)); max-height:calc(100vh - 40px); padding:34px; color:var(--ink); background:var(--paper); border:1px solid var(--ink); box-shadow:18px 18px 0 rgba(0,0,0,.24); }
+.ticket-dialog::backdrop { background:rgba(7,24,21,.72); backdrop-filter:blur(3px); }
+.dialog-header { display:flex; justify-content:space-between; align-items:start; gap:20px; }
+.dialog-header .eyebrow { margin:8px 0 0; }
+.dialog-close { min-width:44px; min-height:44px; padding:8px 13px; background:transparent; border:1px solid var(--ink); cursor:pointer; }
+.dialog-project { display:flex; align-items:center; gap:9px; margin-top:32px; font:500 11px "DM Mono",monospace; text-transform:uppercase; }
+.dialog-project i { width:11px; height:11px; border-radius:50%; background:var(--project-color); border:1px solid var(--ink); }
+.ticket-dialog > h2 { margin:16px 0 30px; font-size:clamp(32px,5vw,54px); line-height:1; letter-spacing:-.05em; }
+.dialog-meta { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); }
+.dialog-meta > span { padding:12px; border-right:1px solid var(--line); }
+.dialog-meta > span:last-child { border-right:0; }
+.dialog-meta small,.dialog-meta strong { display:block; }
+.dialog-meta small { color:var(--muted); font:500 9px "DM Mono",monospace; text-transform:uppercase; }
+.dialog-meta strong { margin-top:5px; font-size:12px; }
+.ticket-dialog section { margin-top:30px; }
+.ticket-dialog section h3 { margin:0 0 8px; font-size:15px; }
+.ticket-dialog section p { margin:0; color:var(--muted); }
+.ticket-dialog ul { margin:0; padding:0; list-style:none; border-top:1px solid var(--line); }
+.ticket-dialog li { padding:10px 0 10px 25px; border-bottom:1px solid var(--line); position:relative; }
+.ticket-dialog li::before { content:"✓"; position:absolute; left:0; font-weight:700; }
 .policy-main { padding-block:75px 110px; }
 .policy-hero { display:grid; grid-template-columns:1.25fr .75fr; gap:8%; align-items:end; padding-bottom:80px; border-bottom:1px solid var(--ink); }
 .policy-hero .eyebrow { grid-column:1/-1; }
@@ -219,6 +240,9 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
   .project-progress { text-align:left; }
   .kanban-board { margin-right:-14px; }
   .policy-hero,.policy-main > section,.commitment-grid { grid-template-columns:1fr; }
+  .dialog-meta { grid-template-columns:1fr 1fr; }
+  .dialog-meta > span:nth-child(2) { border-right:0; }
+  .dialog-meta > span:nth-child(-n+2) { border-bottom:1px solid var(--line); }
   .policy-hero { align-items:start; }
   .analysis-card { min-height:340px; border-left:1px solid var(--line); }
   .method-grid li,.method-grid li + li { padding:28px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.18); }
