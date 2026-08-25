@@ -109,3 +109,15 @@ Les lycées disposant d'une valeur ajoutée de réussite ont été répartis sel
 | Total renseigné | 693 | 100,00 % | 1 514 | 100,00 % |
 
 Les six effectifs et leurs proportions ont été reproduits directement depuis le CSV brut. La distribution est plus favorable au privé sous contrat dans les données 2025. Ce constat descriptif ne mesure pas un effet causal du secteur et n'élimine pas les autres effets de composition.
+
+## 2026-08-25 — Quartiles de la valeur ajoutée de réussite
+
+Les quartiles inclusifs ont été calculés dans `ANALYSE_2025` en excluant les valeurs vides, puis reproduits depuis le CSV brut avec la même convention d'interpolation qu'Excel.
+
+| Indicateur | Privé sous contrat | Public |
+| --- | ---: | ---: |
+| Q1 | 0 | -2 |
+| Médiane | 1 | 0 |
+| Q3 | 1 | 1 |
+
+Les 50 % centraux se situent donc entre 0 et +1 point dans le privé sous contrat, contre -2 à +1 points dans le public. Le secteur public présente une partie basse de distribution plus défavorable ; un box plot permettra ensuite de rendre cette dispersion visible.
