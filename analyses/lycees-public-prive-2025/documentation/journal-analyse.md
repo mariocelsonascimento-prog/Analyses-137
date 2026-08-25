@@ -148,3 +148,15 @@ Ces quatre valeurs ont été reproduites depuis le CSV brut. Chaque extrême peu
 | Maximum | +10 | +36 |
 
 Cette synthèse clôt le premier calcul descriptif de la réussite au bac. Elle sera complétée par les visualisations et par les indicateurs de mentions et d'accès avant la conclusion générale.
+
+## 2026-08-25 — Début de l'analyse des mentions
+
+La moyenne simple du taux de mentions a été calculée par secteur dans un tableau croisé de `ANALYSE_2025`, puis reproduite depuis le CSV brut.
+
+| Secteur | Lycées | Moyenne du taux de mentions |
+| --- | ---: | ---: |
+| Privé sous contrat | 784 | 73,5268 % |
+| Public | 1 562 | 58,0627 % |
+| Ensemble | 2 346 | 63,2306 % |
+
+L'écart moyen brut est de 15,4640 points en faveur du privé sous contrat. Dans ce calcul, chaque lycée compte autant, quel que soit le nombre de candidats. Ce premier constat doit encore être complété par le taux pondéré et par la valeur ajoutée des mentions.
