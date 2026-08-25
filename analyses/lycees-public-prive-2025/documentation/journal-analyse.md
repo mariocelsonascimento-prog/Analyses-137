@@ -160,3 +160,13 @@ La moyenne simple du taux de mentions a été calculée par secteur dans un tabl
 | Ensemble | 2 346 | 63,2306 % |
 
 L'écart moyen brut est de 15,4640 points en faveur du privé sous contrat. Dans ce calcul, chaque lycée compte autant, quel que soit le nombre de candidats. Ce premier constat doit encore être complété par le taux pondéré et par la valeur ajoutée des mentions.
+
+## 2026-08-25 — Taux de mentions pondéré
+
+| Secteur | Candidats présents | Somme taux x présents | Taux de mentions pondéré |
+| --- | ---: | ---: | ---: |
+| Privé sous contrat | 107 343 | 8 314 231 | 77,4548 % |
+| Public | 403 555 | 23 352 100 | 57,8660 % |
+| Ensemble | 510 898 | 31 666 331 | 61,9837 % |
+
+L'écart pondéré est de 19,5888 points en faveur du privé sous contrat. En langage courant, environ 77 mentions sont obtenues pour 100 candidats présents dans le privé sous contrat, contre environ 58 pour 100 dans le public. Ce résultat reste brut : il ne tient pas encore compte des taux attendus selon les profils des élèves.

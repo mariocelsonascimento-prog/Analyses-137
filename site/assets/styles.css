@@ -324,9 +324,10 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .mentions-numbers { display:grid; grid-template-columns:1fr 1fr; margin-top:30px; border-top:1px solid rgba(255,255,255,.2); }
 .mentions-numbers article { padding:20px 0; border-right:1px solid rgba(255,255,255,.2); }
 .mentions-numbers article + article { padding-left:25px; border-right:0; }
-.mentions-numbers span,.mentions-numbers strong { display:block; }
+.mentions-numbers span,.mentions-numbers strong,.mentions-numbers small { display:block; }
 .mentions-numbers span { color:#b5c5c1; font:500 10px "DM Mono",monospace; text-transform:uppercase; }
 .mentions-numbers strong { color:#cfc7ff; font-size:38px; }
+.mentions-numbers small { color:#b5c5c1; }
 .mentions-preview > p:last-child { max-width:850px; color:#c0cfcb; }
 @media (max-width:900px) {
   .tracker-hero { grid-template-columns:1fr; }
