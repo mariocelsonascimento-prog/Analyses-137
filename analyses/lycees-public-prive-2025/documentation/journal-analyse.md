@@ -81,3 +81,18 @@ Si le taux observé ou la valeur ajoutée est vide, le taux attendu reste vide.
 ### Reste à rendre reproductible
 
 Cette préparation a été validée manuellement dans Excel Online, mais le classeur n'est pas encore présent dans le dépôt. Un export de `DATA_2025` et un script permettant de le reconstruire depuis le CSV brut restent nécessaires pour terminer le ticket de traitement.
+
+## 2026-08-25 — Feuille de synthèse ANALYSE_2025
+
+Une feuille `ANALYSE_2025` distincte de la table détaillée a été créée. Elle contient les résultats calculés et référence directement `DATA_2025`, sans dupliquer les 2 346 lignes.
+
+Le premier tableau calcule la médiane de la valeur ajoutée de réussite en excluant les cellules vides avec `MEDIANE` et `FILTRE`.
+
+### Contrôle indépendant depuis le CSV brut
+
+| Secteur | Lycées renseignés | Médiane VA réussite |
+| --- | ---: | ---: |
+| Privé sous contrat | 693 | +1 point |
+| Public | 1 514 | 0 point |
+
+La médiane décrit le lycée typique de chaque secteur et complète la moyenne. Elle ne suffit pas encore à caractériser la distribution complète.
