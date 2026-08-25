@@ -1,15 +1,15 @@
 [
   {
-    "id": "premier-sujet",
+    "id": "lycees-public-prive-2025",
     "number": "001",
     "category": "societe",
-    "categoryLabel": "Société",
-    "title": "Premier sujet à définir",
-    "summary": "La première conviction sera transformée en question vérifiable, avec ses données, son code et ses limites.",
-    "status": "En préparation",
-    "tool": "À définir",
-    "updatedAt": "2026-07-21",
-    "href": null
+    "categoryLabel": "Éducation",
+    "title": "Public ou privé : que disent vraiment les résultats des lycées ?",
+    "summary": "Comparer les résultats observés et attendus des lycées en 2025, sans confondre association et causalité.",
+    "status": "Cadrage",
+    "tool": "Tableau",
+    "updatedAt": "2026-08-25",
+    "href": "analyses/lycees-public-prive-2025.html"
   },
   {
     "id": "economie",
@@ -36,4 +36,3 @@
     "href": null
   }
 ]
-

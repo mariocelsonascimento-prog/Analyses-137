@@ -19,6 +19,7 @@ body:
         - SITE — Portfolio Analyses 137
         - BOOK-BIPY — Business Intelligence avec Python
         - ANALYSES — Sujets de conversation
+        - IVAL-2025 — Lycées publics et privés
     validations:
       required: true
   - type: input

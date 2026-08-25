@@ -35,7 +35,7 @@ function renderTracker(data, projectFilter = "all") {
   document.dispatchEvent(new CustomEvent("tracker:rendered"));
 }
 
-fetch("content/project-management.json?v=20260814-inline-comments", { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Suivi indisponible"); return response.json(); }).then((data) => {
+fetch("content/project-management.json?v=20260825-ival", { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Suivi indisponible"); return response.json(); }).then((data) => {
   trackerData = data;
   const select = document.querySelector("#project-filter");
   select.insertAdjacentHTML("beforeend", data.projects.map((project) => `<option value="${escapeHtml(project.id)}">${escapeHtml(project.id)} · ${escapeHtml(project.name)}</option>`).join(""));

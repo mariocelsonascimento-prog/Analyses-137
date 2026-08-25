@@ -1,0 +1,28 @@
+id: ival-lycees-gt-2012-2025
+title: Indicateurs de valeur ajoutée des lycées d'enseignement général et technologique
+publisher: DEPP - Ministère chargé de l'Éducation nationale
+source_url: https://data.education.gouv.fr/explore/dataset/fr-en-indicateurs-de-resultat-des-lycees-gt_v2/
+license:
+  name: Licence Ouverte 2.0 (Etalab)
+  url: https://www.etalab.gouv.fr/licence-ouverte-open-licence/
+version: "données 2012-2025; métadonnées modifiées le 2026-06-10"
+published_at: "2026-06-10"
+retrieved_at: "2026-08-25"
+coverage: France, lycées publics et privés sous contrat, sessions 2012 à 2025
+format: csv
+delimiter: semicolon
+encoding: utf-8-bom
+rows: 32485
+columns: 88
+sha256: EC5FF514E63B9FD1F152AB8844ACC87315C65DABFDAC4073F9B4890E438F703C
+files:
+  raw: analyses/lycees-public-prive-2025/data/raw/fr-en-indicateurs-de-resultat-des-lycees-gt_v2.csv
+  processed: analyses/lycees-public-prive-2025/data/processed/ival_lycees_2025_prepare.csv
+transformations:
+  - Aucune transformation appliquée au fichier brut archivé
+  - La future copie traitée filtrera 2025 et conservera les 21 colonnes documentées
+limitations:
+  - Les valeurs ajoutées peuvent être non déterminées, notamment pour de faibles effectifs
+  - Les indicateurs permettent une comparaison relative et ne démontrent pas un effet causal du secteur
+  - Les trois indicateurs doivent être interprétés ensemble et non comme un palmarès
+personal_data: false
