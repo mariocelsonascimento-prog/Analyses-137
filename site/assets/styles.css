@@ -276,6 +276,8 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .case-roadmap strong { font-size:18px; }
 .case-roadmap p { margin:3px 0 0; color:var(--muted); }
 .case-roadmap .is-done > span::after { content:" ✓"; color:#6756c7; font-weight:700; }
+.case-roadmap .is-current { background:linear-gradient(90deg,rgba(155,140,255,.2),transparent); }
+.case-roadmap .is-current > span::after { content:" •"; color:#6756c7; font-size:18px; }
 .result-compare { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--ink); }
 .result-compare article { padding:25px; background:var(--white); border-right:1px solid var(--line); }
 .result-compare article:nth-child(2) { border-right:0; }

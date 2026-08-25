@@ -45,3 +45,39 @@ Le tableau croisé Excel a été corrigé et affiche maintenant :
 - moyenne générale des établissements renseignés : -0,21146353.
 
 L'étape 12 est validée. L'écart entre les moyennes de valeur ajoutée de réussite est de 1,3259 point en faveur du privé sous contrat. Cette moyenne reste descriptive et devra être complétée par les médianes, les distributions et les effectifs non renseignés.
+
+## 2026-08-25 — Copie de travail Excel et feuille DATA_2025
+
+### Organisation validée dans Excel Online
+
+- création de la copie `IVAL_2025_ANALYSE.xlsx` ;
+- conservation de la feuille source complète sans suppression de colonnes ;
+- création d'une feuille dédiée `DATA_2025` ;
+- copie des seules lignes de 2025 ;
+- ajout des 11 champs d'identification et de localisation ;
+- ajout des 7 indicateurs globaux de réussite, d'accès et de mentions.
+
+### Champs numériques validés
+
+- `Taux réussite numérique` ;
+- `VA réussite numérique` ;
+- `Taux accès 2nde-bac numérique` ;
+- `VA accès 2nde-bac numérique` ;
+- `Taux mentions numérique` ;
+- `VA mentions numérique`.
+
+Les conversions ont été contrôlées avec la fonction `TYPE` d'Excel. Les valeurs ajoutées absentes restent vides.
+
+### Taux attendus validés
+
+Les trois champs sont calculés avec la relation `taux attendu = taux observé - valeur ajoutée` :
+
+- `Taux réussite attendu` ;
+- `Taux accès 2nde-bac attendu` ;
+- `Taux mentions attendu`.
+
+Si le taux observé ou la valeur ajoutée est vide, le taux attendu reste vide.
+
+### Reste à rendre reproductible
+
+Cette préparation a été validée manuellement dans Excel Online, mais le classeur n'est pas encore présent dans le dépôt. Un export de `DATA_2025` et un script permettant de le reconstruire depuis le CSV brut restent nécessaires pour terminer le ticket de traitement.
