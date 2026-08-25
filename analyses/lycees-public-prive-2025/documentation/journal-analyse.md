@@ -170,3 +170,19 @@ L'écart moyen brut est de 15,4640 points en faveur du privé sous contrat. Dans
 | Ensemble | 510 898 | 31 666 331 | 61,9837 % |
 
 L'écart pondéré est de 19,5888 points en faveur du privé sous contrat. En langage courant, environ 77 mentions sont obtenues pour 100 candidats présents dans le privé sous contrat, contre environ 58 pour 100 dans le public. Ce résultat reste brut : il ne tient pas encore compte des taux attendus selon les profils des élèves.
+
+## 2026-08-25 — Valeur ajoutée moyenne des mentions
+
+| Secteur | Lycées renseignés | Valeurs manquantes | VA mentions moyenne |
+| --- | ---: | ---: | ---: |
+| Privé sous contrat | 693 | 91 | +1,4329 point |
+| Public | 1 514 | 48 | -0,9835 point |
+| Ensemble | 2 207 | 139 | -0,2247 point |
+
+L'écart entre les moyennes de valeur ajoutée est de 2,4164 points en faveur du privé sous contrat. Les valeurs vides sont exclues du calcul.
+
+### Précaution de comparaison
+
+L'écart brut de 19,5888 points est pondéré par les candidats, alors que l'écart de VA de 2,4164 points est une différence entre moyennes d'établissements. Ces deux nombres ne constituent donc pas une décomposition arithmétique directe. Ils indiquent toutefois que l'écart entre secteurs est nettement plus faible sur l'indicateur corrigé produit par la DEPP que sur le taux brut pondéré.
+
+Le privé sous contrat conserve en moyenne une valeur ajoutée de mentions supérieure dans les données 2025. Cela décrit une association et ne démontre pas un effet causal du secteur.
