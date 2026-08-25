@@ -121,3 +121,30 @@ Les quartiles inclusifs ont été calculés dans `ANALYSE_2025` en excluant les 
 | Q3 | 1 | 1 |
 
 Les 50 % centraux se situent donc entre 0 et +1 point dans le privé sous contrat, contre -2 à +1 points dans le public. Le secteur public présente une partie basse de distribution plus défavorable ; un box plot permettra ensuite de rendre cette dispersion visible.
+
+## 2026-08-25 — Valeurs extrêmes et synthèse de la réussite
+
+| Indicateur | Privé sous contrat | Public |
+| --- | ---: | ---: |
+| VA minimum | -8 | -16 |
+| VA maximum | +10 | +36 |
+
+Ces quatre valeurs ont été reproduites depuis le CSV brut. Chaque extrême peut ne concerner qu'un seul établissement : les bornes observées ne doivent donc pas être utilisées seules pour comparer les secteurs. L'étendue plus large du public signale des queues de distribution plus éloignées, tandis que l'écart interquartile confirme aussi une plus grande dispersion centrale : 3 points dans le public contre 1 point dans le privé sous contrat.
+
+### Tableau récapitulatif provisoire
+
+| Indicateur | Privé sous contrat | Public |
+| --- | ---: | ---: |
+| Réussite brute moyenne | 98,74 % | 94,60 % |
+| Réussite pondérée | 99,13 % | 94,49 % |
+| VA moyenne | +0,70 | -0,63 |
+| VA médiane | +1 | 0 |
+| Q1 | 0 | -2 |
+| Q3 | +1 | +1 |
+| VA > 0 | 60,61 % | 31,64 % |
+| VA = 0 | 26,98 % | 18,76 % |
+| VA < 0 | 12,41 % | 49,60 % |
+| Minimum | -8 | -16 |
+| Maximum | +10 | +36 |
+
+Cette synthèse clôt le premier calcul descriptif de la réussite au bac. Elle sera complétée par les visualisations et par les indicateurs de mentions et d'accès avant la conclusion générale.
