@@ -36,4 +36,12 @@ Le recalcul direct de la colonne officielle **Valeur ajoutée du taux de réussi
 - privé sous contrat : 0,698412698, sur 693 lycées renseignés ;
 - public : -0,627476882, sur 1 514 lycées renseignés.
 
-Le tableau croisé Excel doit donc être corrigé avant de valider l'étape 12.
+### Correction validée
+
+Le tableau croisé Excel a été corrigé et affiche maintenant :
+
+- privé sous contrat : 0,698412698 ;
+- public : -0,627476882 ;
+- moyenne générale des établissements renseignés : -0,21146353.
+
+L'étape 12 est validée. L'écart entre les moyennes de valeur ajoutée de réussite est de 1,3259 point en faveur du privé sous contrat. Cette moyenne reste descriptive et devra être complétée par les médianes, les distributions et les effectifs non renseignés.
