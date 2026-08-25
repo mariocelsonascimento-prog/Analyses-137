@@ -93,6 +93,27 @@
       </div>
     </section>
 
+    <section class="case-section section-shell" id="comprendre">
+      <div class="case-section-title"><p class="eyebrow">Sans jargon</p><h2>Comment lire les chiffres ?</h2></div>
+      <div class="case-content">
+        <p class="case-lead">Il n'est pas nécessaire de connaître les statistiques pour suivre cette analyse. Chaque mesure répond à une question simple.</p>
+        <div class="plain-language-grid">
+          <article><span>01</span><h3>Taux de réussite brut</h3><p>Sur 100 candidats présents au bac, combien ont obtenu leur diplôme ? Un taux de 95 % signifie environ 95 admis sur 100.</p></article>
+          <article><span>02</span><h3>Taux attendu</h3><p>Le résultat estimé pour des élèves et des lycées aux caractéristiques comparables. Ce n'est ni un objectif fixé au lycée, ni une prédiction parfaite.</p></article>
+          <article><span>03</span><h3>Valeur ajoutée</h3><p>L'écart entre le taux observé et le taux attendu. <strong>+2</strong> signifie 2 points au-dessus de l'attendu ; <strong>−2</strong>, 2 points en dessous ; <strong>0</strong>, conforme à l'attendu.</p></article>
+          <article><span>04</span><h3>Moyenne simple</h3><p>Elle décrit la moyenne des lycées. Chaque établissement compte autant, qu'il accueille 20 ou 800 candidats.</p></article>
+          <article><span>05</span><h3>Taux pondéré</h3><p>Il décrit le résultat global des candidats. Un lycée comptant davantage de candidats pèse davantage dans le calcul.</p></article>
+          <article><span>06</span><h3>Médiane</h3><p>La valeur du lycée situé au milieu : la moitié des lycées est en dessous, l'autre moitié au-dessus.</p></article>
+          <article><span>07</span><h3>Quartiles Q1 et Q3</h3><p>Ils encadrent la moitié centrale des lycées. Q1 laisse 25 % des lycées en dessous ; Q3 en laisse 75 % en dessous.</p></article>
+          <article><span>08</span><h3>Minimum et maximum</h3><p>Ce sont les deux valeurs les plus extrêmes. Chacune peut correspondre à un seul lycée : elles ne résument donc pas un secteur.</p></article>
+        </div>
+        <div class="reading-example">
+          <p class="eyebrow">Exemple de lecture</p>
+          <p>Dans le privé sous contrat, <strong>60,61 % des lycées renseignés ont une valeur ajoutée positive</strong>. Cela signifie qu'ils obtiennent un taux de réussite supérieur au taux attendu par le modèle du ministère. Cela ne prouve pas que leur statut privé est la cause de cet écart.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="case-section section-shell">
       <div class="case-section-title"><p class="eyebrow">Feuille de route</p><h2>Avant le premier graphique</h2></div>
       <ol class="case-roadmap case-content">
@@ -109,15 +130,15 @@
     <section class="case-section section-shell">
       <div class="case-section-title"><p class="eyebrow">Premiers calculs</p><h2>Un écart brut à expliquer</h2></div>
       <div class="case-content">
-        <p class="case-lead">En 2025, le taux de réussite brut pondé par les candidats est plus élevé dans le privé sous contrat. Ce constat ne tient pas encore compte du profil des élèves.</p>
+        <p class="case-lead">En 2025, parmi les candidats présents au bac, environ 99 sur 100 ont réussi dans le privé sous contrat, contre environ 94 sur 100 dans le public. Ce constat brut ne tient pas encore compte du profil des élèves.</p>
         <div class="result-compare">
           <article><span>Privé sous contrat</span><strong>99,13 %</strong><small>107 343 candidats</small></article>
           <article><span>Public</span><strong>94,49 %</strong><small>403 555 candidats</small></article>
           <article class="result-gap"><span>Écart brut pondéré</span><strong>+4,64 points</strong><small>en faveur du privé sous contrat</small></article>
         </div>
         <div class="va-result">
-          <div><span>VA réussite moyenne · privé</span><strong>+0,70</strong><small>Q1 : 0 · Médiane : +1 · Q3 : +1</small><small>Bornes observées : −8 à +10</small></div>
-          <div><span>VA réussite moyenne · public</span><strong>−0,63</strong><small>Q1 : −2 · Médiane : 0 · Q3 : +1</small><small>Bornes observées : −16 à +36</small></div>
+          <div><span>Écart moyen observé-attendu · privé</span><strong>+0,70 point</strong><small>Moitié centrale : de 0 à +1 · valeur du milieu : +1</small><small>Valeurs extrêmes observées : −8 à +10</small></div>
+          <div><span>Écart moyen observé-attendu · public</span><strong>−0,63 point</strong><small>Moitié centrale : de −2 à +1 · valeur du milieu : 0</small><small>Valeurs extrêmes observées : −16 à +36</small></div>
         </div>
         <div class="analysis-warning is-resolved"><strong>Calculs descriptifs de réussite validés</strong><p>L'écart moyen de valeur ajoutée de réussite est de 1,33 point. Les quartiles montrent que les 50 % centraux vont de 0 à +1 dans le privé, contre −2 à +1 dans le public. Les extrêmes sont plus éloignés dans le public, mais ne doivent jamais être interprétés seuls.</p></div>
         <div class="distribution-block">

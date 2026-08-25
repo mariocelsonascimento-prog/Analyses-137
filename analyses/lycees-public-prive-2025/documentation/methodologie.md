@@ -26,6 +26,15 @@ Lorsque la valeur ajoutée n'est pas déterminée, le taux attendu calculé rest
 - ne pas transformer l'analyse en classement d'établissements ;
 - distinguer systématiquement association observée et causalité.
 
+## Communication au grand public
+
+- expliquer chaque indicateur avant de l'utiliser ;
+- accompagner les pourcentages d'une lecture concrète, par exemple « 95 admis sur 100 candidats » ;
+- remplacer le jargon seul par une formulation courante, par exemple « moitié centrale » avec la mention Q1–Q3 ;
+- toujours préciser la population et le dénominateur d'un pourcentage ;
+- présenter les valeurs extrêmes comme des cas isolés possibles ;
+- répéter qu'un écart observé ne démontre pas sa cause.
+
 ## Livrables Tableau prévus
 
 1. Vue d'ensemble : indicateurs nationaux, secteurs, distributions et territoire.
