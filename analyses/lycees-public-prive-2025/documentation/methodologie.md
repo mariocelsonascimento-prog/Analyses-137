@@ -28,7 +28,7 @@ Lorsque la valeur ajoutée n'est pas déterminée, le taux attendu calculé rest
 
 ## Communication au grand public
 
-- expliquer chaque indicateur avant de l'utiliser ;
+- expliquer chaque indicateur au moment où son résultat apparaît, sans imposer une légende préalable ;
 - accompagner les pourcentages d'une lecture concrète, par exemple « 95 admis sur 100 candidats » ;
 - remplacer le jargon seul par une formulation courante, par exemple « moitié centrale » avec la mention Q1–Q3 ;
 - toujours préciser la population et le dénominateur d'un pourcentage ;
