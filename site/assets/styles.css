@@ -246,6 +246,12 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .case-section { display:grid; grid-template-columns:minmax(230px,.55fr) 1.45fr; gap:8%; padding-block:100px; border-bottom:1px solid var(--line); }
 .case-section-title h2 { margin:0; font-size:clamp(38px,5vw,62px); line-height:1; letter-spacing:-.055em; }
 .case-lead { margin:0 0 32px; font-size:21px; color:var(--muted); }
+.story-block { max-width:850px; margin-bottom:30px; }
+.story-block p:not(.story-kicker):not(.case-lead),.story-conclusion p:not(.story-kicker) { color:var(--muted); font-size:16px; }
+.story-kicker { margin:0 0 8px; color:#6756c7; font:500 10px "DM Mono",monospace; letter-spacing:.1em; text-transform:uppercase; }
+.story-transition { margin-top:45px; padding-top:35px; border-top:1px solid var(--line); }
+.story-example { padding:20px; background:var(--white); border-left:5px solid #9b8cff; }
+.story-conclusion { margin-top:35px; padding:25px; background:#e8e3d7; }
 .data-card { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--ink); background:var(--white); }
 .data-card > div { padding:20px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
 .data-card > div:nth-child(even) { border-right:0; }
@@ -313,6 +319,10 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .case-pending > p:not(.eyebrow) { max-width:800px; font-size:18px; }
 .mentions-preview { margin:-60px -60px 55px; padding:45px 60px; background:var(--ink); color:var(--paper); }
 .mentions-preview h2 { max-width:800px; font-size:clamp(35px,5vw,62px); }
+.mentions-story { max-width:880px; margin-top:28px; color:#c0cfcb; font-size:16px; }
+.mentions-transition { max-width:850px; margin-top:30px; padding-top:25px; border-top:1px solid rgba(255,255,255,.2); color:#c0cfcb; }
+.mentions-transition .story-kicker { color:#cfc7ff; }
+.mentions-transition p:last-child { margin-bottom:0; }
 .mentions-numbers { display:grid; grid-template-columns:1fr 1fr; margin-top:30px; border-top:1px solid rgba(255,255,255,.2); }
 .mentions-numbers article { padding:20px 0; border-right:1px solid rgba(255,255,255,.2); }
 .mentions-numbers article + article { padding-left:25px; border-right:0; }
