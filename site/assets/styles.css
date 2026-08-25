@@ -295,6 +295,18 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .analysis-warning { margin-top:25px; padding:22px; border-left:5px solid #b54a3b; background:#f2ddd7; }
 .analysis-warning p { margin:5px 0 0; }
 .analysis-warning.is-resolved { border-left-color:#37745f; background:#dce9df; }
+.distribution-block { margin-top:45px; border-top:1px solid var(--ink); }
+.distribution-heading { display:flex; justify-content:space-between; gap:25px; padding:22px 0; }
+.distribution-heading .eyebrow,.distribution-heading p { margin:0; }
+.distribution-heading > p:last-child { max-width:410px; color:var(--muted); font-size:12px; }
+.distribution-row { display:grid; grid-template-columns:1fr 1fr 1fr; border-top:1px solid var(--line); }
+.distribution-row > strong,.distribution-row > div { padding:18px 12px; }
+.distribution-row > div { border-left:1px solid var(--line); }
+.distribution-row span,.distribution-row b,.distribution-row small { display:block; }
+.distribution-row span { font:500 9px "DM Mono",monospace; text-transform:uppercase; color:var(--muted); }
+.distribution-row b { margin-top:6px; font-size:24px; }
+.distribution-row small { color:var(--muted); }
+.distribution-note { margin:0; padding:20px; background:#ded8ff; font-size:13px; }
 .case-pending { margin-block:100px; padding:60px; background:#ded8ff; }
 .case-pending h2 { margin:0; font-size:clamp(44px,6vw,76px); letter-spacing:-.06em; }
 .case-pending > p:not(.eyebrow) { max-width:800px; font-size:18px; }
@@ -348,6 +360,11 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
   .result-compare article,.result-compare article:nth-child(2) { border-right:0; border-bottom:1px solid var(--line); }
   .result-compare .result-gap { grid-column:1; border-bottom:0; }
   .va-result { grid-template-columns:1fr; }
+  .distribution-heading { display:block; }
+  .distribution-heading > p:last-child { margin-top:8px; }
+  .distribution-row { grid-template-columns:1fr 1fr; }
+  .distribution-row > strong { grid-column:1/-1; border-bottom:1px solid var(--line); }
+  .distribution-row > div:first-of-type { border-left:0; }
   .data-card > div,.data-card > div:nth-child(even) { border-right:0; }
   .data-card-wide { grid-column:1; }
   .case-pending { margin-block:70px; padding:35px 24px; }

@@ -96,3 +96,16 @@ Le premier tableau calcule la médiane de la valeur ajoutée de réussite en exc
 | Public | 1 514 | 0 point |
 
 La médiane décrit le lycée typique de chaque secteur et complète la moyenne. Elle ne suffit pas encore à caractériser la distribution complète.
+
+## 2026-08-25 — Position par rapport au taux attendu
+
+Les lycées disposant d'une valeur ajoutée de réussite ont été répartis selon le signe de cette valeur.
+
+| Situation | Privé sous contrat | Part du privé | Public | Part du public |
+| --- | ---: | ---: | ---: | ---: |
+| VA > 0 | 420 | 60,61 % | 479 | 31,64 % |
+| VA = 0 | 187 | 26,98 % | 284 | 18,76 % |
+| VA < 0 | 86 | 12,41 % | 751 | 49,60 % |
+| Total renseigné | 693 | 100,00 % | 1 514 | 100,00 % |
+
+Les six effectifs et leurs proportions ont été reproduits directement depuis le CSV brut. La distribution est plus favorable au privé sous contrat dans les données 2025. Ce constat descriptif ne mesure pas un effet causal du secteur et n'élimine pas les autres effets de composition.
