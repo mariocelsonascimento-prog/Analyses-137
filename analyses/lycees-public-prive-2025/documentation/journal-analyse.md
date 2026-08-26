@@ -210,3 +210,17 @@ Les moyennes et les médianes racontent ici une histoire similaire. Cela rend mo
 Les effectifs et proportions ont été reproduits directement depuis le CSV brut. Sur 100 lycées renseignés, environ 58 lycées privés sous contrat obtiennent plus de mentions qu'attendu, contre environ 40 lycées publics. À l'inverse, environ 36 lycées privés et 54 lycées publics se situent sous leur attendu.
 
 La répartition des mentions est donc plus favorable au privé sous contrat dans les IVAL 2025. Cette observation ne permet toujours pas d'attribuer l'écart au statut de l'établissement.
+
+## 2026-08-26 — Quartiles de la valeur ajoutée des mentions
+
+Les quartiles inclusifs calculés dans Excel ont été reproduits depuis le CSV brut.
+
+| Indicateur | Privé sous contrat | Public |
+| --- | ---: | ---: |
+| Q1 | -3 | -5 |
+| Médiane | +2 | -1 |
+| Q3 | +6 | +3 |
+
+La moitié centrale des lycées privés sous contrat se situe entre 3 points sous l'attendu et 6 points au-dessus. Dans le public, elle se situe entre 5 points sous l'attendu et 3 points au-dessus. La distribution centrale du privé est donc décalée vers des valeurs plus hautes.
+
+Les deux intervalles ont ici la même largeur de 9 points. Le décalage observé porte donc sur leur position, pas sur une différence d'étendue interquartile.

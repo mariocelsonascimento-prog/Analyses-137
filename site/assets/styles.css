@@ -336,6 +336,11 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .mentions-va span { color:#b5c5c1; font:500 9px "DM Mono",monospace; text-transform:uppercase; }
 .mentions-va strong { margin-top:7px; color:var(--acid); font-size:24px; }
 .mentions-va small { margin-top:5px; color:#b5c5c1; }
+.quartile-story { max-width:880px; margin-top:28px; padding:22px; border-left:5px solid #cfc7ff; background:rgba(255,255,255,.08); color:#c0cfcb; }
+.quartile-story .story-kicker { color:#cfc7ff; }
+.quartile-story p { margin-top:0; }
+.quartile-story p:last-child { margin-bottom:0; }
+.quartile-story strong { color:var(--paper); }
 .mentions-preview > p:last-child { max-width:850px; color:#c0cfcb; }
 .mentions-preview .calculation-caution { max-width:none; padding:16px; background:rgba(255,255,255,.08); color:#c0cfcb; font-size:12px; }
 .calculation-caution strong { color:var(--paper); }
