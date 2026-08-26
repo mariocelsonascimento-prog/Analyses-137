@@ -279,3 +279,14 @@ Ce résultat contraste avec les écarts bruts observés pour la réussite et les
 Les taux d'accès bruts moyens sont presque identiques, mais les positions par rapport aux taux attendus diffèrent. Le privé sous contrat se situe en moyenne 2,46 points sous son attendu, contre 0,42 point sous l'attendu dans le public. L'écart entre ces deux valeurs ajoutées moyennes est de 2,0339 points en faveur du public.
 
 Sur cet indicateur de parcours, le public est donc en moyenne plus proche de son résultat attendu. Cette observation nuance les résultats de réussite et de mentions, mais ne prouve pas que le secteur public cause un meilleur accompagnement des élèves.
+
+## 2026-08-26 — Médiane de la valeur ajoutée de l'accès
+
+| Secteur | Lycées renseignés | VA accès moyenne | VA accès médiane |
+| --- | ---: | ---: | ---: |
+| Privé sous contrat | 693 | -2,46 | -1 |
+| Public | 1 513 | -0,42 | 0 |
+
+Le lycée privé sous contrat situé au milieu de son secteur se trouve un point sous son taux d'accès attendu. Le lycée public situé au milieu est exactement au niveau attendu.
+
+Moyenne et médiane vont dans le même sens : sur l'accès seconde-bac, le public est mieux positionné relativement à l'attendu. Cette phrase décrit la position centrale des groupes et ne signifie pas que chaque lycée public fait mieux que chaque lycée privé.
