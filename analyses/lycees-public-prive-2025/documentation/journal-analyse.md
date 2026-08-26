@@ -362,3 +362,23 @@ Les écarts moyens sont calculés à partir des valeurs non arrondies, puis arro
 Une valeur positive indique que l'indicateur est plus favorable au privé sous contrat ; une valeur négative indique qu'il est plus favorable au public. La réussite présente un écart modéré en faveur du privé, les mentions un écart plus marqué en faveur du privé, et l'accès un écart en faveur du public.
 
 Cette opposition est le résultat central provisoire : la réponse change selon la dimension mesurée. Résumer l'analyse par « le privé est meilleur » ou « le public est meilleur » effacerait une partie essentielle des données.
+
+## 2026-08-26 — Début de l'analyse régionale et anomalie de comptage
+
+Le tableau croisé régional des moyennes de VA réussite a été créé avec `Region` en lignes et `Secteur` en colonnes. Les moyennes affichées ont été retrouvées dans le CSV brut.
+
+En revanche, le champ « Nombre de VA réussite numérique » du tableau croisé compte 784 lycées privés et 1 562 publics. Les vrais nombres de VA renseignées sont 693 et 1 514. Excel compte ici les cellules qui contiennent une formule renvoyant `""` comme des cellules présentes.
+
+Exemples de corrections nécessaires :
+
+| Région | Privé total | Privé avec VA | Public total | Public avec VA |
+| --- | ---: | ---: | ---: | ---: |
+| Auvergne-Rhône-Alpes | 102 | 92 | 176 | 175 |
+| Grand Est (`GRA EST` dans la source) | 57 | 48 | 140 | 134 |
+| Île-de-France | 162 | 147 | 312 | 305 |
+| Normandie (`NORMAIE` dans la source) | 40 | 31 | 84 | 77 |
+| Mayotte | 0 | 0 | 10 | 0 |
+
+Mayotte affiche logiquement une moyenne non calculable : aucune des dix lignes publiques ne possède de VA réussite renseignée.
+
+Les écarts territoriaux ne seront pas interprétés avant correction de ces effectifs. Une colonne indicatrice numérique `VA réussite disponible`, valant 1 si la VA est numérique et 0 sinon, permettra de sommer les vrais effectifs dans le tableau croisé.
