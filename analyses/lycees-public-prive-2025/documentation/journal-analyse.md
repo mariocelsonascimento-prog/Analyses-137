@@ -290,3 +290,16 @@ Sur cet indicateur de parcours, le public est donc en moyenne plus proche de son
 Le lycée privé sous contrat situé au milieu de son secteur se trouve un point sous son taux d'accès attendu. Le lycée public situé au milieu est exactement au niveau attendu.
 
 Moyenne et médiane vont dans le même sens : sur l'accès seconde-bac, le public est mieux positionné relativement à l'attendu. Cette phrase décrit la position centrale des groupes et ne signifie pas que chaque lycée public fait mieux que chaque lycée privé.
+
+## 2026-08-26 — Distribution de la valeur ajoutée de l'accès
+
+| Situation | Privé sous contrat | Part du privé | Public | Part du public |
+| --- | ---: | ---: | ---: | ---: |
+| Au-dessus de l'attendu | 254 | 36,65 % | 684 | 45,21 % |
+| Au niveau attendu | 53 | 7,65 % | 135 | 8,92 % |
+| En dessous de l'attendu | 386 | 55,70 % | 694 | 45,87 % |
+| Total renseigné | 693 | 100,00 % | 1 513 | 100,00 % |
+
+Sur 100 lycées renseignés, environ 37 lycées privés sous contrat font mieux que leur taux d'accès attendu, contre 45 lycées publics. À l'inverse, environ 56 lycées privés se situent sous l'attendu, contre 46 lycées publics.
+
+Cette répartition confirme le signal donné par la moyenne et la médiane : sur l'accès seconde-bac, le public est mieux positionné relativement à l'attendu dans les IVAL 2025. Il s'agit toujours d'une association descriptive.

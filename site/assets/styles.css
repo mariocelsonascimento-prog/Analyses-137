@@ -384,6 +384,15 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .access-va small + small { margin-top:3px; }
 .access-reading { margin-top:24px; }
 .access-reading p:not(.story-kicker) { color:var(--muted); }
+.access-distribution { margin-top:35px; border-top:1px solid var(--ink); }
+.access-distribution-intro { display:flex; justify-content:space-between; gap:25px; padding:22px 0; }
+.access-distribution-intro p { margin:0; }
+.access-distribution-intro p:last-child { max-width:470px; color:var(--muted); }
+.access-distribution-row { display:grid; grid-template-columns:1.4fr 1fr 1fr; border-top:1px solid var(--line); }
+.access-distribution-row > strong,.access-distribution-row > span { padding:17px 12px; }
+.access-distribution-row > span { border-left:1px solid var(--line); }
+.access-distribution-row b { margin-right:4px; color:#6756c7; font-size:23px; }
+.access-distribution-detail { margin:0; padding:18px; background:var(--white); color:var(--muted); font-size:12px; }
 @media (max-width:900px) {
   .tracker-hero { grid-template-columns:1fr; }
   .tracker-summary { grid-template-columns:1fr 1fr; }
@@ -454,6 +463,11 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
   .access-numbers article,.access-numbers article:nth-child(2) { border-right:0; border-bottom:1px solid var(--line); }
   .access-numbers .access-gap { grid-column:1; border-bottom:0; }
   .access-va { grid-template-columns:1fr; }
+  .access-distribution-intro { display:block; }
+  .access-distribution-intro p:last-child { margin-top:8px; }
+  .access-distribution-row { grid-template-columns:1fr 1fr; }
+  .access-distribution-row > strong { grid-column:1/-1; border-bottom:1px solid var(--line); }
+  .access-distribution-row > span:first-of-type { border-left:0; }
   .mentions-numbers article,.mentions-numbers article + article { padding:16px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.2); }
   .analysis-card { min-height:340px; border-left:1px solid var(--line); }
   .method-grid li,.method-grid li + li { padding:28px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.18); }
