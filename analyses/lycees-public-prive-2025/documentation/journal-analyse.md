@@ -267,3 +267,15 @@ Le taux d'accès moyen est supérieur de seulement 0,1535 point dans le public. 
 Le taux d'accès est un indicateur de parcours construit par la DEPP, et non le simple taux de réussite des candidats présents au bac. `Présents - Toutes séries` n'est pas son dénominateur : aucune moyenne pondérée avec ce champ ne sera calculée.
 
 Ce résultat contraste avec les écarts bruts observés pour la réussite et les mentions. L'analyse doit maintenant examiner la valeur ajoutée d'accès avant d'interpréter le rôle relatif des secteurs dans les parcours jusqu'au bac.
+
+## 2026-08-26 — Valeur ajoutée moyenne de l'accès seconde-bac
+
+| Secteur | Lycées renseignés | Valeurs manquantes | VA accès moyenne |
+| --- | ---: | ---: | ---: |
+| Privé sous contrat | 693 | 91 | -2,4589 points |
+| Public | 1 513 | 49 | -0,4250 point |
+| Ensemble | 2 206 | 140 | -1,0639 point |
+
+Les taux d'accès bruts moyens sont presque identiques, mais les positions par rapport aux taux attendus diffèrent. Le privé sous contrat se situe en moyenne 2,46 points sous son attendu, contre 0,42 point sous l'attendu dans le public. L'écart entre ces deux valeurs ajoutées moyennes est de 2,0339 points en faveur du public.
+
+Sur cet indicateur de parcours, le public est donc en moyenne plus proche de son résultat attendu. Cette observation nuance les résultats de réussite et de mentions, mais ne prouve pas que le secteur public cause un meilleur accompagnement des élèves.
