@@ -253,3 +253,17 @@ Les quatre bornes ont été reproduites depuis le CSV brut. Le minimum de -39 da
 | Maximum | +28 | +27 |
 
 Les calculs descriptifs des mentions sont désormais terminés. Dans les IVAL 2025, les taux bruts et les indicateurs corrigés sont globalement plus favorables au privé sous contrat. Cette synthèse reste une comparaison descriptive et ne démontre pas un effet causal du secteur.
+
+## 2026-08-26 — Début de l'analyse de l'accès seconde-bac
+
+| Secteur | Lycées | Taux d'accès moyen |
+| --- | ---: | ---: |
+| Privé sous contrat | 784 | 84,9707 % |
+| Public | 1 562 | 85,1242 % |
+| Ensemble | 2 346 | 85,0729 % |
+
+Le taux d'accès moyen est supérieur de seulement 0,1535 point dans le public. À l'échelle de cette première comparaison descriptive, les deux secteurs sont donc presque au même niveau.
+
+Le taux d'accès est un indicateur de parcours construit par la DEPP, et non le simple taux de réussite des candidats présents au bac. `Présents - Toutes séries` n'est pas son dénominateur : aucune moyenne pondérée avec ce champ ne sera calculée.
+
+Ce résultat contraste avec les écarts bruts observés pour la réussite et les mentions. L'analyse doit maintenant examiner la valeur ajoutée d'accès avant d'interpréter le rôle relatif des secteurs dans les parcours jusqu'au bac.

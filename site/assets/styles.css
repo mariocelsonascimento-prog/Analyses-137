@@ -359,6 +359,20 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .mentions-distribution-row > span { border-left:1px solid rgba(255,255,255,.16); color:#c0cfcb; }
 .mentions-distribution-row b { margin-right:4px; color:var(--acid); font-size:23px; }
 .mentions-distribution-detail { margin:0; padding:18px; background:rgba(255,255,255,.08); color:#c0cfcb; font-size:12px; }
+.access-section { background:#dfe9e5; }
+.access-section .case-section { border:0; }
+.access-numbers { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--ink); background:var(--white); }
+.access-numbers article { padding:23px; border-right:1px solid var(--line); }
+.access-numbers article:nth-child(2) { border-right:0; }
+.access-numbers span,.access-numbers strong,.access-numbers small { display:block; }
+.access-numbers span { font:500 10px "DM Mono",monospace; text-transform:uppercase; }
+.access-numbers strong { margin:15px 0 4px; font-size:38px; }
+.access-numbers small { color:var(--muted); }
+.access-numbers .access-gap { grid-column:1/-1; border-top:1px solid var(--ink); border-right:0; background:var(--acid); }
+.access-caution { margin-top:28px; padding:22px; background:var(--ink); color:#c0cfcb; }
+.access-caution .story-kicker { color:var(--acid); }
+.access-caution p:last-child { margin-bottom:0; }
+.access-transition { margin:28px 0 0; font-size:17px; }
 @media (max-width:900px) {
   .tracker-hero { grid-template-columns:1fr; }
   .tracker-summary { grid-template-columns:1fr 1fr; }
@@ -425,6 +439,9 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
   .mentions-distribution-row { grid-template-columns:1fr 1fr; }
   .mentions-distribution-row > strong { grid-column:1/-1; border-bottom:1px solid rgba(255,255,255,.16); }
   .mentions-distribution-row > span:first-of-type { border-left:0; }
+  .access-numbers { grid-template-columns:1fr; }
+  .access-numbers article,.access-numbers article:nth-child(2) { border-right:0; border-bottom:1px solid var(--line); }
+  .access-numbers .access-gap { grid-column:1; border-bottom:0; }
   .mentions-numbers article,.mentions-numbers article + article { padding:16px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.2); }
   .analysis-card { min-height:340px; border-left:1px solid var(--line); }
   .method-grid li,.method-grid li + li { padding:28px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.18); }
