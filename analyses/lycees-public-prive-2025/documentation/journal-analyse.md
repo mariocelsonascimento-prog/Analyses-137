@@ -343,3 +343,22 @@ Le minimum de -47 dans le privé sous contrat ne concerne qu'un seul lycée. Com
 | Maximum | +11 | +16 |
 
 Les calculs centraux vont dans la même direction : pour l'accès seconde-bac, les lycées publics sont globalement mieux positionnés relativement à leur attendu dans les IVAL 2025. Les distributions se chevauchent largement et cette comparaison ne démontre pas un effet causal du secteur.
+
+## 2026-08-26 — Synthèse des trois dimensions
+
+Aucun score global n'est construit : réussite, mentions et accès décrivent des dimensions différentes qui doivent rester visibles séparément.
+
+| Indicateur | Privé sous contrat | Public | Écart privé - public |
+| --- | ---: | ---: | ---: |
+| VA réussite moyenne | +0,70 | -0,63 | +1,33 |
+| VA réussite médiane | +1 | 0 | +1 |
+| VA mentions moyenne | +1,43 | -0,98 | +2,42 |
+| VA mentions médiane | +2 | -1 | +3 |
+| VA accès moyenne | -2,46 | -0,42 | -2,03 |
+| VA accès médiane | -1 | 0 | -1 |
+
+Les écarts moyens sont calculés à partir des valeurs non arrondies, puis arrondis à deux décimales. Cela explique les valeurs +2,42 pour les mentions et -2,03 pour l'accès, plutôt que +2,41 et -2,04 obtenues en soustrayant les nombres déjà arrondis du tableau.
+
+Une valeur positive indique que l'indicateur est plus favorable au privé sous contrat ; une valeur négative indique qu'il est plus favorable au public. La réussite présente un écart modéré en faveur du privé, les mentions un écart plus marqué en faveur du privé, et l'accès un écart en faveur du public.
+
+Cette opposition est le résultat central provisoire : la réponse change selon la dimension mesurée. Résumer l'analyse par « le privé est meilleur » ou « le public est meilleur » effacerait une partie essentielle des données.
