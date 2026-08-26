@@ -303,3 +303,15 @@ Moyenne et médiane vont dans le même sens : sur l'accès seconde-bac, le publi
 Sur 100 lycées renseignés, environ 37 lycées privés sous contrat font mieux que leur taux d'accès attendu, contre 45 lycées publics. À l'inverse, environ 56 lycées privés se situent sous l'attendu, contre 46 lycées publics.
 
 Cette répartition confirme le signal donné par la moyenne et la médiane : sur l'accès seconde-bac, le public est mieux positionné relativement à l'attendu dans les IVAL 2025. Il s'agit toujours d'une association descriptive.
+
+## 2026-08-26 — Quartiles de la valeur ajoutée de l'accès
+
+| Indicateur | Privé sous contrat | Public |
+| --- | ---: | ---: |
+| Q1 | -5 | -3 |
+| Médiane | -1 | 0 |
+| Q3 | +2 | +3 |
+
+Les quartiles inclusifs calculés dans Excel ont été reproduits depuis le CSV brut. La moitié centrale des lycées privés sous contrat se situe entre 5 points sous l'attendu et 2 points au-dessus. Dans le public, elle se situe entre 3 points sous l'attendu et 3 points au-dessus.
+
+La zone centrale du public est donc légèrement décalée vers le haut. Les deux intervalles se chevauchent toutefois largement : cette comparaison décrit une différence de position entre les groupes, pas une séparation nette entre tous les lycées publics et privés.
