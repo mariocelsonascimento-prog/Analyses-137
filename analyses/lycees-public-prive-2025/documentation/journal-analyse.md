@@ -382,3 +382,13 @@ Exemples de corrections nécessaires :
 Mayotte affiche logiquement une moyenne non calculable : aucune des dix lignes publiques ne possède de VA réussite renseignée.
 
 Les écarts territoriaux ne seront pas interprétés avant correction de ces effectifs. Une colonne indicatrice numérique `VA réussite disponible`, valant 1 si la VA est numérique et 0 sinon, permettra de sommer les vrais effectifs dans le tableau croisé.
+
+## 2026-08-26 — Effectifs régionaux corrigés et vérifiés
+
+Le tableau croisé utilise maintenant les vrais nombres de valeurs ajoutées renseignées. Les moyennes et les effectifs ont été reproduits ligne par ligne depuis le CSV brut : le total est de 693 lycées privés sous contrat et 1 514 lycées publics.
+
+Deux anomalies de libellé existent dans la source brute : `GRA EST` et `NORMAIE`. Le fichier brut reste inchangé ; les libellés `Grand Est` et `Normandie` sont utilisés uniquement pour l'affichage public et devront être documentés dans le traitement reproductible.
+
+Mayotte compte dix lycées publics en 2025, mais aucune valeur ajoutée de réussite exploitable. Aucune moyenne ni aucun écart ne doit donc y être affiché comme zéro.
+
+Une comparaison est signalée comme fragile lorsqu'un secteur repose sur moins de 10 lycées renseignés. C'est le cas de la Corse, de la Guadeloupe, de la Guyane, de La Réunion et de la Martinique pour le privé sous contrat. Ce seuil est une règle de présentation prudente, pas un test statistique.
