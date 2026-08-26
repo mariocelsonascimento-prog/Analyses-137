@@ -341,6 +341,11 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .quartile-story p { margin-top:0; }
 .quartile-story p:last-child { margin-bottom:0; }
 .quartile-story strong { color:var(--paper); }
+.extreme-story { max-width:880px; margin-top:16px; padding:22px; background:#302f3a; color:#c0cfcb; }
+.extreme-story .story-kicker { color:#ffb49f; }
+.extreme-story p { margin-top:0; }
+.extreme-story p:last-child { margin-bottom:0; }
+.extreme-story strong { color:var(--paper); }
 .mentions-preview > p:last-child { max-width:850px; color:#c0cfcb; }
 .mentions-preview .calculation-caution { max-width:none; padding:16px; background:rgba(255,255,255,.08); color:#c0cfcb; font-size:12px; }
 .calculation-caution strong { color:var(--paper); }

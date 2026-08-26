@@ -224,3 +224,32 @@ Les quartiles inclusifs calculés dans Excel ont été reproduits depuis le CSV 
 La moitié centrale des lycées privés sous contrat se situe entre 3 points sous l'attendu et 6 points au-dessus. Dans le public, elle se situe entre 5 points sous l'attendu et 3 points au-dessus. La distribution centrale du privé est donc décalée vers des valeurs plus hautes.
 
 Les deux intervalles ont ici la même largeur de 9 points. Le décalage observé porte donc sur leur position, pas sur une différence d'étendue interquartile.
+
+## 2026-08-26 — Valeurs extrêmes et synthèse des mentions
+
+| Indicateur | Privé sous contrat | Public |
+| --- | ---: | ---: |
+| VA mentions minimum | -39 | -19 |
+| Nombre de lycées au minimum | 1 | 1 |
+| VA mentions maximum | +28 | +27 |
+| Nombre de lycées au maximum | 2 | 2 |
+
+Les quatre bornes ont été reproduites depuis le CSV brut. Le minimum de -39 dans le privé sous contrat ne concerne qu'un seul lycée ; il ne représente donc pas le secteur. Cette observation illustre pourquoi les extrêmes restent secondaires face à la médiane, aux quartiles et aux proportions.
+
+### Tableau récapitulatif des mentions
+
+| Indicateur | Privé sous contrat | Public |
+| --- | ---: | ---: |
+| Taux de mentions moyen | 73,53 % | 58,06 % |
+| Taux de mentions pondéré | 77,45 % | 57,87 % |
+| VA mentions moyenne | +1,43 | -0,98 |
+| VA mentions médiane | +2 | -1 |
+| Q1 | -3 | -5 |
+| Q3 | +6 | +3 |
+| VA > 0 | 58,01 % | 39,63 % |
+| VA = 0 | 5,63 % | 6,34 % |
+| VA < 0 | 36,36 % | 54,03 % |
+| Minimum | -39 | -19 |
+| Maximum | +28 | +27 |
+
+Les calculs descriptifs des mentions sont désormais terminés. Dans les IVAL 2025, les taux bruts et les indicateurs corrigés sont globalement plus favorables au privé sous contrat. Cette synthèse reste une comparaison descriptive et ne démontre pas un effet causal du secteur.
