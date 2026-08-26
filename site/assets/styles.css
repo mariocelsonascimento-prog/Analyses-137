@@ -396,6 +396,10 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .access-quartile-story { margin-top:24px; padding:22px; background:var(--white); border-left:5px solid #6756c7; }
 .access-quartile-story p { margin-top:0; color:var(--muted); }
 .access-quartile-story p:last-child { margin-bottom:0; }
+.access-extreme-story { margin-top:16px; padding:22px; background:#ece0d8; border-left:5px solid #b54a3b; }
+.access-extreme-story .story-kicker { color:#963f32; }
+.access-extreme-story p { margin-top:0; color:var(--muted); }
+.access-extreme-story p:last-child { margin-bottom:0; }
 @media (max-width:900px) {
   .tracker-hero { grid-template-columns:1fr; }
   .tracker-summary { grid-template-columns:1fr 1fr; }

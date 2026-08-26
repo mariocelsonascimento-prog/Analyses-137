@@ -315,3 +315,31 @@ Cette répartition confirme le signal donné par la moyenne et la médiane : sur
 Les quartiles inclusifs calculés dans Excel ont été reproduits depuis le CSV brut. La moitié centrale des lycées privés sous contrat se situe entre 5 points sous l'attendu et 2 points au-dessus. Dans le public, elle se situe entre 3 points sous l'attendu et 3 points au-dessus.
 
 La zone centrale du public est donc légèrement décalée vers le haut. Les deux intervalles se chevauchent toutefois largement : cette comparaison décrit une différence de position entre les groupes, pas une séparation nette entre tous les lycées publics et privés.
+
+## 2026-08-26 — Valeurs extrêmes et synthèse de l'accès
+
+| Indicateur | Privé sous contrat | Public |
+| --- | ---: | ---: |
+| VA accès minimum | -47 | -28 |
+| Nombre de lycées au minimum | 1 | 1 |
+| VA accès maximum | +11 | +16 |
+| Nombre de lycées au maximum | 1 | 2 |
+
+Le minimum de -47 dans le privé sous contrat ne concerne qu'un seul lycée. Comme les autres valeurs extrêmes, il doit rester visible pour la transparence, mais ne peut pas résumer la distribution d'un secteur.
+
+### Tableau récapitulatif de l'accès seconde-bac
+
+| Indicateur | Privé sous contrat | Public |
+| --- | ---: | ---: |
+| Taux d'accès moyen | 84,97 % | 85,12 % |
+| VA accès moyenne | -2,46 | -0,42 |
+| Q1 | -5 | -3 |
+| Médiane | -1 | 0 |
+| Q3 | +2 | +3 |
+| VA > 0 | 36,65 % | 45,21 % |
+| VA = 0 | 7,65 % | 8,92 % |
+| VA < 0 | 55,70 % | 45,87 % |
+| Minimum | -47 | -28 |
+| Maximum | +11 | +16 |
+
+Les calculs centraux vont dans la même direction : pour l'accès seconde-bac, les lycées publics sont globalement mieux positionnés relativement à leur attendu dans les IVAL 2025. Les distributions se chevauchent largement et cette comparaison ne démontre pas un effet causal du secteur.
