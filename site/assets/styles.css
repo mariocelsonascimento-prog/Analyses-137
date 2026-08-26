@@ -332,9 +332,10 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .mentions-numbers small { color:#b5c5c1; }
 .mentions-va { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
 .mentions-va article { padding:18px; background:rgba(255,255,255,.08); }
-.mentions-va span,.mentions-va strong { display:block; }
+.mentions-va span,.mentions-va strong,.mentions-va small { display:block; }
 .mentions-va span { color:#b5c5c1; font:500 9px "DM Mono",monospace; text-transform:uppercase; }
 .mentions-va strong { margin-top:7px; color:var(--acid); font-size:24px; }
+.mentions-va small { margin-top:5px; color:#b5c5c1; }
 .mentions-preview > p:last-child { max-width:850px; color:#c0cfcb; }
 .mentions-preview .calculation-caution { max-width:none; padding:16px; background:rgba(255,255,255,.08); color:#c0cfcb; font-size:12px; }
 .calculation-caution strong { color:var(--paper); }

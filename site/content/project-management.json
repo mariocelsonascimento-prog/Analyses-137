@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-26",
   "workflow": [
     { "id": "backlog", "label": "À étudier" },
     { "id": "planned", "label": "Planifié" },

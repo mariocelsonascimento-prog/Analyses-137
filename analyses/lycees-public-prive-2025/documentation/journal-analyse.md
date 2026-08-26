@@ -186,3 +186,14 @@ L'écart entre les moyennes de valeur ajoutée est de 2,4164 points en faveur du
 L'écart brut de 19,5888 points est pondéré par les candidats, alors que l'écart de VA de 2,4164 points est une différence entre moyennes d'établissements. Ces deux nombres ne constituent donc pas une décomposition arithmétique directe. Ils indiquent toutefois que l'écart entre secteurs est nettement plus faible sur l'indicateur corrigé produit par la DEPP que sur le taux brut pondéré.
 
 Le privé sous contrat conserve en moyenne une valeur ajoutée de mentions supérieure dans les données 2025. Cela décrit une association et ne démontre pas un effet causal du secteur.
+
+## 2026-08-26 — Médiane de la valeur ajoutée des mentions
+
+| Secteur | Lycées renseignés | VA mentions moyenne | VA mentions médiane |
+| --- | ---: | ---: | ---: |
+| Privé sous contrat | 693 | +1,43 | +2 |
+| Public | 1 514 | -0,98 | -1 |
+
+Le lycée privé sous contrat situé au milieu de son secteur obtient deux points de mentions de plus que son taux attendu. Le lycée public situé au milieu obtient un point de moins que son taux attendu.
+
+Les moyennes et les médianes racontent ici une histoire similaire. Cela rend moins plausible une différence provenant uniquement de quelques valeurs extrêmes, mais ne remplace pas l'étude de la distribution complète.
