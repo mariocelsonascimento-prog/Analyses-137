@@ -197,3 +197,16 @@ Le privé sous contrat conserve en moyenne une valeur ajoutée de mentions supé
 Le lycée privé sous contrat situé au milieu de son secteur obtient deux points de mentions de plus que son taux attendu. Le lycée public situé au milieu obtient un point de moins que son taux attendu.
 
 Les moyennes et les médianes racontent ici une histoire similaire. Cela rend moins plausible une différence provenant uniquement de quelques valeurs extrêmes, mais ne remplace pas l'étude de la distribution complète.
+
+## 2026-08-26 — Distribution de la valeur ajoutée des mentions
+
+| Situation | Privé sous contrat | Part du privé | Public | Part du public |
+| --- | ---: | ---: | ---: | ---: |
+| Au-dessus de l'attendu | 402 | 58,01 % | 600 | 39,63 % |
+| Au niveau attendu | 39 | 5,63 % | 96 | 6,34 % |
+| En dessous de l'attendu | 252 | 36,36 % | 818 | 54,03 % |
+| Total renseigné | 693 | 100,00 % | 1 514 | 100,00 % |
+
+Les effectifs et proportions ont été reproduits directement depuis le CSV brut. Sur 100 lycées renseignés, environ 58 lycées privés sous contrat obtiennent plus de mentions qu'attendu, contre environ 40 lycées publics. À l'inverse, environ 36 lycées privés et 54 lycées publics se situent sous leur attendu.
+
+La répartition des mentions est donc plus favorable au privé sous contrat dans les IVAL 2025. Cette observation ne permet toujours pas d'attribuer l'écart au statut de l'établissement.
