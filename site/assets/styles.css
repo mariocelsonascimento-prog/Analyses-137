@@ -427,6 +427,14 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .territory-story { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:45px; }
 .territory-story > p { margin:0; padding:22px; background:var(--white); }
 .territory-rule { border-left:5px solid #9b8cff; }
+.territory-result { display:grid; grid-template-columns:repeat(3,1fr); margin-top:14px; border:1px solid var(--ink); background:var(--white); }
+.territory-result article { padding:22px; border-right:1px solid var(--line); }
+.territory-result article:last-child { border-right:0; }
+.territory-result strong,.territory-result span { display:block; }
+.territory-result strong { font-size:32px; letter-spacing:-.05em; }
+.territory-result span { color:var(--muted); font-size:11px; }
+.territory-reading { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+.territory-reading p { margin:0; padding:20px; background:#d8d2ff; }
 .territory-table-wrap { margin-top:30px; overflow-x:auto; border:1px solid var(--ink); background:var(--white); }
 .territory-table { width:100%; min-width:850px; border-collapse:collapse; font-size:12px; }
 .territory-table caption { padding:18px; text-align:left; font-weight:700; border-bottom:1px solid var(--ink); }
@@ -515,8 +523,9 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
   .access-distribution-row > span:first-of-type { border-left:0; }
   .synthesis-heading,.synthesis-grid { grid-template-columns:1fr; }
   .synthesis-heading .eyebrow { grid-column:1; }
-  .territory-heading,.territory-story { grid-template-columns:1fr; }
+  .territory-heading,.territory-story,.territory-result,.territory-reading { grid-template-columns:1fr; }
   .territory-heading .eyebrow { grid-column:1; }
+  .territory-result article { border-right:0; border-bottom:1px solid var(--line); }
   .mentions-numbers article,.mentions-numbers article + article { padding:16px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.2); }
   .analysis-card { min-height:340px; border-left:1px solid var(--line); }
   .method-grid li,.method-grid li + li { padding:28px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.18); }

@@ -392,3 +392,26 @@ Deux anomalies de libellé existent dans la source brute : `GRA EST` et `NORMAIE
 Mayotte compte dix lycées publics en 2025, mais aucune valeur ajoutée de réussite exploitable. Aucune moyenne ni aucun écart ne doit donc y être affiché comme zéro.
 
 Une comparaison est signalée comme fragile lorsqu'un secteur repose sur moins de 10 lycées renseignés. C'est le cas de la Corse, de la Guadeloupe, de la Guyane, de La Réunion et de la Martinique pour le privé sous contrat. Ce seuil est une règle de présentation prudente, pas un test statistique.
+
+## 2026-08-26 — Règle d'interprétation régionale à 20 lycées
+
+La règle de prudence est renforcée : une région est utilisée pour comparer les secteurs seulement si elle possède au moins 20 lycées avec une VA réussite disponible dans chacun des deux secteurs. Cette règle analytique est propre à cette publication et ne vient pas de la DEPP.
+
+Dix régions remplissent cette condition : Auvergne-Rhône-Alpes, Bretagne, Grand Est, Hauts-de-France, Île-de-France, Normandie, Nouvelle-Aquitaine, Occitanie, Pays de la Loire et Provence-Alpes-Côte d'Azur.
+
+| Région | Privé renseigné | Public renseigné | Écart VA réussite privé - public |
+| --- | ---: | ---: | ---: |
+| Auvergne-Rhône-Alpes | 92 | 175 | +1,99 |
+| Bretagne | 55 | 63 | +0,80 |
+| Grand Est | 48 | 134 | +1,30 |
+| Hauts-de-France | 61 | 124 | +1,01 |
+| Île-de-France | 147 | 305 | +1,72 |
+| Normandie | 31 | 77 | +2,37 |
+| Nouvelle-Aquitaine | 46 | 135 | +1,15 |
+| Occitanie | 46 | 133 | +0,64 |
+| Pays de la Loire | 60 | 70 | +1,97 |
+| Provence-Alpes-Côte d'Azur | 58 | 101 | +1,13 |
+
+L'écart est positif dans les dix régions retenues. Il varie de +0,64 point en Occitanie à +2,37 points en Normandie, contre +1,33 point au niveau national. La cohérence du signe montre que le résultat national n'est pas porté uniquement par une ou deux grandes régions ; l'ampleur de l'écart varie cependant selon le territoire.
+
+Ce constat reste descriptif. Le seuil de 20 n'est ni un test de significativité ni une garantie que les différences observées ne sont pas dues à d'autres facteurs.
