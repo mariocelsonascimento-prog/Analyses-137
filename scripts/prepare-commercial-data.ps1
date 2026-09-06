@@ -106,9 +106,10 @@ $rows = foreach ($sale in $sales) {
   $returnEvents = @()
   foreach ($return in $saleReturns) {
     $returnQuantity = Number $return.Quantite_Retour
+    $returnReason = if ($return.Motif.Trim() -match '(?i)^defectueux$') { [string]::Concat('D', [char]0x00E9, 'fectueux') } else { $return.Motif.Trim() }
     $returnedQuantity += $returnQuantity
-    $reasons += $return.Motif
-    $returnEvents += [pscustomobject]@{ reason = $return.Motif; quantity = $returnQuantity }
+    $reasons += $returnReason
+    $returnEvents += [pscustomobject]@{ reason = $returnReason; quantity = $returnQuantity }
   }
   [pscustomobject][ordered]@{
     saleId = $sale.Vente_ID; date = (Excel-DateValue $sale.Date_Commande).ToString('yyyy-MM-dd'); year = (Excel-DateValue $sale.Date_Commande).Year
