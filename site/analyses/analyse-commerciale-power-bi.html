@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Étude de cas Power BI sur le chiffre d'affaires, la marge et les retours produits.">
+  <meta name="theme-color" content="#f4f1e8">
+  <title>Ventes, marge et retours — Analyses 137</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260906-pbi">
+  <script src="../assets/app.js?v=20260906-pbi" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Analyses 137, accueil"><span class="brand-mark" aria-hidden="true">137</span><span>Analyses</span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+    <nav id="navigation" class="navigation" aria-label="Navigation principale">
+      <a href="../index.html#analyses" aria-current="page">Analyses</a><a href="../index.html#livres">Livres</a><a href="../suivi.html">Suivi</a>
+      <a class="nav-cta" href="https://github.com/mariocelsonascimento-prog/Analyses-137/tree/main/analyses/analyse-commerciale-power-bi">Voir le dossier</a>
+    </nav>
+  </header>
+
+  <main id="contenu" class="pbi-case">
+    <section class="pbi-hero section-shell">
+      <div><p class="eyebrow">Analyse 002 · Business Intelligence</p><span class="case-status">Étude de cas terminée · Power BI</span><h1>Vendre plus ne veut pas toujours dire gagner plus.</h1><p class="pbi-intro">Ce tableau de bord confronte le chiffre d'affaires, la marge et les retours. Son objectif n'est pas d'empiler des graphiques, mais d'aider à décider où regarder en premier.</p><div class="hero-actions"><a class="button button-primary" href="#dashboard">Voir le dashboard</a><a class="button button-secondary" href="../downloads/analyse-commerciale-power-bi.pbix" download>Télécharger le fichier Power BI</a></div></div>
+      <aside class="pbi-question"><p class="eyebrow">Question métier</p><h2>Quels commerciaux, produits et clients créent le plus de valeur, et quels retours doivent être examinés en priorité ?</h2><p>Le cas montre aussi une compétence essentielle en analyse : deux indicateurs peuvent raconter des histoires différentes sans se contredire.</p></aside>
+    </section>
+
+    <section class="pbi-kpis" aria-label="Indicateurs principaux"><div class="section-shell pbi-kpi-grid">
+      <article><span>Chiffre d'affaires</span><strong>2,97 M€</strong><small>Valeur totale des ventes</small></article>
+      <article><span>Marge</span><strong>526 915 €</strong><small>Montant restant après les coûts</small></article>
+      <article><span>Taux de marge</span><strong>17,76 %</strong><small>Environ 18 € de marge pour 100 € vendus</small></article>
+      <article><span>Unités vendues</span><strong>4 295</strong><small>Volume total de produits</small></article>
+      <article><span>Unités retournées</span><strong>134</strong><small>Produits revenus après la vente</small></article>
+      <article><span>Taux de retour</span><strong>3,12 %</strong><small>Environ 3 produits sur 100</small></article>
+    </div></section>
+
+    <section id="dashboard" class="pbi-dashboard section-shell"><div class="pbi-heading"><p class="eyebrow">Vue finale</p><h2>Le dashboard en un coup d'œil</h2><p>Les filtres Année, Commercial et Produit permettent de passer de la vue générale à une situation précise.</p></div><figure><img src="../assets/images/analyse-commerciale-dashboard.png" alt="Dashboard Power BI présentant six indicateurs, la performance par commercial, les produits, les clients et les retours."><figcaption>La page finale réunit performance commerciale et qualité des ventes. Le fichier PBIX permet d'examiner le modèle et les interactions.</figcaption></figure></section>
+
+    <section class="pbi-story section-shell"><div class="pbi-heading"><p class="eyebrow">Lecture 01</p><h2>Chiffre d'affaires et rentabilité ne sont pas synonymes</h2></div><div class="pbi-story-grid"><article><strong>Julie Renard</strong><span>≈ 680 k€ de chiffre d'affaires</span><p>Elle est la première contributrice en volume de ventes et génère aussi environ 120 k€ de marge.</p></article><article><strong>Karim Benali</strong><span>25,32 % de taux de marge</span><p>Son chiffre d'affaires est plus faible, autour de 490 k€, mais chaque euro vendu est en moyenne plus rentable.</p></article></div><p class="pbi-explain"><strong>Exemple simple.</strong> Une vente de 100 € avec 15 € de marge rapporte moins qu'une vente de 80 € avec 20 € de marge. Le chiffre d'affaires mesure l'activité ; le taux de marge mesure l'efficacité économique de cette activité. Le dashboard évite donc de désigner automatiquement le plus gros vendeur comme le plus rentable.</p></section>
+
+    <section class="pbi-dark"><div class="section-shell pbi-story"><div class="pbi-heading"><p class="eyebrow">Lecture 02</p><h2>Beaucoup de retours ou un taux élevé : ce n'est pas la même alerte</h2></div><div class="pbi-contrast"><article><span>Plus grand volume observé</span><strong>Webcam HD · 12</strong><p>Douze unités retournées attirent l'attention sur le volume absolu.</p></article><article><span>Taux le plus élevé observé</span><strong>Headset Office · 13,33 %</strong><p>La proportion est forte même si le nombre d'unités retournées est plus faible.</p></article></div><p class="pbi-explain"><strong>Pourquoi regarder les deux ?</strong> Un produit très vendu peut avoir beaucoup de retours tout en gardant un taux raisonnable. À l'inverse, quelques retours sur un produit peu vendu peuvent représenter une part inquiétante. Le volume aide à mesurer la charge opérationnelle ; le taux aide à repérer une fragilité relative.</p></div></section>
+
+    <section class="pbi-story section-shell"><div class="pbi-heading"><p class="eyebrow">Lecture 03</p><h2>Les motifs précisent où enquêter</h2></div><div class="pbi-reasons"><div><strong>32</strong><span>Défectueux</span></div><div><strong>30</strong><span>Non conforme</span></div><div><strong>25</strong><span>Erreur de commande</span></div><div><strong>24</strong><span>Autre</span></div><div><strong>23</strong><span>Transport</span></div></div><div class="pbi-matrix"><img src="../assets/images/analyse-commerciale-retours.png" alt="Matrice Power BI croisant les produits et les motifs de retour."><div><h3>Un signal à examiner, pas une cause prouvée</h3><p>Pour la Webcam HD, 9 retours sur 12 sont classés « défectueux », soit 75 %. C'est un bon motif pour lancer un contrôle qualité ciblé.</p><p>Le tableau ne permet toutefois pas d'affirmer que le fournisseur est responsable. Il faudrait compléter l'analyse par des numéros de lot, des dates, des commentaires clients ou des données logistiques.</p></div></div></section>
+
+    <section class="pbi-method"><div class="section-shell"><div class="pbi-heading"><p class="eyebrow">Construction</p><h2>Ce que le projet démontre techniquement</h2></div><div class="pbi-method-grid"><article><span>01</span><h3>Modéliser</h3><p>Une table calendrier relie les faits et rend les filtres annuels cohérents.</p></article><article><span>02</span><h3>Calculer</h3><p>Les mesures DAX séparent les calculs métier des colonnes brutes.</p></article><article><span>03</span><h3>Comparer</h3><p>Top N, taux et volumes répondent à des questions différentes.</p></article><article><span>04</span><h3>Guider</h3><p>Les interactions sont réglées pour préserver les comparaisons utiles.</p></article></div><div class="pbi-code"><div><span>Quantité retournée</span><code>SUM(Retours[Quantite_Retour])</code></div><div><span>Taux de retour</span><code>DIVIDE([Quantité retournée], [Quantité vendue], 0)</code></div></div></div></section>
+
+    <section class="pbi-limit section-shell"><p class="eyebrow">Transparence</p><h2>Ce que cette analyse ne permet pas d'affirmer</h2><p>Le jeu de données est intégré à un exercice Power BI. Sa provenance et sa licence ne figurent pas dans les fichiers reçus : les résultats doivent être lus comme une démonstration de méthode et de compétences, pas comme une étude officielle d'une entreprise réelle.</p><p>Les écarts observés orientent les vérifications. Ils ne prouvent pas, à eux seuls, pourquoi une marge est faible ou pourquoi un produit revient.</p><div class="hero-actions"><a class="button button-primary" href="../downloads/analyse-commerciale-power-bi.pbix" download>Examiner le PBIX</a><a class="button button-secondary" href="../suivi.html">Voir les tickets du projet</a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="section-shell footer-grid"><div><a class="brand footer-brand" href="../index.html"><span class="brand-mark">137</span><span>Analyses</span></a><p>Des analyses publiques, vérifiables et expliquées sans jargon inutile.</p></div><div><p class="footer-label">Projet</p><a href="../index.html#analyses">Analyses</a><a href="../suivi.html">Suivi</a><a href="../accessibilite.html">Accessibilité</a></div><p class="copyright">© <span id="year"></span> Analyses 137</p></div></footer>
+</body>
+</html>

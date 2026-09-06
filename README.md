@@ -49,7 +49,7 @@ Chaque pipeline public précise son environnement, ses données d'entrée, les c
 
 ## Statut
 
-La première analyse est en cours : [lycées publics et privés sous contrat en 2025](analyses/lycees-public-prive-2025/README.md). Le cadrage, la source brute et sa traçabilité sont publiés ; la préparation reproductible des données est la prochaine étape.
+L'analyse des [lycées publics et privés sous contrat en 2025](analyses/lycees-public-prive-2025/README.md) est actuellement en pause. Une nouvelle étude de cas, [Ventes, marge et retours avec Power BI](analyses/analyse-commerciale-power-bi/README.md), est publiée avec son rapport téléchargeable.
 
 La démarche d'accessibilité du site est documentée dans `docs/ACCESSIBILITY.md` et publiée sur la page `site/accessibilite.html`.
 
