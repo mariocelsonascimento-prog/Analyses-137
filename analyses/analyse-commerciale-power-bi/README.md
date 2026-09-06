@@ -1,6 +1,8 @@
 # Ventes, marge et retours — étude de cas Power BI
 
-Cette étude de cas montre comment relier trois lectures complémentaires d'une activité commerciale : le chiffre d'affaires, la rentabilité et les retours produits.
+Cette étude de cas est un entraînement réalisé pour préparer un entretien. Son objectif principal est de développer et démontrer mes compétences en Power BI, en préparation des données et en analyse. Elle montre comment relier trois lectures complémentaires d'une activité commerciale fictive : le chiffre d'affaires, la rentabilité et les retours produits.
+
+Ce projet n'est pas une mission client et ne décrit pas une entreprise réelle.
 
 ## Question métier
 
