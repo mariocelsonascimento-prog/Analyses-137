@@ -10,7 +10,10 @@ Quels commerciaux, produits et clients contribuent le plus à l'activité, et qu
 
 - [Page publique](../../site/analyses/analyse-commerciale-power-bi.html)
 - [Rapport Power BI](../../dashboards/power-bi/analyse-commerciale-power-bi.pbix)
+- [Données brutes Excel](data/raw/Entrainement_PowerBI_DataAnalyst.xlsx)
 - captures du dashboard dans `site/assets/images/`
+
+La version web interactive est générée avec `scripts/prepare-commercial-data.ps1`. Le script retire deux doublons de vente, normalise les libellés et remplace les deux prix unitaires manquants par la moyenne observée pour le même produit. Il reproduit ainsi les KPI du rapport Power BI.
 
 ## Indicateurs
 
@@ -31,4 +34,4 @@ Taux de retour = DIVIDE([Quantité retournée], [Quantité vendue], 0)
 
 ## Limites
 
-Il s'agit d'un jeu de données d'exercice intégré au fichier PBIX. Sa provenance et sa licence ne sont pas documentées dans les fichiers reçus : il ne doit donc pas être présenté comme une source publique officielle. Les résultats décrivent uniquement ce jeu de données et ne permettent pas d'établir les causes des retours ou des écarts de marge.
+Il s'agit d'un jeu de données d'exercice. Sa provenance et sa licence ne sont pas documentées dans les fichiers reçus : il ne doit donc pas être présenté comme une source publique officielle. Les résultats décrivent uniquement ce jeu de données et ne permettent pas d'établir les causes des retours ou des écarts de marge.
