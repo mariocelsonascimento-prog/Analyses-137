@@ -9,7 +9,7 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/styles.css?v=20260906-pbi">
   <script src="../assets/app.js?v=20260906-pbi" defer></script>
-  <script src="../assets/commercial-dashboard.js?v=20260906-1" defer></script>
+  <script src="../assets/commercial-dashboard.js?v=20260906-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -48,11 +48,11 @@
         <p id="dashboard-context" class="dashboard-context" aria-live="polite">Chargement des données…</p>
         <div id="live-kpis" class="live-kpis" aria-label="Indicateurs filtrés"></div>
         <div class="live-chart-grid">
-          <section class="live-chart live-chart-wide"><h3>Performance par commercial</h3><p>Chiffre d'affaires et marge. La sélection d'un commercial le met en évidence sans faire disparaître ses collègues.</p><div id="chart-salespeople"></div></section>
-          <section class="live-chart"><h3>Top 5 produits par marge</h3><div id="chart-products"></div></section>
-          <section class="live-chart"><h3>Top 5 clients par chiffre d'affaires</h3><div id="chart-clients"></div></section>
-          <section class="live-chart"><h3>Produits au taux de retour le plus élevé</h3><div id="chart-return-rate"></div></section>
-          <section class="live-chart"><h3>Motifs de retour</h3><div id="chart-reasons"></div></section>
+          <section class="live-chart live-chart-wide"><h3>Performance par commercial</h3><p>Cliquez sur une barre pour filtrer le dashboard. La sélection reste visible en jaune.</p><div id="chart-salespeople"></div></section>
+          <section class="live-chart"><h3>Top 5 produits par marge</h3><p>Cliquez sur un produit pour recalculer tous les autres éléments.</p><div id="chart-products"></div></section>
+          <section class="live-chart"><h3>Top 5 clients par chiffre d'affaires</h3><p>Cliquez sur un client pour explorer son activité.</p><div id="chart-clients"></div></section>
+          <section class="live-chart"><h3>Produits au taux de retour le plus élevé</h3><p>Cliquez sur un produit pour examiner son profil.</p><div id="chart-return-rate"></div></section>
+          <section class="live-chart"><h3>Motifs de retour</h3><p>Cliquez sur un motif pour voir les ventes concernées.</p><div id="chart-reasons"></div></section>
         </div>
         <p id="dashboard-error" class="dashboard-error" hidden>Les données du dashboard ne peuvent pas être chargées.</p>
       </div>
