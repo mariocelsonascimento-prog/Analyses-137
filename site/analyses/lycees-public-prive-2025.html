@@ -7,8 +7,9 @@
   <meta name="theme-color" content="#f4f1e8">
   <title>Lycées publics et privés en 2025 — Analyses 137</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/styles.css?v=20260909-questions">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260909-story">
   <script src="../assets/app.js?v=20260825-ival" defer></script>
+  <script src="../assets/ival-story.js?v=20260909-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -106,7 +107,21 @@
       </ol>
     </section>
 
-    <section class="case-section section-shell">
+    <section id="exploration" class="story-explorer section-shell" aria-labelledby="story-explorer-title">
+      <div class="story-explorer-heading"><div><p class="eyebrow">Lecture guidée</p><h2 id="story-explorer-title">Explorez l’analyse par chapitre</h2></div><p>Un seul chapitre est affiché à la fois. Vous pouvez avancer dans l’ordre ou accéder directement à la question qui vous intéresse.</p></div>
+      <div class="story-toolbar">
+        <div class="story-tabs" role="tablist" aria-label="Chapitres de l’analyse">
+          <button id="tab-reussite" type="button" role="tab" aria-controls="story-reussite" aria-selected="true" data-story-target="reussite">Réussite</button>
+          <button id="tab-mentions" type="button" role="tab" aria-controls="story-mentions" aria-selected="false" data-story-target="mentions" tabindex="-1">Mentions</button>
+          <button id="tab-acces" type="button" role="tab" aria-controls="story-acces" aria-selected="false" data-story-target="acces" tabindex="-1">Accès au bac</button>
+          <button id="tab-synthese" type="button" role="tab" aria-controls="story-synthese" aria-selected="false" data-story-target="synthese" tabindex="-1">Synthèse</button>
+          <button id="tab-regions" type="button" role="tab" aria-controls="story-regions" aria-selected="false" data-story-target="regions" tabindex="-1">Régions</button>
+        </div>
+        <div class="story-pager"><button id="story-previous" type="button" disabled>← Précédent</button><p><span id="story-progress">Chapitre 1 sur 5</span><strong id="story-title">Réussite au bac</strong></p><button id="story-next" type="button">Suivant →</button></div>
+      </div>
+    </section>
+
+    <section id="story-reussite" class="case-section section-shell story-panel" role="tabpanel" aria-labelledby="tab-reussite" data-story-panel="reussite" data-story-title="Réussite au bac">
       <div class="case-section-title"><p class="eyebrow">Premiers calculs</p><h2>Un écart brut à expliquer</h2></div>
       <div class="case-content">
         <div class="answer-question"><span>Question 1</span><h3>Les taux de réussite au baccalauréat diffèrent-ils entre les lycées publics et privés sous contrat ?</h3></div>
@@ -146,7 +161,7 @@
       </div>
     </section>
 
-    <section class="case-pending section-shell">
+    <section id="story-mentions" class="case-pending section-shell story-panel" role="tabpanel" aria-labelledby="tab-mentions" data-story-panel="mentions" data-story-title="Mentions au bac">
       <div class="mentions-preview">
         <div><p class="eyebrow">Deuxième indicateur · mentions · calculs descriptifs terminés</p><h2>Comparer l’obtention des mentions au baccalauréat.</h2></div>
         <div class="answer-question answer-question-dark"><span>Question 3</span><h3>Les taux de mentions au baccalauréat diffèrent-ils entre les deux secteurs ?</h3></div>
@@ -163,16 +178,16 @@
         <div class="mentions-va"><article><span>Écart moyen observé-attendu · privé</span><strong>+1,43 point</strong><small>Lycée situé au milieu : +2 points</small><small>Moitié centrale : de −3 à +6 points</small></article><article><span>Écart moyen observé-attendu · public</span><strong>−0,98 point</strong><small>Lycée situé au milieu : −1 point</small><small>Moitié centrale : de −5 à +3 points</small></article></div>
         <p>Le lycée privé sous contrat moyen obtient un taux de mentions situé 1,43 point au-dessus de son attendu. Le lycée public moyen se situe 0,98 point en dessous. L'écart entre ces deux positions est de 2,42 points : l'indicateur corrigé reste plus favorable au privé sous contrat, sans prouver que le secteur en est la cause.</p>
         <p>Regardons maintenant le lycée placé au milieu de chaque groupe, plutôt que la moyenne de tous les lycées. Dans le privé sous contrat, ce lycée médian se situe 2 points au-dessus de l'attendu. Dans le public, il se situe 1 point en dessous. Comme cette lecture centrale va dans le même sens que la moyenne, l'écart observé semble moins susceptible de reposer seulement sur quelques cas exceptionnels.</p>
-        <div class="quartile-story">
+        <details class="quartile-story story-details"><summary>Approfondir : où se trouve la moitié des lycées ?</summary><div>
           <p class="story-kicker">Où se trouve la moitié des lycées ?</p>
           <p>Imaginons que l'on range les lycées de chaque secteur du moins bon au meilleur écart par rapport à l'attendu, puis que l'on retire le quart le plus bas et le quart le plus haut. Il reste la moitié centrale.</p>
           <p>Dans le privé sous contrat, cette moitié se situe entre <strong>3 points sous l'attendu et 6 points au-dessus</strong>. Dans le public, elle va de <strong>5 points sous l'attendu à 3 points au-dessus</strong>. Les deux zones ont la même largeur, mais celle du privé est globalement placée plus haut.</p>
-        </div>
-        <div class="extreme-story">
+        </div></details>
+        <details class="extreme-story story-details"><summary>Approfondir : comprendre les valeurs extrêmes</summary><div>
           <p class="story-kicker">Un cas extrême ne raconte pas l'histoire du groupe</p>
           <p>Dans le privé sous contrat, la valeur la plus basse atteint <strong>−39 points</strong>. Elle ne concerne pourtant qu'un seul lycée parmi les 693 renseignés. Dans le public, le minimum est de <strong>−19 points</strong> et ne concerne lui aussi qu'un seul lycée.</p>
           <p>À l'autre extrémité, les maximums atteignent +28 dans le privé et +27 dans le public, avec deux lycées dans chaque cas. Ces situations existent et doivent rester visibles, mais elles ne renversent pas la lecture donnée par le milieu de la distribution.</p>
-        </div>
+        </div></details>
         <div class="mentions-distribution">
           <div class="mentions-distribution-intro"><p class="story-kicker">Position par rapport à l’attendu</p><p>Quelle proportion de lycées obtient plus, autant ou moins de mentions que prévu ?</p></div>
           <div class="mentions-distribution-row"><strong>Plus de mentions que prévu</strong><span><b>58</b> privés</span><span><b>40</b> publics</span></div>
@@ -184,7 +199,7 @@
       </div>
     </section>
 
-    <section class="access-section">
+    <section id="story-acces" class="access-section story-panel" role="tabpanel" aria-labelledby="tab-acces" data-story-panel="acces" data-story-title="Accès de la seconde au bac">
       <div class="section-shell case-section">
         <div class="case-section-title"><p class="eyebrow">Troisième indicateur · accès au bac</p><h2>Ici, les deux secteurs sont presque au même niveau.</h2></div>
         <div class="case-content">
@@ -225,21 +240,21 @@
             <div class="access-distribution-row"><strong>En dessous de l'attendu</strong><span><b>55,70 %</b> privés</span><span><b>45,87 %</b> publics</span></div>
             <p class="access-distribution-detail">Effectifs exacts : 254 privés et 684 publics sont au-dessus de l'attendu ; 386 privés et 694 publics sont en dessous. Calcul sur 693 lycées privés et 1 513 lycées publics renseignés.</p>
           </div>
-          <div class="access-quartile-story">
+          <details class="access-quartile-story story-details"><summary>Approfondir : comparer la moitié centrale</summary><div>
             <p class="story-kicker">Deux groupes qui se chevauchent largement</p>
             <p>Si l'on retire le quart des lycées les plus bas et le quart des plus hauts, la moitié restante va de −5 à +2 points dans le privé, contre −3 à +3 points dans le public.</p>
             <p>La zone du public est placée un peu plus haut, ce qui va dans le même sens que la moyenne et la médiane. Mais les deux intervalles partagent une grande partie de leurs valeurs : beaucoup de lycées publics et privés ont donc des situations comparables.</p>
-          </div>
-          <div class="access-extreme-story">
+          </div></details>
+          <details class="access-extreme-story story-details"><summary>Approfondir : interpréter les valeurs extrêmes</summary><div>
             <p class="story-kicker">Le −47 le plus visible est aussi le moins représentatif</p>
             <p>La valeur la plus basse atteint −47 points dans le privé sous contrat, contre −28 dans le public. Mais chacun de ces minimums ne concerne qu'un seul lycée. Les maximums sont +11 dans le privé, pour un lycée, et +16 dans le public, pour deux lycées.</p>
             <p>Ces cas attirent l'œil parce qu'ils sont spectaculaires. Pour comprendre la situation habituelle, il vaut mieux revenir à la moyenne, au lycée du milieu et à la moitié centrale : ces trois lectures placent le public un peu plus haut relativement à l'attendu.</p>
-          </div>
+          </div></details>
         </div>
       </div>
     </section>
 
-    <section class="synthesis-section section-shell">
+    <section id="story-synthese" class="synthesis-section section-shell story-panel" role="tabpanel" aria-labelledby="tab-synthese" data-story-panel="synthese" data-story-title="Synthèse des trois indicateurs">
       <div class="synthesis-heading">
         <p class="eyebrow">Synthèse provisoire · trois dimensions</p>
         <h2>La réponse change selon la question posée.</h2>
@@ -270,7 +285,7 @@
       </div>
     </section>
 
-    <section class="territory-section">
+    <section id="story-regions" class="territory-section story-panel" role="tabpanel" aria-labelledby="tab-regions" data-story-panel="regions" data-story-title="Comparaison régionale">
       <div class="section-shell">
         <div class="territory-heading"><p class="eyebrow">Nouvelle échelle · régions</p><h2>L'écart national est-il le même partout ?</h2><p>Nous commençons par la valeur ajoutée de réussite. Une moyenne régionale n'a de sens qu'avec le nombre de lycées qui se trouve derrière.</p></div>
         <div class="answer-question answer-question-territory"><span>Question 8</span><h3>Dans les régions suffisamment représentées, l’écart de réussite va-t-il toujours dans le même sens ?</h3></div>
