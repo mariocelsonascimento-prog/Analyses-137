@@ -423,12 +423,13 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .synthesis-heading > p:last-child { margin:0; color:var(--muted); font-size:17px; }
 .synthesis-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:55px; }
 .synthesis-card { min-height:330px; padding:25px; display:flex; flex-direction:column; border:1px solid var(--ink); background:var(--white); }
-.synthesis-card > span { font:500 10px "DM Mono",monospace; text-transform:uppercase; }
-.synthesis-card > strong { margin-top:45px; font-size:38px; letter-spacing:-.05em; }
-.synthesis-card h3 { margin:4px 0 20px; font-size:20px; }
+.synthesis-card > span { display:flex; align-items:center; min-height:46px; margin:-8px -8px 0; padding:10px 12px; background:#eeeafc; font:700 14px "Manrope",sans-serif; letter-spacing:-.01em; text-transform:none; }
+.synthesis-card > strong { margin-top:38px; font-size:44px; line-height:1; letter-spacing:-.055em; }
+.synthesis-card h3 { margin:10px 0 20px; font-size:27px; line-height:1.12; letter-spacing:-.035em; }
 .synthesis-card p { margin-top:auto; color:var(--muted); font-size:13px; }
 .synthesis-card.is-private { border-top:8px solid #9b8cff; }
 .synthesis-card.is-public { border-top:8px solid #37745f; }
+.synthesis-card.is-public > span { background:#dfe9e5; }
 .synthesis-reading { margin-top:24px; padding:22px; background:#e8e3d7; }
 .synthesis-reading p { margin-top:0; }
 .synthesis-reading p:last-child { margin-bottom:0; }
