@@ -6,6 +6,7 @@
   const panels = [...document.querySelectorAll("[data-story-panel]")];
   const previous = document.querySelector("#story-previous");
   const next = document.querySelector("#story-next");
+  const pager = document.querySelector(".story-pager");
   const progress = document.querySelector("#story-progress");
   const title = document.querySelector("#story-title");
   const keys = tabs.map((tab) => tab.dataset.storyTarget);
@@ -24,8 +25,11 @@
     panels.forEach((panel) => { panel.hidden = panel.dataset.storyPanel !== activeKey; });
     previous.disabled = activeIndex === 0;
     next.disabled = activeIndex === panels.length - 1;
+    previous.textContent = activeIndex === 0 ? "← Précédent" : `← ${panels[activeIndex - 1].dataset.storyTitle}`;
+    next.textContent = activeIndex === panels.length - 1 ? "Analyse terminée" : `${panels[activeIndex + 1].dataset.storyTitle} →`;
     progress.textContent = `Chapitre ${activeIndex + 1} sur ${panels.length}`;
     title.textContent = panels[activeIndex].dataset.storyTitle;
+    panels[activeIndex].insertAdjacentElement("afterend", pager);
     history.replaceState(null, "", `#chapitre-${activeKey}`);
     if (moveFocus) tabs[activeIndex].focus();
     if (scroll) explorer.scrollIntoView({ behavior: "smooth", block: "start" });
