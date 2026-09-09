@@ -560,6 +560,177 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
   .method-grid li,.method-grid li + li { padding:28px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.18); }
   .method-grid h3 { margin-top:38px; }
 }
+
+/* Analyse IVAL — mise en page dédiée aux téléphones */
+@media (max-width:680px) {
+  .case-main,
+  .case-main section,
+  .case-main article,
+  .case-main .case-hero > *,
+  .case-main .case-section > *,
+  .case-main .case-content,
+  .case-main .story-panel,
+  .case-main .story-block,
+  .case-main .story-transition,
+  .case-main .story-conclusion {
+    min-width:0;
+    max-width:100%;
+  }
+
+  .case-hero {
+    min-height:auto;
+    gap:42px;
+    padding-block:54px 70px;
+  }
+
+  .case-hero h1 {
+    max-width:100%;
+    font-size:clamp(42px,12.5vw,54px);
+    line-height:.98;
+    letter-spacing:-.055em;
+    overflow-wrap:break-word;
+  }
+
+  .case-hero-copy > p:last-of-type {
+    font-size:17px;
+    line-height:1.55;
+  }
+
+  .case-question {
+    padding:25px 22px;
+    box-shadow:9px 9px 0 #9b8cff;
+  }
+
+  .case-question h2 {
+    margin:28px 0 20px;
+    font-size:23px;
+    overflow-wrap:break-word;
+  }
+
+  .case-section {
+    gap:36px;
+    padding-block:70px;
+  }
+
+  .case-section-title h2,
+  .mentions-preview h2,
+  .synthesis-heading h2,
+  .territory-heading h2,
+  .case-pending h2 {
+    font-size:clamp(35px,10.5vw,46px);
+    line-height:1.04;
+    overflow-wrap:break-word;
+  }
+
+  .case-lead {
+    font-size:19px;
+    line-height:1.55;
+  }
+
+  .story-block p:not(.story-kicker):not(.case-lead),
+  .story-conclusion p:not(.story-kicker) {
+    font-size:15px;
+  }
+
+  .story-panel .story-kicker,
+  .story-panel .distribution-heading .eyebrow {
+    font-size:17px;
+  }
+
+  .answer-question h3 {
+    font-size:clamp(21px,6.5vw,27px);
+    overflow-wrap:break-word;
+  }
+
+  .story-details summary {
+    padding:16px 17px;
+    font-size:17px;
+  }
+
+  .story-details > div {
+    padding:0 17px 18px;
+  }
+
+  .result-compare strong,
+  .mentions-numbers strong,
+  .access-numbers strong,
+  .synthesis-card > strong,
+  .territory-result strong {
+    font-size:clamp(32px,10vw,42px);
+    overflow-wrap:break-word;
+  }
+
+  .va-result strong,
+  .mentions-va strong,
+  .access-va strong {
+    font-size:clamp(28px,9vw,35px);
+    overflow-wrap:break-word;
+  }
+
+  .synthesis-card {
+    min-height:0;
+    padding:21px;
+  }
+
+  .synthesis-card h3 {
+    font-size:25px;
+  }
+
+  .synthesis-card p {
+    margin-top:20px;
+  }
+
+  .territory-table-wrap {
+    width:100%;
+    max-width:100%;
+    overscroll-behavior-inline:contain;
+  }
+}
+
+@media (max-width:420px) {
+  .case-facts-grid {
+    grid-template-columns:1fr;
+  }
+
+  .case-facts article,
+  .case-facts article:nth-child(2) {
+    border-right:0;
+    border-left:1px solid rgba(16,42,38,.3);
+    border-bottom:1px solid rgba(16,42,38,.3);
+  }
+
+  .story-tabs button {
+    max-width:78vw;
+    white-space:normal;
+  }
+
+  .story-pager {
+    padding:13px;
+  }
+
+  .distribution-row,
+  .mentions-distribution-row,
+  .access-distribution-row {
+    grid-template-columns:1fr;
+  }
+
+  .distribution-row > strong,
+  .mentions-distribution-row > strong,
+  .access-distribution-row > strong {
+    grid-column:1;
+  }
+
+  .distribution-row > div,
+  .mentions-distribution-row > span,
+  .access-distribution-row > span {
+    border-left:0;
+    border-top:1px solid var(--line);
+  }
+
+  .mentions-distribution-row > span {
+    border-top-color:rgba(255,255,255,.16);
+  }
+}
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
 
 /* Étude de cas Power BI */
