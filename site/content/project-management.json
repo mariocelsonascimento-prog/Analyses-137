@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-09-09",
   "workflow": [
     { "id": "backlog", "label": "À étudier" },
     { "id": "planned", "label": "Planifié" },
@@ -11,7 +11,7 @@
     { "id": "SITE", "name": "Portfolio Analyses 137", "type": "Site web", "status": "Actif", "color": "#d5ff45", "description": "Construire le site public et ses parcours de présentation." },
     { "id": "BOOK-BIPY", "name": "Business Intelligence avec Python", "type": "Livre", "status": "Actif", "color": "#73b7ff", "description": "Transformer les apprentissages du livre en projets BI reproductibles." },
     { "id": "ANALYSES", "name": "Sujets de conversation", "type": "Analyses", "status": "Préparation", "color": "#ff9478", "description": "Confronter des convictions courantes à des données publiques." },
-    { "id": "IVAL-2025", "name": "Lycées publics et privés", "type": "Analyse", "status": "En pause", "color": "#9b8cff", "description": "Comparer les résultats observés, attendus et les valeurs ajoutées des lycées en 2025." },
+    { "id": "IVAL-2025", "name": "Lycées publics et privés", "type": "Analyse", "status": "Actif", "color": "#9b8cff", "description": "Comparer les résultats observés, attendus et les valeurs ajoutées des lycées en 2025." },
     { "id": "PBI-VENTES", "name": "Ventes, marge et retours", "type": "Power BI", "status": "Terminé", "color": "#f2c94c", "description": "Analyser la performance commerciale, la rentabilité et les retours dans un cas pratique Power BI." }
   ],
   "issues": [
