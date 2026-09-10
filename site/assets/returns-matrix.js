@@ -16,8 +16,8 @@
 
   function clearHighlight() {
     selectedTarget = null;
-    root.querySelectorAll(".is-selected-row,.is-selected-column,.is-selected-cell,.is-dimmed")
-      .forEach((element) => element.classList.remove("is-selected-row", "is-selected-column", "is-selected-cell", "is-dimmed"));
+    root.querySelectorAll(".is-selected-row,.is-selected-column,.is-related-row,.is-related-column,.is-selected-cell,.is-dimmed")
+      .forEach((element) => element.classList.remove("is-selected-row", "is-selected-column", "is-related-row", "is-related-column", "is-selected-cell", "is-dimmed"));
     root.querySelectorAll("[data-matrix-cell],[data-matrix-axis]").forEach((button) => button.setAttribute("aria-pressed", "false"));
     reset.disabled = true;
     status.textContent = `Aucune sélection. La matrice présente ${integer.format(matrixTotal)} unités retournées au total.`;
@@ -34,13 +34,32 @@
     }
 
     selectedTarget = key;
+    const relatedRows = new Set();
+    const relatedColumns = new Set();
+    root.querySelectorAll("[data-matrix-cell]").forEach((cellButton) => {
+      if (axis === "row" && cellButton.dataset.matrixRow === row && cellButton.dataset.matrixColumn !== "__total__") {
+        relatedColumns.add(cellButton.dataset.matrixColumn);
+      }
+      if (axis === "column" && cellButton.dataset.matrixColumn === column && cellButton.dataset.matrixRow !== "__total__") {
+        relatedRows.add(cellButton.dataset.matrixRow);
+      }
+    });
+
     root.querySelectorAll(".return-matrix-table th,.return-matrix-table td").forEach((element) => {
       const sameRow = Boolean(row) && element.dataset.matrixRow === row;
       const sameColumn = Boolean(column) && element.dataset.matrixColumn === column;
+      const relatedRow = relatedRows.has(element.dataset.matrixRow);
+      const relatedColumn = relatedColumns.has(element.dataset.matrixColumn);
       element.classList.toggle("is-selected-row", sameRow);
       element.classList.toggle("is-selected-column", sameColumn);
-      element.classList.toggle("is-selected-cell", axis === "cell" && sameRow && sameColumn);
-      element.classList.toggle("is-dimmed", !sameRow && !sameColumn);
+      element.classList.toggle("is-related-row", relatedRow);
+      element.classList.toggle("is-related-column", relatedColumn);
+      element.classList.toggle("is-selected-cell",
+        (axis === "cell" && sameRow && sameColumn) ||
+        (axis === "row" && sameRow && relatedColumn) ||
+        (axis === "column" && sameColumn && relatedRow)
+      );
+      element.classList.toggle("is-dimmed", !sameRow && !sameColumn && !relatedRow && !relatedColumn);
     });
     root.querySelectorAll("[data-matrix-cell],[data-matrix-axis]").forEach((interactiveButton) => {
       interactiveButton.setAttribute("aria-pressed", String(interactiveButton === button));
@@ -48,8 +67,13 @@
     reset.disabled = false;
     const value = Number(button.dataset.value);
     const units = `${integer.format(value)} unité${value > 1 ? "s" : ""} retournée${value > 1 ? "s" : ""}`;
-    if (axis === "row") status.textContent = `${button.dataset.label} : ${units} au total. Toute la ligne du produit est surlignée.`;
-    else if (axis === "column") status.textContent = `${button.dataset.label} : ${units} au total. Toute la colonne du motif est surlignée.`;
+    if (axis === "row") {
+      const count = relatedColumns.size;
+      status.textContent = `${button.dataset.label} : ${units} au total. Sa ligne et ${count} colonne${count > 1 ? "s" : ""} de motif${count > 1 ? "s" : ""} contenant une valeur sont surlignées.`;
+    } else if (axis === "column") {
+      const count = relatedRows.size;
+      status.textContent = `${button.dataset.label} : ${units} au total. Sa colonne et ${count} ligne${count > 1 ? "s" : ""} de produit${count > 1 ? "s" : ""} contenant une valeur sont surlignées.`;
+    }
     else status.textContent = `${button.dataset.rowLabel} × ${button.dataset.columnLabel} : ${units}. La ligne et la colonne correspondantes sont surlignées.`;
   }
 

@@ -805,6 +805,8 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .return-matrix-zero { color:#a7aea9; }
 .return-matrix-table .return-matrix-total { background:#f2efe6; font-weight:700; }
 .return-matrix-table .is-dimmed { opacity:.26; }
+.return-matrix-table .is-related-row { opacity:1; background:#f2edff; }
+.return-matrix-table .is-related-column { opacity:1; background:#f0f6d8; }
 .return-matrix-table .is-selected-row { opacity:1; background:#eeeafc; }
 .return-matrix-table .is-selected-column { opacity:1; background:#edf5cd; }
 .return-matrix-table .is-selected-cell { opacity:1; background:var(--ink); color:var(--paper); }
