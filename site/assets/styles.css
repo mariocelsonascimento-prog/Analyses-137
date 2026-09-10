@@ -808,5 +808,210 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 @media (max-width:900px) { .live-kpis { grid-template-columns:repeat(3,1fr); }.dashboard-controls { grid-template-columns:1fr 1fr; }.analysis-formulas,.reading-chain,.decision-grid,.training-context-grid { grid-template-columns:1fr; }.decision-grid article { min-height:0; } }
 @media (max-width:680px) { .pbi-hero { padding-block:60px 85px; }.pbi-hero h1 { font-size:clamp(47px,14vw,68px); }.pbi-kpi-grid,.pbi-story-grid,.pbi-contrast,.pbi-reasons,.pbi-method-grid,.pbi-code,.live-chart-grid,.dashboard-controls { grid-template-columns:1fr; }.pbi-reasons div,.pbi-method-grid article,.pbi-method-grid article + article,.pbi-code div { border-right:0; border-bottom:1px solid var(--line); padding:20px; }.pbi-dashboard,.pbi-story,.pbi-limit,.pbi-method { padding-block:75px; }.web-dashboard { margin-inline:-8px; padding:8px; }.live-kpis { grid-template-columns:1fr 1fr; }.live-chart-wide { grid-column:1; }.dashboard-controls button { width:100%; } }
 @media (max-width:680px) { .analysis-walkthrough,.decision-section { padding-block:75px; }.analysis-steps li { grid-template-columns:1fr; gap:5px; }.analysis-step-number { font-size:18px; } }
+
+/* Étude Power BI — hiérarchie de lecture harmonisée avec l’analyse IVAL */
+.pbi-kpi-grid span {
+  font:700 14px "Manrope",sans-serif;
+  line-height:1.25;
+  text-transform:none;
+}
+.pbi-story-grid span,
+.pbi-contrast span {
+  padding:8px 10px;
+  background:#eeeafc;
+  font:700 14px "Manrope",sans-serif;
+  line-height:1.3;
+  text-transform:none;
+}
+.pbi-dark .pbi-contrast span { color:var(--paper); background:rgba(255,255,255,.1); }
+.pbi-reasons span { font:700 14px "Manrope",sans-serif; line-height:1.3; }
+.pbi-method-grid h3 { font-size:27px; line-height:1.15; }
+.pbi-case .story-kicker,
+.reflection strong,
+.reading-chain strong {
+  font:700 16px "Manrope",sans-serif;
+  line-height:1.3;
+  letter-spacing:-.015em;
+  text-transform:none;
+}
+.reflection strong,
+.reading-chain strong { display:block; margin-bottom:8px; }
+.pbi-explain > strong { display:block; margin-bottom:8px; font-size:18px; line-height:1.3; }
+.analysis-formulas strong { font-size:18px; line-height:1.3; }
+.decision-grid span,
+.decision-grid > article > strong {
+  font:700 14px "Manrope",sans-serif;
+  line-height:1.3;
+  text-transform:none;
+}
+.decision-grid > article > strong { font-size:16px; }
+.live-chart h3 { font-size:20px; line-height:1.25; }
+
+/* Étude Power BI — mise en page dédiée aux téléphones */
+@media (max-width:680px) {
+  .pbi-case,
+  .pbi-case section,
+  .pbi-case article,
+  .pbi-case .pbi-hero > *,
+  .pbi-case .pbi-heading > *,
+  .pbi-case .training-context-grid > *,
+  .pbi-case .analysis-steps li > *,
+  .pbi-case .pbi-matrix > *,
+  .pbi-case .live-chart {
+    min-width:0;
+    max-width:100%;
+  }
+
+  .pbi-hero {
+    min-height:auto;
+    gap:42px;
+    padding-block:54px 70px;
+  }
+
+  .pbi-hero h1 {
+    max-width:100%;
+    font-size:clamp(42px,12.5vw,54px);
+    line-height:.98;
+    letter-spacing:-.055em;
+    overflow-wrap:break-word;
+  }
+
+  .pbi-intro {
+    font-size:17px;
+    line-height:1.55;
+  }
+
+  .pbi-question {
+    padding:25px 22px;
+    box-shadow:9px 9px 0 var(--ink);
+  }
+
+  .pbi-question h2 {
+    margin:28px 0 20px;
+    font-size:23px;
+    overflow-wrap:break-word;
+  }
+
+  .training-context,
+  .pbi-dashboard,
+  .pbi-story,
+  .pbi-limit,
+  .pbi-method,
+  .analysis-walkthrough,
+  .decision-section {
+    padding-block:70px;
+  }
+
+  .pbi-heading h2,
+  .training-context h2,
+  .pbi-limit h2 {
+    font-size:clamp(35px,10.5vw,46px);
+    line-height:1.04;
+    overflow-wrap:break-word;
+  }
+
+  .pbi-kpi-grid article {
+    min-width:0;
+    min-height:145px;
+    padding:20px;
+  }
+
+  .pbi-kpi-grid strong,
+  .pbi-story-grid strong,
+  .pbi-contrast strong,
+  .pbi-reasons strong {
+    overflow-wrap:break-word;
+  }
+
+  .pbi-dashboard figure {
+    margin-top:32px;
+    padding:8px;
+    box-shadow:8px 8px 0 #d9d5c9;
+  }
+
+  .pbi-story-grid article,
+  .pbi-contrast article,
+  .decision-grid article {
+    min-height:0;
+    padding:21px;
+  }
+
+  .analysis-steps {
+    margin-top:38px;
+  }
+
+  .analysis-steps li {
+    padding:30px 0;
+  }
+
+  .analysis-steps h3 {
+    font-size:clamp(23px,7vw,30px);
+    overflow-wrap:break-word;
+  }
+
+  .reflection,
+  .pbi-explain,
+  .decision-test {
+    padding:18px;
+  }
+
+  .analysis-formulas p,
+  .reading-chain p {
+    padding:17px;
+  }
+
+  .pbi-matrix h3,
+  .decision-grid h3,
+  .decision-test h3 {
+    overflow-wrap:break-word;
+  }
+
+  .live-kpis {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .live-kpis span {
+    min-height:0;
+    font-size:11px;
+    line-height:1.3;
+    overflow-wrap:break-word;
+  }
+
+  .live-kpis strong {
+    font-size:clamp(18px,6vw,24px);
+    overflow-wrap:break-word;
+  }
+
+  .bar-row > div {
+    align-items:flex-start;
+  }
+
+  .bar-row span {
+    min-width:0;
+    overflow-wrap:break-word;
+  }
+
+  .bar-row strong {
+    flex:0 0 auto;
+  }
+}
+
+@media (max-width:420px) {
+  .pbi-kpi-grid { grid-template-columns:1fr; }
+  .pbi-kpi-grid article { min-height:0; }
+  .pbi-kpi-grid strong { margin-top:13px; }
+
+  .pbi-case .hero-actions {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .pbi-case .hero-actions .button { width:100%; }
+
+  .web-dashboard {
+    margin-inline:0;
+    padding:7px;
+  }
+}
 @media (prefers-contrast:more) { :root { --line:rgba(16,42,38,.5); --muted:#42514d; } .status,.incident-status { border:1px solid currentColor; } }
 @media (forced-colors:active) { .brand-mark,.button-primary,.filter.is-active { border:2px solid ButtonText; } .project-code i,.ticket-project i { forced-color-adjust:none; } }
