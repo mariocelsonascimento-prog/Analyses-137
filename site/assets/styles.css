@@ -846,6 +846,10 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 }
 .decision-grid > article > strong { font-size:16px; }
 .live-chart h3 { font-size:20px; line-height:1.25; }
+.pbi-nav-is-ready .pbi-nav-panel[hidden] { display:none!important; }
+.pbi-nav-panel { animation:story-panel-in .25s ease-out; }
+.pbi-section-tabs button { min-width:max-content; }
+.pbi-readings-panel { min-width:0; }
 
 /* Étude Power BI — mise en page dédiée aux téléphones */
 @media (max-width:680px) {
@@ -860,6 +864,12 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
   .pbi-case .live-chart {
     min-width:0;
     max-width:100%;
+  }
+
+  .pbi-section-tabs button {
+    max-width:78vw;
+    min-width:0;
+    white-space:normal;
   }
 
   .pbi-hero {
