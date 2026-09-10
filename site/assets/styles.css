@@ -800,6 +800,8 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .return-matrix-table tfoot th { z-index:4; left:0; }
 .return-matrix-table button { width:100%; min-height:36px; padding:4px; border:0; background:transparent; color:inherit; cursor:pointer; font-weight:700; }
 .return-matrix-table button:hover { background:#d8d2ff; }
+.return-matrix-table th:first-child .return-matrix-axis { text-align:left; }
+.return-matrix-axis { line-height:1.25; text-decoration:underline dotted; text-underline-offset:3px; }
 .return-matrix-zero { color:#a7aea9; }
 .return-matrix-table .return-matrix-total { background:#f2efe6; font-weight:700; }
 .return-matrix-table .is-dimmed { opacity:.26; }

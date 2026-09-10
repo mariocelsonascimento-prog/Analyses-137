@@ -7,7 +7,7 @@
   const reset = root.querySelector(".return-matrix-reset");
   const error = root.querySelector(".return-matrix-error");
   const integer = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 });
-  let selectedCell = null;
+  let selectedTarget = null;
   let matrixTotal = 0;
 
   const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, (character) => ({
@@ -15,43 +15,54 @@
   }[character]));
 
   function clearHighlight() {
-    selectedCell = null;
+    selectedTarget = null;
     root.querySelectorAll(".is-selected-row,.is-selected-column,.is-selected-cell,.is-dimmed")
       .forEach((element) => element.classList.remove("is-selected-row", "is-selected-column", "is-selected-cell", "is-dimmed"));
-    root.querySelectorAll("[data-matrix-cell]").forEach((button) => button.setAttribute("aria-pressed", "false"));
+    root.querySelectorAll("[data-matrix-cell],[data-matrix-axis]").forEach((button) => button.setAttribute("aria-pressed", "false"));
     reset.disabled = true;
-    status.textContent = `Aucune cellule sélectionnée. La matrice présente ${integer.format(matrixTotal)} unités retournées au total.`;
+    status.textContent = `Aucune sélection. La matrice présente ${integer.format(matrixTotal)} unités retournées au total.`;
   }
 
-  function selectCell(button) {
-    const row = button.dataset.matrixRow;
-    const column = button.dataset.matrixColumn;
-    const key = `${row}\u0000${column}`;
-    if (selectedCell === key) {
+  function selectTarget(button) {
+    const axis = button.dataset.matrixAxis || "cell";
+    const row = axis === "row" ? button.dataset.matrixValue : button.dataset.matrixRow;
+    const column = axis === "column" ? button.dataset.matrixValue : button.dataset.matrixColumn;
+    const key = axis === "cell" ? `cell:${row}\u0000${column}` : `${axis}:${button.dataset.matrixValue}`;
+    if (selectedTarget === key) {
       clearHighlight();
       return;
     }
 
-    selectedCell = key;
+    selectedTarget = key;
     root.querySelectorAll(".return-matrix-table th,.return-matrix-table td").forEach((element) => {
-      const sameRow = element.dataset.matrixRow === row;
-      const sameColumn = element.dataset.matrixColumn === column;
+      const sameRow = Boolean(row) && element.dataset.matrixRow === row;
+      const sameColumn = Boolean(column) && element.dataset.matrixColumn === column;
       element.classList.toggle("is-selected-row", sameRow);
       element.classList.toggle("is-selected-column", sameColumn);
-      element.classList.toggle("is-selected-cell", sameRow && sameColumn);
+      element.classList.toggle("is-selected-cell", axis === "cell" && sameRow && sameColumn);
       element.classList.toggle("is-dimmed", !sameRow && !sameColumn);
     });
-    root.querySelectorAll("[data-matrix-cell]").forEach((cellButton) => {
-      cellButton.setAttribute("aria-pressed", String(cellButton === button));
+    root.querySelectorAll("[data-matrix-cell],[data-matrix-axis]").forEach((interactiveButton) => {
+      interactiveButton.setAttribute("aria-pressed", String(interactiveButton === button));
     });
     reset.disabled = false;
-    status.textContent = `${button.dataset.rowLabel} × ${button.dataset.columnLabel} : ${integer.format(Number(button.dataset.value))} unité${Number(button.dataset.value) > 1 ? "s" : ""} retournée${Number(button.dataset.value) > 1 ? "s" : ""}. La ligne et la colonne correspondantes sont surlignées.`;
+    const value = Number(button.dataset.value);
+    const units = `${integer.format(value)} unité${value > 1 ? "s" : ""} retournée${value > 1 ? "s" : ""}`;
+    if (axis === "row") status.textContent = `${button.dataset.label} : ${units} au total. Toute la ligne du produit est surlignée.`;
+    else if (axis === "column") status.textContent = `${button.dataset.label} : ${units} au total. Toute la colonne du motif est surlignée.`;
+    else status.textContent = `${button.dataset.rowLabel} × ${button.dataset.columnLabel} : ${units}. La ligne et la colonne correspondantes sont surlignées.`;
   }
 
   function cellButton(rowKey, rowLabel, columnKey, columnLabel, value) {
     if (!value) return '<span class="return-matrix-zero" aria-label="Aucun retour">—</span>';
     const label = `${integer.format(value)} unité${value > 1 ? "s" : ""} retournée${value > 1 ? "s" : ""} pour ${rowLabel}, motif ${columnLabel}`;
     return `<button type="button" data-matrix-cell data-matrix-row="${escapeHtml(rowKey)}" data-matrix-column="${escapeHtml(columnKey)}" data-row-label="${escapeHtml(rowLabel)}" data-column-label="${escapeHtml(columnLabel)}" data-value="${value}" aria-label="${escapeHtml(label)}" aria-pressed="false">${integer.format(value)}</button>`;
+  }
+
+  function axisButton(axis, key, label, value) {
+    const direction = axis === "row" ? "la ligne" : "la colonne";
+    const accessibleLabel = `Surligner ${direction} ${label}, ${integer.format(value)} unité${value > 1 ? "s" : ""} retournée${value > 1 ? "s" : ""}`;
+    return `<button class="return-matrix-axis" type="button" data-matrix-axis="${axis}" data-matrix-value="${escapeHtml(key)}" data-label="${escapeHtml(label)}" data-value="${value}" aria-label="${escapeHtml(accessibleLabel)}" aria-pressed="false">${escapeHtml(label)}</button>`;
   }
 
   function render(rows) {
@@ -73,25 +84,25 @@
     const products = [...productTotals.keys()].sort((a, b) => a.localeCompare(b, "fr"));
     const grandTotal = [...productTotals.values()].reduce((sum, value) => sum + value, 0);
     matrixTotal = grandTotal;
-    const head = reasons.map((reason) => `<th scope="col" data-matrix-column="${escapeHtml(reason)}">${escapeHtml(reason)}</th>`).join("");
+    const head = reasons.map((reason) => `<th scope="col" data-matrix-column="${escapeHtml(reason)}">${axisButton("column", reason, reason, reasonTotals.get(reason))}</th>`).join("");
     const body = products.map((product) => {
       const cells = reasons.map((reason) => {
         const value = values.get(`${product}\u0000${reason}`) || 0;
         return `<td data-matrix-row="${escapeHtml(product)}" data-matrix-column="${escapeHtml(reason)}">${cellButton(product, product, reason, reason, value)}</td>`;
       }).join("");
       const total = productTotals.get(product);
-      return `<tr><th scope="row" data-matrix-row="${escapeHtml(product)}">${escapeHtml(product)}</th>${cells}<td class="return-matrix-total" data-matrix-row="${escapeHtml(product)}" data-matrix-column="__total__">${cellButton(product, product, "__total__", "Total", total)}</td></tr>`;
+      return `<tr><th scope="row" data-matrix-row="${escapeHtml(product)}">${axisButton("row", product, product, total)}</th>${cells}<td class="return-matrix-total" data-matrix-row="${escapeHtml(product)}" data-matrix-column="__total__">${cellButton(product, product, "__total__", "Total", total)}</td></tr>`;
     }).join("");
     const foot = reasons.map((reason) => `<td data-matrix-row="__total__" data-matrix-column="${escapeHtml(reason)}">${cellButton("__total__", "Total", reason, reason, reasonTotals.get(reason))}</td>`).join("");
 
-    scrollArea.innerHTML = `<table class="return-matrix-table"><caption class="sr-only">Quantités retournées par produit et par motif, avec totaux</caption><thead><tr><th scope="col" class="return-matrix-corner">Produit</th>${head}<th scope="col" data-matrix-column="__total__">Total</th></tr></thead><tbody>${body}</tbody><tfoot><tr><th scope="row" data-matrix-row="__total__">Total</th>${foot}<td data-matrix-row="__total__" data-matrix-column="__total__">${cellButton("__total__", "Total", "__total__", "Total", grandTotal)}</td></tr></tfoot></table>`;
-    root.querySelectorAll("[data-matrix-cell]").forEach((button) => button.addEventListener("click", () => selectCell(button)));
+    scrollArea.innerHTML = `<table class="return-matrix-table"><caption class="sr-only">Quantités retournées par produit et par motif, avec totaux</caption><thead><tr><th scope="col" class="return-matrix-corner">Produit</th>${head}<th scope="col" data-matrix-column="__total__">${axisButton("column", "__total__", "Total", grandTotal)}</th></tr></thead><tbody>${body}</tbody><tfoot><tr><th scope="row" data-matrix-row="__total__">${axisButton("row", "__total__", "Total", grandTotal)}</th>${foot}<td data-matrix-row="__total__" data-matrix-column="__total__">${cellButton("__total__", "Total", "__total__", "Total", grandTotal)}</td></tr></tfoot></table>`;
+    root.querySelectorAll("[data-matrix-cell],[data-matrix-axis]").forEach((button) => button.addEventListener("click", () => selectTarget(button)));
     clearHighlight();
   }
 
   reset.addEventListener("click", clearHighlight);
   root.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && selectedCell) {
+    if (event.key === "Escape" && selectedTarget) {
       clearHighlight();
       reset.focus();
     }
