@@ -850,6 +850,8 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
 .pbi-nav-panel { animation:story-panel-in .25s ease-out; }
 .pbi-section-tabs button { min-width:max-content; }
 .pbi-readings-panel { min-width:0; }
+.pbi-nav-panel .pbi-heading + .answer-question,
+.pbi-limit > .answer-question { margin-top:45px; }
 
 /* Étude Power BI — mise en page dédiée aux téléphones */
 @media (max-width:680px) {
@@ -871,6 +873,9 @@ a.analysis-card:hover { background:var(--white); transform:translateY(-4px); }
     min-width:0;
     white-space:normal;
   }
+
+  .pbi-nav-panel .pbi-heading + .answer-question,
+  .pbi-limit > .answer-question { margin-top:32px; }
 
   .pbi-hero {
     min-height:auto;
