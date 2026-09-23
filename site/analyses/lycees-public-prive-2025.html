@@ -287,7 +287,7 @@
 
     <section id="story-regions" class="territory-section story-panel" role="tabpanel" aria-labelledby="tab-regions" data-story-panel="regions" data-story-title="Comparaison régionale">
       <div class="section-shell">
-        <div class="territory-heading"><p class="eyebrow">Nouvelle échelle · régions</p><h2>L'écart national est-il le même partout ?</h2><p>Nous commençons par la valeur ajoutée de réussite. Une moyenne régionale n'a de sens qu'avec le nombre de lycées qui se trouve derrière.</p></div>
+        <div class="territory-heading"><p class="eyebrow">Nouvelle échelle · régions</p><h2>L'écart national est-il le même partout ?</h2><p>Nous comparons les valeurs ajoutées de réussite, puis de mentions. Chaque moyenne régionale est accompagnée du nombre de lycées renseignés.</p></div>
         <div class="answer-question answer-question-territory"><span>Question 8</span><h3>Dans les régions suffisamment représentées, l’écart de réussite va-t-il toujours dans le même sens ?</h3></div>
         <div class="territory-story">
           <p>Une moyenne calculée sur 147 lycées privés en Île-de-France est plus stable qu'une moyenne calculée sur seulement 2 lycées en Corse ou en Guyane. Les petits groupes ne sont pas supprimés : ils sont signalés pour empêcher une lecture trop assurée.</p>
@@ -298,7 +298,7 @@
           <article><strong>+0,64</strong><span>écart le plus faible · Occitanie</span></article>
           <article><strong>+2,37</strong><span>écart le plus élevé · Normandie</span></article>
         </div>
-        <div class="territory-reading"><p>Dans chacune des dix régions suffisamment représentées, la valeur ajoutée moyenne de réussite est plus élevée dans le privé sous contrat. Le signe est stable, mais la taille de l'écart varie presque du simple au quadruple selon la région.</p><p>Cela rend peu probable que le résultat national soit seulement produit par une ou deux grandes régions. Cela ne prouve pas pour autant que les écarts sont statistiquement significatifs ou causés par le secteur.</p></div>
+        <div class="territory-reading"><p>Dans chacune des dix régions suffisamment représentées, la valeur ajoutée moyenne de réussite est plus élevée dans le privé sous contrat. Les écarts vont de +0,64 à +2,37 points, contre +1,33 point au niveau national.</p><p>Le même sens d'écart se retrouve dans les dix régions retenues. Ce constat ne mesure pas la contribution de chaque région à l'écart national et ne démontre ni significativité statistique ni effet causal du secteur.</p></div>
         <div class="territory-table-wrap">
           <table class="territory-table">
             <caption>Valeur ajoutée moyenne de réussite et nombre de lycées renseignés, par région et secteur</caption>
@@ -326,13 +326,61 @@
           </table>
         </div>
         <p class="territory-note">Les libellés bruts <code>GRA EST</code> et <code>NORMAIE</code> ont été corrigés uniquement pour l'affichage. Le CSV officiel archivé reste intact.</p>
+        <div class="answer-question answer-question-territory"><span>Question 9 · Mentions</span><h3>La valeur ajoutée des mentions est-elle aussi plus élevée dans le privé sous contrat selon les régions ?</h3></div>
+        <div class="territory-reading">
+          <p>La valeur ajoutée des mentions mesure la distance entre le taux de mentions observé et celui attendu pour chaque lycée. Nous comparons ici la moyenne de ces distances dans les deux secteurs : chaque lycée renseigné compte autant, quel que soit son nombre de candidats.</p>
+          <p>Les effectifs ont été vérifiés séparément pour les mentions : <strong>693 lycées privés sous contrat et 1 514 publics</strong> ont une VA disponible. Les mêmes dix régions satisfont le seuil de 20 lycées dans chaque secteur. Les 139 VA absentes sont exclues des moyennes, sans être remplacées par zéro.</p>
+        </div>
+        <div class="territory-result">
+          <article><strong>10 sur 10</strong><span>régions retenues ont un écart de VA mentions positif</span></article>
+          <article><strong>+0,73 point</strong><span>écart le plus faible · Hauts-de-France</span></article>
+          <article><strong>+4,46 points</strong><span>écart le plus élevé · Île-de-France</span></article>
+        </div>
+        <div class="territory-reading">
+          <p><strong>Comment lire cet écart ?</strong> En Île-de-France, les lycées privés sous contrat se situent en moyenne à +1,82 point au-dessus de leur taux de mentions attendu. Les publics se situent à −2,64 points sous leur attendu. La différence entre ces deux positions atteint +4,46 points. Ce chiffre compare les VA moyennes ; il ne représente pas l'écart brut des taux de mentions.</p>
+          <p><strong>Plus élevé ne signifie pas toujours au-dessus de l'attendu.</strong> En Auvergne-Rhône-Alpes, la moyenne est négative dans les deux secteurs : −1,43 point dans le privé et −2,22 dans le public. L'écart de +0,79 point signifie que le privé est moins en dessous de l'attendu dans cette région.</p>
+        </div>
+        <details class="story-details">
+          <summary>Consulter les moyennes, effectifs et écarts de mentions par région</summary>
+          <div>
+            <div class="territory-table-wrap" tabindex="0" role="region" aria-label="Tableau régional des valeurs ajoutées de mentions, défilable horizontalement">
+              <table class="territory-table" id="regional-mentions">
+                <caption>IVAL 2025 · VA moyenne de mentions (points) et nombre de lycées avec VA disponible. Les écarts sont calculés avant arrondi.</caption>
+                <thead><tr><th scope="col">Région</th><th scope="col">VA privé sous contrat</th><th scope="col">Lycées privés</th><th scope="col">VA public</th><th scope="col">Lycées publics</th><th scope="col">Privé − public</th></tr></thead>
+                <tbody>
+                <tr><th scope="row">Auvergne-Rhône-Alpes</th><td>−1,43</td><td>92</td><td>−2,22</td><td>175</td><td>+0,79</td></tr>
+                <tr class="is-fragile"><th scope="row">Bourgogne-Franche-Comté <small>hors comparaison · moins de 20</small></th><td>−0,59</td><td>17</td><td>−4,07</td><td>70</td><td>+3,48</td></tr>
+                <tr><th scope="row">Bretagne</th><td>+2,31</td><td>55</td><td>−1,62</td><td>63</td><td>+3,93</td></tr>
+                <tr class="is-fragile"><th scope="row">Centre-Val de Loire <small>hors comparaison · moins de 20</small></th><td>−0,61</td><td>18</td><td>+0,46</td><td>50</td><td>−1,07</td></tr>
+                <tr class="is-fragile"><th scope="row">Corse <small>hors comparaison · moins de 20</small></th><td>+10,00</td><td>2</td><td>+11,22</td><td>9</td><td>−1,22</td></tr>
+                <tr><th scope="row">Grand Est</th><td>+2,08</td><td>48</td><td>+0,30</td><td>134</td><td>+1,78</td></tr>
+                <tr class="is-fragile"><th scope="row">Guadeloupe <small>hors comparaison · moins de 20</small></th><td>+4,33</td><td>3</td><td>+7,60</td><td>15</td><td>−3,27</td></tr>
+                <tr class="is-fragile"><th scope="row">Guyane <small>hors comparaison · moins de 20</small></th><td>+1,00</td><td>2</td><td>+1,60</td><td>10</td><td>−0,60</td></tr>
+                <tr><th scope="row">Hauts-de-France</th><td>+1,95</td><td>61</td><td>+1,23</td><td>124</td><td>+0,73</td></tr>
+                <tr><th scope="row">Île-de-France</th><td>+1,82</td><td>147</td><td>−2,64</td><td>305</td><td>+4,46</td></tr>
+                <tr class="is-fragile"><th scope="row">La Réunion <small>hors comparaison · moins de 20</small></th><td>+2,33</td><td>3</td><td>+1,38</td><td>29</td><td>+0,95</td></tr>
+                <tr class="is-fragile"><th scope="row">Martinique <small>hors comparaison · moins de 20</small></th><td>+10,25</td><td>4</td><td>+6,86</td><td>14</td><td>+3,39</td></tr>
+                <tr class="is-missing"><th scope="row">Mayotte <small>non déterminé</small></th><td>—</td><td>0</td><td>—</td><td>0</td><td>—</td></tr>
+                <tr><th scope="row">Normandie</th><td>−1,81</td><td>31</td><td>−4,40</td><td>77</td><td>+2,60</td></tr>
+                <tr><th scope="row">Nouvelle-Aquitaine</th><td>+0,65</td><td>46</td><td>−3,16</td><td>135</td><td>+3,82</td></tr>
+                <tr><th scope="row">Occitanie</th><td>+4,35</td><td>46</td><td>+1,74</td><td>133</td><td>+2,60</td></tr>
+                <tr><th scope="row">Pays de la Loire</th><td>−1,67</td><td>60</td><td>−4,03</td><td>70</td><td>+2,36</td></tr>
+                <tr><th scope="row">Provence-Alpes-Côte d'Azur</th><td>+6,47</td><td>58</td><td>+3,22</td><td>101</td><td>+3,25</td></tr>
+                </tbody>
+                <tfoot><tr><th scope="row">France entière · toutes les régions</th><td>+1,43</td><td>693</td><td>−0,98</td><td>1 514</td><td>+2,42</td></tr></tfoot>
+              </table>
+            </div>
+            <p class="territory-note">Le total national inclut toutes les régions avec une VA disponible, y compris celles sous le seuil de 20. Il n'est pas la moyenne simple des dix écarts régionaux. À Mayotte, aucune VA de mentions n'est disponible : les moyennes et l'écart sont non déterminés.</p>
+          </div>
+        </details>
+        <p class="territory-note">Source : <a href="https://github.com/mariocelsonascimento-prog/Analyses-137/raw/main/analyses/lycees-public-prive-2025/data/raw/fr-en-indicateurs-de-resultat-des-lycees-gt_v2.csv">CSV IVAL archivé</a>, session 2025, indicateurs « Toutes séries ». Tableau transmis et calculs reproduits le 23 septembre 2026. La comparaison reste descriptive : le seuil de 20 n'établit ni significativité statistique ni effet causal du secteur. L'accès seconde-bac reste à comparer par région.</p>
       </div>
     </section>
 
     <section class="case-pending section-shell">
       <p class="eyebrow">Résultats</p>
       <h2>Pas encore de conclusion finale.</h2>
-      <p>Les calculs descriptifs des trois indicateurs et leur première synthèse sont documentés. Les comparaisons territoriales, les visualisations et la conclusion finale restent à produire.</p>
+      <p>Les calculs nationaux des trois indicateurs et les comparaisons régionales de réussite et de mentions sont documentés. L'accès seconde-bac par région, la vue académique, les dashboards Tableau et la conclusion finale restent à produire.</p>
       <a class="button button-primary" href="../suivi.html">Consulter l'avancement détaillé</a>
     </section>
   </main>

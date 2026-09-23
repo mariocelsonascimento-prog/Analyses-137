@@ -415,3 +415,52 @@ Dix régions remplissent cette condition : Auvergne-Rhône-Alpes, Bretagne, Gran
 L'écart est positif dans les dix régions retenues. Il varie de +0,64 point en Occitanie à +2,37 points en Normandie, contre +1,33 point au niveau national. La cohérence du signe montre que le résultat national n'est pas porté uniquement par une ou deux grandes régions ; l'ampleur de l'écart varie cependant selon le territoire.
 
 Ce constat reste descriptif. Le seuil de 20 n'est ni un test de significativité ni une garantie que les différences observées ne sont pas dues à d'autres facteurs.
+
+## 2026-09-23 — Étapes 38 et 39 : reprise régionale et VA mentions
+
+### Étape 38 — Interprétation de la VA réussite
+
+L'interprétation transmise confirme les dix écarts positifs déjà documentés à l'étape 37 : de +0,64 point en Occitanie à +2,37 points en Normandie, avec +1,33 point au niveau national.
+
+Précision de rédaction : observer un signe positif dans les dix régions retenues ne quantifie pas leur contribution respective à l'écart national. Aucune décomposition de cet écart ni aucun test de significativité n'a été réalisé. La restitution publique décrit donc la répétition du signe, sans déduire qu'une région ne pourrait pas contribuer fortement au résultat national.
+
+### Étape 39 — Tableau régional de VA mentions contrôlé
+
+Le tableau transmis contient la moyenne de `VA mentions numérique` et le nombre de valeurs renseignées dans la colonne source `Valeur ajoutée du taux de mentions - Toutes séries`, par région et secteur.
+
+Vérification indépendante : lecture du CSV archivé (séparateur point-virgule, UTF-8), filtre `Année = 2025`, exclusion des VA vides, conversion des nombres avec point décimal, puis somme et nombre des VA par région et secteur. Moyenne = somme / nombre. Chaque VA égale à zéro est incluse. Les effectifs concordent exactement et toutes les moyennes fournies concordent à 0,00000001 point près avec le CSV. Les données brutes n'ont pas été modifiées.
+
+Résultats nationaux : 693 VA privées et 1 514 publiques, soit 2 207 disponibles sur 2 346 lycées et 139 absentes. Moyennes : +1,432900432900433 et −0,9834874504623514. Leur différence vaut +2,416387883362784 points, soit **+2,42** après arrondi. Ne pas soustraire les moyennes déjà arrondies (+1,43 et −0,98) pour calculer l'écart.
+
+| Région | VA privé (points) | Effectif privé | VA public (points) | Effectif public | Écart privé − public (points) | Seuil 20 par secteur |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Auvergne-Rhône-Alpes | −1,43 | 92 | −2,22 | 175 | +0,79 | Oui |
+| Bourgogne-Franche-Comté | −0,59 | 17 | −4,07 | 70 | +3,48 | Non |
+| Bretagne | +2,31 | 55 | −1,62 | 63 | +3,93 | Oui |
+| Centre-Val de Loire | −0,61 | 18 | +0,46 | 50 | −1,07 | Non |
+| Corse | +10,00 | 2 | +11,22 | 9 | −1,22 | Non |
+| Grand Est | +2,08 | 48 | +0,30 | 134 | +1,78 | Oui |
+| Guadeloupe | +4,33 | 3 | +7,60 | 15 | −3,27 | Non |
+| Guyane | +1,00 | 2 | +1,60 | 10 | −0,60 | Non |
+| Hauts-de-France | +1,95 | 61 | +1,23 | 124 | +0,73 | Oui |
+| Île-de-France | +1,82 | 147 | −2,64 | 305 | +4,46 | Oui |
+| La Réunion | +2,33 | 3 | +1,38 | 29 | +0,95 | Non |
+| Martinique | +10,25 | 4 | +6,86 | 14 | +3,39 | Non |
+| Mayotte | — | 0 | — | 0 | — | Non |
+| Normandie | −1,81 | 31 | −4,40 | 77 | +2,60 | Oui |
+| Nouvelle-Aquitaine | +0,65 | 46 | −3,16 | 135 | +3,82 | Oui |
+| Occitanie | +4,35 | 46 | +1,74 | 133 | +2,60 | Oui |
+| Pays de la Loire | −1,67 | 60 | −4,03 | 70 | +2,36 | Oui |
+| Provence-Alpes-Côte d'Azur | +6,47 | 58 | +3,22 | 101 | +3,25 | Oui |
+
+Les effectifs sont vérifiés pour cet indicateur indépendamment de la réussite. Les mêmes dix régions dépassent le seuil. Les écarts calculés à partir des valeurs non arrondies sont positifs dans les dix cas, de +0,7250132205182442 point dans les Hauts-de-France à +4,459194825471172 points en Île-de-France.
+
+Exemple pédagogique : en Auvergne-Rhône-Alpes, la VA moyenne reste négative dans les deux secteurs (−1,43 et −2,22). Un écart positif de +0,79 point signifie ici que le privé est moins en dessous de l'attendu, et non qu'il dépasse son attendu.
+
+Mayotte n'a aucune VA de mentions disponible : moyenne et écart restent non déterminés. Les sept autres régions hors seuil restent visibles avec un avertissement. Les libellés `GRA EST` et `NORMAIE`, présents dans le CSV, sont normalisés uniquement pour l'affichage.
+
+Le total national utilise toutes les VA disponibles, pas uniquement les dix régions retenues. Il ne correspond pas à une moyenne simple des écarts régionaux.
+
+### Suite restant à réaliser
+
+Comparer l'accès seconde-bac par région, en recalculant ses propres effectifs disponibles, puis poursuivre les vues académiques prévues. Le ticket IVAL-9 reste en cours. Le classeur Excel de travail n'a pas été reçu ni modifié lors de ce contrôle ; le contrôle porte sur les résultats transmis et la source CSV.

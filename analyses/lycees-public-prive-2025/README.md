@@ -8,9 +8,11 @@ Cette analyse comparera des écarts observés. Elle ne cherchera pas à prouver 
 
 ## Statut
 
-**Cadrage et archivage de la source terminés. Préparation des données à venir.**
+**Analyse en cours — reprise le 2026-09-23, étapes 38 et 39 documentées.**
 
-Aucun résultat comparatif n'est encore publié.
+Les résultats descriptifs nationaux de réussite, mentions et accès seconde-bac sont publiés. Les comparaisons régionales de VA réussite et de VA mentions sont contrôlées depuis le CSV brut et présentées sur le site. La comparaison régionale de l'accès, la vue académique et les dashboards Tableau restent à produire. Le script de préparation et les contrôles qualité complets restent à automatiser.
+
+Le [journal d'analyse](documentation/journal-analyse.md) détaille les calculs, les vérifications et les limites. Le seuil de 20 lycées avec VA disponible par secteur est un choix analytique, pas un test statistique.
 
 ## Périmètre de la première version
 

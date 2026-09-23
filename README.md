@@ -49,7 +49,7 @@ Chaque pipeline public précise son environnement, ses données d'entrée, les c
 
 ## Statut
 
-L'analyse des [lycées publics et privés sous contrat en 2025](analyses/lycees-public-prive-2025/README.md) est actuellement en pause. Une nouvelle étude de cas, [Ventes, marge et retours avec Power BI](analyses/analyse-commerciale-power-bi/README.md), est publiée avec son rapport téléchargeable.
+L'analyse des [lycées publics et privés sous contrat en 2025](analyses/lycees-public-prive-2025/README.md) a repris : les comparaisons régionales de réussite et de mentions sont documentées. L'étude de cas [Ventes, marge et retours avec Power BI](analyses/analyse-commerciale-power-bi/README.md) est publiée avec son rapport téléchargeable.
 
 La démarche d'accessibilité du site est documentée dans `docs/ACCESSIBILITY.md` et publiée sur la page `site/accessibilite.html`.
 
