@@ -464,3 +464,13 @@ Le total national utilise toutes les VA disponibles, pas uniquement les dix rég
 ### Suite restant à réaliser
 
 Comparer l'accès seconde-bac par région, en recalculant ses propres effectifs disponibles, puis poursuivre les vues académiques prévues. Le ticket IVAL-9 reste en cours. Le classeur Excel de travail n'a pas été reçu ni modifié lors de ce contrôle ; le contrôle porte sur les résultats transmis et la source CSV.
+
+## 2026-09-23 — Réception du classeur Excel après le contrôle des étapes 38 et 39
+
+Le propriétaire a transmis `IVAL_2025_ANALYSE.xlsx.xlsx`. Une copie binaire identique est conservée sous `workbooks/2026-09-23/IVAL_2025_ANALYSE.xlsx` (seule la double extension a été normalisée).
+
+Le [compte rendu de contrôle](../workbooks/2026-09-23/README.md) décrit les feuilles, les plages vérifiées, l'empreinte SHA-256 et les points à reprendre. Les 2 346 UAI de DATA_2025, les indicateurs, les valeurs manquantes, les taux attendus et les moyennes et effectifs régionaux des mentions concordent avec le CSV brut.
+
+Restent à corriger : les codes géographiques stockés en nombres, les écarts de synthèse calculés depuis des moyennes arrondies (mentions +2,42 et accès −2,03 points attendus), et les six erreurs de moyenne indisponible à Mayotte. Les trois effectifs de classe prévus pour l'étude de taille sont absents de DATA_2025.
+
+Le fichier reçu et le CSV brut n'ont pas été modifiés. La vérification porte sur les résultats enregistrés, sans recalcul ni actualisation native dans Excel. IVAL-3 et IVAL-4 restent en cours ; cette réception ne suffit pas à clôturer l'export et l'automatisation.

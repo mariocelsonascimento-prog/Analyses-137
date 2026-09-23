@@ -58,7 +58,9 @@ Les valeurs ajoutées absentes resteront nulles et seront présentées comme « 
 
 ## Prochain livrable
 
-Produire `data/processed/ival_lycees_2025_prepare.csv` à l'aide d'un script public, avec uniquement 2025 et les 21 colonnes retenues, puis exécuter les contrôles qualité avant toute visualisation.
+Le [classeur reçu le 2026-09-23 et son contrôle](workbooks/2026-09-23/README.md) sont archivés dans le dépôt source. Les données de 2025 et les résultats régionaux des mentions concordent avec le CSV. Le classeur reste intact ; les codes géographiques, deux écarts calculés après arrondi et l'affichage des moyennes indisponibles nécessitent une reprise.
+
+Produire `data/processed/ival_lycees_2025_prepare.csv` à l'aide d'un script public, avec uniquement 2025 et les champs retenus, dont les trois effectifs de classe prévus pour l'analyse de taille. Automatiser les contrôles et vérifier l'actualisation du classeur avant les dashboards Tableau.
 
 ## Sources officielles
 
